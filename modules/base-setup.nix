@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./main-user.nix ./fish.nix ./gnome.nix ];
+  imports = [ ./main-user.nix ./fish.nix ./gnome.nix ./alacritty.nix ];
 
   environment.sessionVariables = rec {
     XDG_CACHE_HOME = "$HOME/.cache";

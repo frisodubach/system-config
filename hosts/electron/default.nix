@@ -1,6 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
-
-{
+{ config, lib, pkgs, inputs, ... }: {
   imports = [
     ./hardware-configuration.nix
     #./no-git.nix
@@ -60,6 +58,14 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+
+  services.xserver.libinput = {
+    enable = true;
+    touchpad = {
+      tapping = true;
+      accelProfile = "flat";
+    };
+  };
 
   ## LOCALE SECTION
   time.timeZone = "Europe/Amsterdam";

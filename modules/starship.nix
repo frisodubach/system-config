@@ -57,10 +57,6 @@
           truncation_symbol = "";
         };
 
-        directory.substituations = {
-
-        };
-
         docker_context = {
           symbol = "";
           style = "bg:#";
