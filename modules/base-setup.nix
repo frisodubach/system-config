@@ -86,6 +86,6 @@
     powerline-fonts
     nerdfonts
     overpass
-    (netfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
