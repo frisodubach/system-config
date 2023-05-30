@@ -14,8 +14,8 @@
         ];
 
         window = {
-          opacity = 1.0;
-          decorations = "none";
+          opacity = 0.9;
+          decorations = "full";
           dynamic_title = true;
         };
 
