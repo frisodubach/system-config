@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  environment.variable = rec {
+  environment.variables = rec {
     MOZ_ENABLE_WAYLAND = "1";
     MOZ_GTK_TITLEBAR_DECORATION = "client";
   };
