@@ -66,7 +66,7 @@
   };
 
   # ENABLE TAILSCALE
-  service.tailscale.enable = true;
+  services.tailscale.enable = true;
 
   # AUTO UPDATE DB
   services.locate = {
