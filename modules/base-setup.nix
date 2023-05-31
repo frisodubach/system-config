@@ -21,14 +21,18 @@
     git
     vim
     wget
-    fd
-    ripgrep
+    fd # better find
+    ripgrep # better grep
     htop
     unzip
     powertop
     smartmontools # Get SMART data
-    tldr
-    fzf
+    tldr # man alternative
+    fzf # fuzzy finder
+    exa # ls alternative
+    bat # cat alternative
+    ncdu # du alternative
+    duf # df alternative
 
     # emacs package dependencies
     libtool
