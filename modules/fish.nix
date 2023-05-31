@@ -11,9 +11,11 @@
       '';
       shellAliases = {
         nix-rb =
-          "nixos-rebuild switch --flake /home/phonon/.config/system-config/flake.nix";
+          "sudo nixos-rebuild switch --flake /home/phonon/.config/system-config/#electron";
         nix-dry =
-          "nixos-rebuild dry-activate --flake /home/phonon/.config/system-config/flake.nix";
+          "sudo nixos-rebuild dry-activate --flake /home/phonon/.config/system-config/#electron";
+        ll = "exa -l";
+        la = "exa -la";
       };
     };
   };
