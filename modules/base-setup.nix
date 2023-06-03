@@ -81,6 +81,9 @@
     localuser = null;
   };
 
+  # AUTO UPDATE NIX
+  system.autoUpgrade.enable = true;
+
   # FONTS
   fonts.fonts = with pkgs; [
     fira-code

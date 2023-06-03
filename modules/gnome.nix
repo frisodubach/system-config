@@ -39,6 +39,7 @@
     nordic
     whitesur-gtk-theme
     colloid-gtk-theme
+    gruvbox-gtk-theme
     kora-icon-theme
   ];
 
