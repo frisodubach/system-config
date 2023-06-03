@@ -57,7 +57,7 @@
 
     # misc
     neofetch
-    python3
+    #python3
 
   ];
 
