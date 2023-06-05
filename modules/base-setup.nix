@@ -82,7 +82,7 @@
   };
 
   # AUTO UPDATE NIX
-  system.autoUpgrade.enable = true;
+  #system.autoUpgrade.enable = true; # Can't use this with flake config
 
   # FONTS
   fonts.fonts = with pkgs; [
