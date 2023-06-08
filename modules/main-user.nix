@@ -37,6 +37,7 @@
       signal-desktop
       albert
       starship
+      kid3
     ];
     #xdg.mimeApps.defaultApplications = {
     #  "image/png" = "feh.desktop";
