@@ -38,6 +38,8 @@
       albert
       starship
       kid3
+      wofi
+      onagre
     ];
     #xdg.mimeApps.defaultApplications = {
     #  "image/png" = "feh.desktop";

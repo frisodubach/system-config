@@ -14,6 +14,8 @@
           "sudo nixos-rebuild switch --flake /home/phonon/.config/system-config/#electron";
         nix-dry =
           "sudo nixos-rebuild dry-activate --flake /home/phonon/.config/system-config/#electron";
+        nix-upgr =
+          "sudo nixos-rebuild --upgrade --flake /home/phonon/.config/system-config/#electron";
         ll = "exa -l";
         la = "exa -la";
         doom-sync = "~/.emacs.d/bin/doom sync";
