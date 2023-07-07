@@ -6,7 +6,7 @@
   services.emacs = {
     enable = true;
     install = true;
-    package = pkgs.emacs;
+    package = pkgs.emacs-gtk;
   };
 
   programs.fish.enable = true;
