@@ -1,5 +1,23 @@
 { config, lib, pkgs, inputs, ... }:
 
+# Goals:
+# - GUI apps for managing Wifi / Bluetooth
+# - Scipts for managing brightness / volume / mic / nightlight
+# - EWW bar w/ workspace indicator, basic system settings, time / calendar, system info, app launcher
+# - App launcher (rofi / Fuzzel)
+# - Keyboard shortcuts (M-e, M-1/2/3/etc, M-w, M-m, etc)
+# - Touchpad gestures
+# - Dynamic display settings
+# - Locking application
+# - Notification daemon
+# - Screenshot tool
+# - Wallpaper engine
+# - Clipboard manager
+# - File manager
+# - Photo viewer
+# - Calculator
+# - Font manager
+
 {
   environment.variables = rec {
     MOZ_ENABLE_WAYLAND = "1";
