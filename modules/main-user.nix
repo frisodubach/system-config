@@ -3,11 +3,11 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-  services.emacs = {
-    enable = false;
-    install = true;
-    package = pkgs.emacs;
-  };
+#  services.emacs = {
+#    enable = false;
+#    install = true;
+#    package = pkgs.emacs;
+#  };
 
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
@@ -40,6 +40,7 @@
       kid3
       wofi
       onagre
+      emacs
     ];
     #xdg.mimeApps.defaultApplications = {
     #  "image/png" = "feh.desktop";
