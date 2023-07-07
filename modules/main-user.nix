@@ -4,9 +4,9 @@
   nixpkgs.config.allowUnfree = true;
 
   services.emacs = {
-    enable = true;
+    enable = false;
     install = true;
-    package = pkgs.emacs-gtk;
+    package = pkgs.emacs;
   };
 
   programs.fish.enable = true;
