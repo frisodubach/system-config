@@ -8,7 +8,11 @@
 #    install = true;
 #    package = pkgs.emacs;
 #  };
-
+  
+#  nixpkgs.overlays = [
+#    (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
+#  ];
+  
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
@@ -41,6 +45,7 @@
       wofi
       onagre
       emacs
+      #emacsGcc
     ];
     #xdg.mimeApps.defaultApplications = {
     #  "image/png" = "feh.desktop";

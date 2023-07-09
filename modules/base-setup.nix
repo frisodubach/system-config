@@ -41,6 +41,10 @@
     gnumake
     nixfmt
     shfmt
+    coreutils
+    fd
+    ripgrep
+    git    
 
     # basic GUI applications
     firefox
