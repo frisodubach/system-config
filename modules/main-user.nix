@@ -3,11 +3,11 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-#  services.emacs = {
-#    enable = false;
-#    install = true;
-#    package = pkgs.emacs;
-#  };
+  services.emacs = {
+    enable = true;
+    install = true;
+    package = pkgs.emacs;
+  };
   
 #  nixpkgs.overlays = [
 #    (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
@@ -43,8 +43,7 @@
       starship
       kid3
       wofi
-      onagre
-      emacs
+      #emacs
       #emacsGcc
     ];
     #xdg.mimeApps.defaultApplications = {
