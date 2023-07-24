@@ -57,8 +57,8 @@
     gnome-clocks
     seahorse
     gnome-calendar
-    # gnome-tour
+    gnome-tour
     gnome-music
-    # gnome-connections
+    gnome-connections
   ];
 }
