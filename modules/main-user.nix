@@ -8,11 +8,11 @@
     install = true;
     package = pkgs.emacs;
   };
-  
-#  nixpkgs.overlays = [
-#    (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
-#  ];
-  
+
+  #  nixpkgs.overlays = [
+  #    (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
+  #  ];
+
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
@@ -39,7 +39,7 @@
       sherlock
       amberol
       signal-desktop
-      albert
+      # albert
       starship
       kid3
       wofi
