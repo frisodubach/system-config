@@ -1,7 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./main-user.nix ./fish.nix ./gnome.nix ./alacritty.nix ];
+  imports = [
+    ./main-user.nix
+    ./fish.nix
+    ./hyprland.nix
+    ./alacritty.nix
+    ./dunst.nix
+    ./swaylock.nix
+  ];
 
   environment.sessionVariables = rec {
     XDG_CACHE_HOME = "$HOME/.cache";
@@ -44,7 +51,7 @@
     coreutils
     fd
     ripgrep
-    git    
+    git
 
     # basic GUI applications
     firefox
