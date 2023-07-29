@@ -10,7 +10,7 @@
         global = {
           frame_color = "#8AADF4";
           separator_color = "frame";
-          font = "FiraCode";
+          # font = "Fira Code";
         };
 
         urgency_low = {
