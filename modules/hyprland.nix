@@ -2,7 +2,7 @@
 # Later best to separate into dedicated folders for each module
 # Although I'm not a fan of that config method..
 
-{ config, pkgs, lib, modulesPath, inputs, newmpkgs, ... }:
+{ config, pkgs, lib, modulesPath, inputs, ... }:
 
 {
 

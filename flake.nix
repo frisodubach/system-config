@@ -25,6 +25,7 @@
       nixosConfigurations = {
         electron = lib.nixosSystem {
           inherit system;
+          inherit pkgs;
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/electron/default.nix
