@@ -145,9 +145,7 @@
     home.stateVersion = "23.05";
 
     # Don't understand this well.
-    # imports = [
-    #   inputs.hyprland.homeManagerModules.default
-    # ];
+    imports = [ inputs.hyprland.homeManagerModules.default ];
 
     # Enable hyprland
     wayland.windowManager.hyprland = {
