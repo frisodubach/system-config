@@ -1,7 +1,3 @@
-# This is a newm config. Need to edit properly
-# Later best to separate into dedicated folders for each module
-# Although I'm not a fan of that config method..
-
 { config, pkgs, lib, modulesPath, inputs, ... }:
 
 {
@@ -9,23 +5,17 @@
   # === Hyprland ===
   imports = [ inputs.hyprland.nixosModules.default ./swaylock.nix ];
 
-  # nix.settings = {
-  #   substituters = [ "https://hyprland.cachix.org" ];
-  #   trusted-public-keys =
-  #     [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  # };
+  nix.settings = {
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys =
+      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+  };
 
   # Module from inputs.hyprland substitutes nixpkgs `programs.hyprland` with its own,
   # allowing for pulling the latest changes once they are available.
   # Besides installing the Hyprland package, this module sets some system-wide configuration
   # (e.g. polkit, xdg-desktop-portal-hyprland)
   programs.hyprland.enable = true;
-
-  nix.settings = {
-    substituters = [ "https://hyprland.cachix.org" ];
-    trusted-public-keys =
-      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  };
 
   # === Environment variables ===
   environment.variables = rec {
@@ -81,10 +71,6 @@
   #     default_session = initial_session;
   #   };
   # };
-
-  # environment.etc."greetd/environments".text = ''
-  #   newm
-  # '';
 
   environment.systemPackages = with pkgs; [
 
@@ -148,7 +134,7 @@
 
   # === HOME MANAGER ===
   home-manager.users.phonon = { pkgs, ... }: {
-    home.stateVersion = "23.05";
+    home.stateVersion = "22.11";
 
     # Don't understand this well.
     imports = [ inputs.hyprland.homeManagerModules.default ];
@@ -163,17 +149,6 @@
       [
         # hyprland
         eww-wayland
-
-        # wofi
-        # swaybg
-        # wlsunset
-        # wl-clipboard
-        # pamixer
-        # brightnessctl
-        # libnotify
-        # lua
-        # dunst # notifications
-
       ];
 
     # Config
