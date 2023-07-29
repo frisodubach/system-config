@@ -108,13 +108,5 @@
       overpass
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
     ];
-
-    fontConfig = {
-      defaultFonts = {
-        serif = [ "Ubuntu" ];
-        sans-serif = [ "Overpass" "Agave" ];
-        monospace = [ "FiraCode" ];
-      };
-    };
   };
 }
