@@ -96,14 +96,25 @@
   #system.autoUpgrade.enable = true; # Can't use this with flake config
 
   # FONTS
-  fonts.fonts = with pkgs; [
-    fira-code
-    fira
-    fira-code-symbols
-    jetbrains-mono
-    powerline-fonts
-    nerdfonts
-    overpass
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+  fonts = {
+    enableDefaultFonts = true;
+    fonts = with pkgs; [
+      fira-code
+      fira
+      fira-code-symbols
+      jetbrains-mono
+      powerline-fonts
+      nerdfonts
+      overpass
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    ];
+
+    fontConfig = {
+      defaultFonts = {
+        serif = [ "Ubuntu" ];
+        sans-serif = [ "Overpass" "Agave" ];
+        monospace = [ "FiraCode" ];
+      };
+    };
+  };
 }
