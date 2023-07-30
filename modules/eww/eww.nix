@@ -4,11 +4,13 @@
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "23.05";
 
+    programs.eww.enable = true;
+
     home.packages = with pkgs; [ eww-wayland lua ];
 
     # Config
-    home.file.".config/eww/eww.scss".source = ./eww/eww.scss;
-    home.file.".config/eww/eww.yuck".source = ./eww/eww.yuck;
+    home.file.".config/eww/eww.scss".source = ./eww.scss;
+    home.file.".config/eww/eww.yuck".source = ./eww.yuck;
 
     #scripts
     home.file.".config/eww/scripts/battery.sh" = {
