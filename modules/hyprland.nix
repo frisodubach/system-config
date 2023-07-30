@@ -47,7 +47,6 @@
   # === Greeter ===
   services.xserver = {
     enable = true;
-    wayland = true;
     desktopManager.xterm.enable = false;
     displayManager = {
       defaultSession = "hyprland";
