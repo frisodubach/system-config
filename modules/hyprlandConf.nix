@@ -20,8 +20,7 @@
   # Execute your favorite apps at launch
   # exec-once = waybar & hyprpaper & firefox
   exec-once=swaybg -i /home/phonon/Wallpapers/wallhaven-v9v6vm_1920x1080.png
-  exec-once=foot --server
-  exec-once=wlsunset -l -23 -L -46
+  #exec-once=wlsunset -l -23 -L -46
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=dunst

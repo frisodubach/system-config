@@ -89,6 +89,7 @@
 
     # Basic system tools
     gnome.nautilus # gui file manager
+    xfce.thunar # gui file manager
     libnotify # notification daemon
     brightnessctl
     wlr-randr
@@ -96,7 +97,7 @@
     wofi # application launcher
     networkmanager # gui network manager
     lightlocker # lightDM screenlock
-    hyprpaper # wallpaper engine
+    swaybg # wallpaper engine
     # Audio
     pamixer
     playerctl
@@ -145,39 +146,6 @@
         eww-wayland
       ];
 
-    # Config
-    # home.file.".config/hypr/hyprland.conf".source =
-    #   ../dotfiles/.config/hypr/hyprland.conf;
-
-    # === EWW ===
-    # home.file.".config/eww/eww.scss".source = ../dotfiles/.config/eww/eww.scss;
-    # home.file.".config/eww/eww.yuck".source = ../dotfiles/.config/eww/eww.yuck;
-
-    # scripts
-    # home.file.".config/eww/scripts/battery.sh" = {
-    #   source = ../scripts/eww/battery.sh;
-    #   executable = true;
-    # };
-
-    # home.file.".config/eww/scripts/wifi.sh" = {
-    #   source = ../scripts/eww/wifi.sh;
-    #   executable = true;
-    # };
-
-    # home.file.".config/eww/scripts/brightness.sh" = {
-    #   source = ../scripts/eww/brightness.sh;
-    #   executable = true;
-    # };
-
-    # home.file.".config/eww/scripts/workspaces.sh" = {
-    #   source = ../scripts/eww/workspaces.sh;
-    #   executable = true;
-    # };
-
-    # home.file.".config/eww/scripts/workspaces.lua" = {
-    #   source = ../scripts/eww/workspaces.lua;
-    #   executable = true;
-    # };
   };
 
 }
