@@ -41,7 +41,7 @@
       # kb_rules =
 
       follow_mouse = 1
-      accel-_profile = flat
+      accel_profile = flat
 
       touchpad {
           natural_scroll = false
