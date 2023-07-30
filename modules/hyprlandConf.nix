@@ -46,7 +46,7 @@
       touchpad {
           natural_scroll = false
           disable_while_typing = true
-          clickfinger_behaviour = false
+          clickfinger_behavior = false
           tap-to-click = true
 
       }
