@@ -35,7 +35,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-wlr xdg-desktop-portal-gtk ];
+    # extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
     gtkUsePortal = true;
   };
 
@@ -63,17 +63,6 @@
       };
     };
   };
-
-  # services.greetd = {
-  #   enable = true;
-  #   settings = rec {
-  #     initial_session = {
-  #       command = "${pkgs.greetd.gtkgreet}/bin/gtkgreet -l";
-  #       user = "phonon";
-  #     };
-  #     default_session = initial_session;
-  #   };
-  # };
 
   environment.systemPackages = with pkgs; [
 

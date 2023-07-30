@@ -44,7 +44,7 @@
       accel_profile = flat
 
       touchpad {
-          natural_scroll = false
+          natural_scroll = true
           disable_while_typing = true
           clickfinger_behavior = false
           tap-to-click = true
@@ -60,7 +60,7 @@
       gaps_in = 5
       gaps_out = 20
       border_size = 2
-      col.active_border = rgba(0DB7D4FF) rgba(7AA2F7FF) rgba(9778D0FF) 45deg
+      col.active_border = 0xffd65d0e
       col.inactive_border = rgba(04404aaa)
       resize_on_border = true
       hover_icon_on_border = true
@@ -141,7 +141,7 @@
   bind = $mainMod, M, exit,
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, V, togglefloating,
-  bind = $mainMod, space, exec, wofi --show drun
+  bind = $mainMod, space, exec, wofi --show drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
   # bind = $mainMod, space, exec, wofi --fork -S drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
   bind = $mainMod, P, pseudo, # dwindle
   bind = $mainMod, J, togglesplit, # dwindle
