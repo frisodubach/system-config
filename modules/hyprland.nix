@@ -5,12 +5,6 @@
   # === Hyprland ===
   imports = [ inputs.hyprland.nixosModules.default ./swaylock.nix ];
 
-  nix.settings = {
-    substituters = [ "https://hyprland.cachix.org" ];
-    trusted-public-keys =
-      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  };
-
   # Module from inputs.hyprland substitutes nixpkgs `programs.hyprland` with its own,
   # allowing for pulling the latest changes once they are available.
   # Besides installing the Hyprland package, this module sets some system-wide configuration
@@ -147,7 +141,7 @@
       enable = true;
       package = null; # Use system-wide package
       xwayland.enable = true;
-      extraConfig = (import ./hyprlandConf.nix { inherit (hyprlandConf) ; });
+      extraConfig = import ./hyprlandConf.nix { };
     };
 
     home.packages = with pkgs;
