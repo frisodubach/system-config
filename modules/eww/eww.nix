@@ -7,8 +7,8 @@
     home.packages = with pkgs; [ eww-wayland lua ];
 
     # Config
-    home.file.".config/eww/eww.scss".source = ../dotfiles/.config/eww/eww.scss;
-    home.file.".config/eww/eww.yuck".source = ../dotfiles/.config/eww/eww.yuck;
+    home.file.".config/eww/eww.scss".source = ./eww/eww.scss;
+    home.file.".config/eww/eww.yuck".source = ./eww/eww.yuck;
 
     #scripts
     home.file.".config/eww/scripts/battery.sh" = {
