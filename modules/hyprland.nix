@@ -47,12 +47,12 @@
   # === Greeter ===
   services.xserver = {
     enable = true;
+    wayland = true;
     desktopManager.xterm.enable = false;
     displayManager = {
       defaultSession = "hyprland";
       lightdm = {
         enable = false;
-        wayland = true;
         greeters.gtk = {
           enable = false;
           theme.name = "Gruvbox-Dark-B";
