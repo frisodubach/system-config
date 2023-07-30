@@ -134,7 +134,7 @@
 
   # === HOME MANAGER ===
   home-manager.users.phonon = { pkgs, ... }: {
-    home.stateVersion = "23.05";
+    home.stateVersion = "22.11";
 
     # Don't understand this well.
     imports = [ inputs.hyprland.homeManagerModules.default ];
@@ -152,8 +152,8 @@
       ];
 
     # Config
-    home.file.".config/hypr/hyprland.conf".source =
-      ../dotfiles/.config/hypr/hyprland.conf;
+    # home.file.".config/hypr/hyprland.conf".source =
+    #   ../dotfiles/.config/hypr/hyprland.conf;
 
     # === EWW ===
     # home.file.".config/eww/eww.scss".source = ../dotfiles/.config/eww/eww.scss;
