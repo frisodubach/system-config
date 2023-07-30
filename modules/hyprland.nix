@@ -147,7 +147,7 @@
       enable = true;
       package = null; # Use system-wide package
       xwayland.enable = true;
-      extraConfig = (import ./hyprlandConf.nix { inherit (config) ; });
+      extraConfig = (import ./hyprlandConf.nix { inherit (hyprlandConf) ; });
     };
 
     home.packages = with pkgs;
