@@ -152,8 +152,8 @@
       ];
 
     # Config
-    # home.file.".config/hypr/hyprland.conf".source =
-    #   ../dotfiles/.config/hypr/hyprland.conf;
+    home.file.".config/hypr/hyprland.conf".source =
+      ../dotfiles/.config/hypr/hyprland.conf;
 
     # === EWW ===
     # home.file.".config/eww/eww.scss".source = ../dotfiles/.config/eww/eww.scss;
