@@ -52,6 +52,7 @@
       defaultSession = "hyprland";
       lightdm = {
         enable = false;
+        wayland = true;
         greeters.gtk = {
           enable = false;
           theme.name = "Gruvbox-Dark-B";
@@ -61,7 +62,6 @@
         enable = true;
         wayland = true;
       };
-      wayland = true;
     };
   };
 
