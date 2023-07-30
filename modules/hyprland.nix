@@ -45,21 +45,25 @@
   };
 
   # === Greeter ===
-  #  services.xserver = {
-  #    enable = true;
-  #desktopManager.gnome.enable = true;
-  #    displayManager = {
-  #      defaultSession = "newm";
-  #      lightdm = {
-  #        greeters.gtk = {
-  #          enable = true;
-  #          theme.name = "Gruvbox-Dark-B";
-  #        };
-  #        enable = true;
-  #wayland = true;
-  #      };
-  #    };
-  #  };
+  services.xserver = {
+    enable = true;
+    desktopManager.xterm.enable = false;
+    displayManager = {
+      defaultSession = "hyprland";
+      lightdm = {
+        enable = false;
+        greeters.gtk = {
+          enable = false;
+          theme.name = "Gruvbox-Dark-B";
+        };
+      };
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
+      wayland = true;
+    };
+  };
 
   # services.greetd = {
   #   enable = true;
@@ -143,6 +147,8 @@
     wayland.windowManager.hyprland = {
       enable = true;
       package = null; # Use system-wide package
+      xwayland.enable = true;
+      extraConfig = (import ./hyprlandConf.nix { inherit (config) ; });
     };
 
     home.packages = with pkgs;
@@ -152,8 +158,8 @@
       ];
 
     # Config
-    home.file.".config/hypr/hyprland.conf".source =
-      ../dotfiles/.config/hypr/hyprland.conf;
+    # home.file.".config/hypr/hyprland.conf".source =
+    #   ../dotfiles/.config/hypr/hyprland.conf;
 
     # === EWW ===
     # home.file.".config/eww/eww.scss".source = ../dotfiles/.config/eww/eww.scss;
