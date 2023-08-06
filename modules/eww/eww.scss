@@ -1,290 +1,230 @@
-$base: #44465c;
-$blue: #3fc6de;
-$surface0: #44465c;
-$surface1: #44465c;
-$text: #d9e0ee;
-$overlay0: #6e738d;
-$red: #ec6a88;
-$peach: #efb993;
-$yellow: #efb993;
-$mauve: #b072d1;
-$green: #3fdaa4;
-$mantle: #292a37;
-$crust: #2e303e;
-$light-gray: #9699b7;
+/* Created   by https://github.com/rxyhn
+   Designed  by https://github.com/rxyhn
+   Maintaned by https://github.com/rxyhn
+*/
 
-* {
-    all: unset; //Unsets everything so you can style everything from scratch
-    font-family: "JetBrainsMono"
+// Global
+*{
+  all: unset;
 }
 
-.icon {
-    font-family: monospace;
-    font-size: 1.4rem;
+// Variable Color's
+$background: #1A1B26;
+$foreground: #A9B1D6;
+
+$black: #24283B;
+$gray: #565F89;
+$red: #F7768E;
+$green: #73DACA;
+$yellow: #E0AF68;
+$blue: #7AA2F7;
+$magenta: #BB9AF7;
+$cyan: #7DCFFF;
+$white: $foreground;
+
+// EWW BAR
+.eww_bar{
+  background-color: $background;
+  padding: .3rem;
 }
 
-
-button {
-    transition: background-color 200ms, color 200ms;
+// Launcher
+.launcher_icon{
+    color: $cyan;
+    font-family: "Font Awesome 6 Pro";
+    font-size: 1.7em;
+    padding: 1rem 0 1rem 0;
 }
 
-.active {
-    color: $green;
-    font-size: 1.4rem;
+// Workspaces
+.works {
+font-family: "Font Awesome 6 Pro";
+padding: .2rem .7rem .2rem .7rem;
+background-color: $black;
+border-radius: 5px;
 }
 
-.inactive {
-    color: $base;
-    font-size: 1.4rem;
+.0 , .01, .02, .03, .04, .05, .06,
+.011, .022, .033, .044, .055, .066{
+  margin: .55rem 0 .55rem 0;
 }
 
-.inactive:hover {
-    color: $light-gray;
+/* Unoccupied */
+.0 {
+color: $gray;
 }
 
-.bar {
-    background-color: $mantle;
-    border-left: 4px dotted $red;
+/* Occupied */
+.01, .02, .03, .04, .05, .06 {
+  color: $gray;
 }
 
-.dashboard {
-    background-color: $mantle;
-    padding: 1rem;
-    margin-bottom: 1rem;
+/* Focused */
+.011,
+.022,
+.033,
+.044,
+.055,
+.066 {
+  color: $foreground;
 }
 
-.cal-box {
-    padding: 1rem 1rem .2rem;
+.0:nth-child(1),
+.0:nth-child(3){
+  font-size: 1.5em;
+}
+.0:nth-child(2){
+  font-size: 1.4em;
+}
+.0:nth-child(4),
+.0:nth-child(5){
+  font-size: 1.6em;
+}
+.0:nth-child(6){
+  font-size: 1.7em;
+}
+.01,
+.011,
+.03,
+.033{
+  font-size: 1.5em;
+}
+.02,
+.022{
+  font-size: 1.4em;
+}
+.04,
+.05,
+.044,
+.055{
+  font-size: 1.6em;
+}
+.06,
+.066{
+  font-size: 1.7em;
 }
 
-.cal {
-    padding: 0;
-    border-radius: 8px;
+// Control Panel
+.control {
+padding: .5rem;
+font-family: Material Icons;
+font-size: 1.6em;
+background-color: $black;
+border-radius: 5px;
 }
-
-.calendar_box {
-    padding: 1rem;
-    calendar:selected {
-        color: $blue;
-    }
-
-    calendar.header {
-        color: $blue;
-        font-weight: bold;
-    }
-
-    calendar.button {
-        color: $blue;
-    }
-
-    calendar.highlight {
-        color: $green;
-        font-weight: bold;
-    }
-
-    calendar:indeterminate {
-        color: rgba(205, 219, 249, 0.3);
-    }
-}
-
-.sysinfo_box {
-    padding: 1rem;
-    .iconmem {
-        font-size: 3rem;
-        color: $yellow;
-    }
-    .iconcpu {
-        font-size: 3rem;
-        color: $blue;
-    }
-    .icondisk {
-        font-size: 3rem;
-        color: $green;
-    }
-    .cpubar, .membar, .diskbar {
-        background-color: $crust;
-    }
-}
-.slider_box {
-    padding: 0 1rem;
-    scale {
-        background-color: $crust;
-        border-radius: 100px;
-        margin: 0.5rem 0;
-    }
-
-    scale trough {
-        border-radius: 100px;
-    }
-
-    scale highlight {
-        padding: 8px;
-        margin: 8px;
-        border-radius: 100px;
-    }
-
-    .brightness_slider highlight {
-        background-color: $yellow;
-    }
-
-    .volume_slider highlight {
-        background-color: $blue;
-    }
-
-    .micvolume_slider highlight {
-        background-color: $green;
-    }
-
-    .slider_icon {
-        font-size: 2rem;
-        padding-right: 0.75rem;
-    }
-}
-
-.notification_box {
-}
-
-.wifi {
-  font-size: 2rem;
+.bat{
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 1.2em;
+  padding-right: .5rem;
   color: $blue;
 }
-
-.clock {
-  font-weight: bold;
-  background-color: $base;
-  color: $text;
-  border-radius: 10px;
-  padding: 0.2rem;
-  margin: 0.5rem;
+.wifi-icon{
+  margin-bottom: .2rem;
+  color: $magenta;
 }
-
-.cpubar {
-  color: $blue;
-  background-color: $surface1;
-  margin: 4px 0;
+.brightness-icon{
+  margin: .2rem 0 .2rem 0;
+  color: $yellow;
 }
-
-.diskbar {
+.volume-icon{
+  margin: .2rem 0 .2rem 0;
   color: $green;
-  background-color: $surface1;
-  margin: 4px 0;
+}
+scale trough {
+  all: unset;
+  background-color: $background;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 10px;
+  margin: .3rem 0 .3rem 0;
+}
+.bribar trough highlight {
+  background-color: $yellow;
+  border-radius: 5px;
+}
+.volbar trough highlight {
+  background-color: $green;
+  border-radius: 5px;
 }
 
-.membar {
-    color: $yellow;
-    background-color: $surface1;
-  margin: 4px 0;
+// Clock
+.time {
+  font-family: Comic Mono;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: $black;
+  color: $white;
+  border-radius: 5px;
+  padding: .7rem 0 .5rem 0;
+  margin: .5rem 0 .5rem 0;
 }
 
-.iconmem, .iconcpu, .icondisk {
-    color: $base;
-    font-size: 2.5rem;
-}
+// Calendar
+.cal-box {
+  background-color: $black;
+  font-family: Comic Mono;
+  font-size: 1em;
+  font-weight: bold;
 
-.date {
-  font-size: 1.5rem;
-}
+  .cal-inner-box {
+      padding: 1rem 1rem .2rem;
 
-.reg-btn {
-    font-size: 2rem;
-    margin: 2px 8px;
-    border-radius: 10px;
-}
+      .cal {
+          &.highlight {
+              padding: 10rem;
+          }
 
-.dashbutton {
-    color: $mauve;
-}
-
-.dashbutton:hover {
-    background-color: $base;
-}
-
-.dashbutton:active {
-    background-color: $mauve;
-    color: $mantle;
-}
-
-.powerbutton {
-    color: $red;
-}
-
-.powerbutton:hover {
-    background-color: $base;
-}
-
-.powerbutton:active {
-    background-color: $red;
-    color: $mantle;
-}
-
-.launchbutton {
-    background-color: $blue;
-    color: $mantle;
-    margin-top: 6px;
-}
-
-.launchbutton:hover {
-    background-color: $mauve;
-}
-
-.launchbutton:active {
-    color: $mauve;
-    background-color: $mantle;
-}
-
-.battery {
-    font-size: 1.5rem;
-    color: $blue;
-}
-
-// Credits AlphaTechnolog
-.powermenu-box {
-    padding: 0 2px;
-    margin: 7px 7px 7px 0px;
-    background: inherit;
-    .dispatcher {
-        border-radius: 15px;
-        background: $base;
-        color: $red;
-        font-size: 14px;
-        padding: 0 14px 0 10px;
-        &:hover { background-color: $surface0; }
-        &:active { background-color: $surface1; }
-    }
-}
-
-// powermenu
-.powermenu-container {
-  background: $crust;
-  color: $text;
-  padding: 10px;
-  font-size: 55px;
-
-  transition: all 200ms cubic-bezier(.1,-0.00,.0,1.49);
-
-  .btn { margin: 1rem;}
-  // shutdown
-  .shutdown-btn-box .btn {
-    color: $red;
-    border-radius: 15px;
-    background-color: $mantle;
-    &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
+          padding: .8rem .25rem 0rem;
+          margin-left: 10px;
+      }
   }
-  // reboot
-  .reboot-btn-box .btn {
-    color: $mauve;
-    border-radius: 15px;
-    background-color: $mantle;
-    &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
-  }
-  // exit
-  .exit-btn-box .btn {
-    color: $yellow;
-    border-radius: 15px;
-    background-color: $mantle;
-    &:hover { background-color: $base; }
-    &:active { background-color: $surface1; }
-  }
+}
+
+calendar:selected {
+  color: $blue;
+}
+
+calendar.header {
+color: $blue;
+font-weight: bold;
+}
+
+calendar.button {
+color: $magenta;
+}
+
+calendar.highlight {
+color: $magenta;
+font-weight: bold;
+}
+
+calendar:indeterminate {
+color: $background;
+}
+
+// Powermenu
+.powermenu {
+  font-family: feather;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.button-bspres, .button-reb, .button-lock,
+.button-quit, .button-off{
+  padding: .5rem .2rem .3rem .2rem;
+}
+.button-off{
+  margin-bottom: .5rem;
+  color: $red;
+}
+.button-bspres{
+  color: $green;
+}
+.button-reb{
+  color: $yellow
+}
+.button-quit{
+  color: $magenta;
+}
+.button-lock{
+  color: $blue;
 }
