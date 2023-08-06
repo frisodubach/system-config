@@ -10,8 +10,15 @@
     # programs.eww.enable = true;
 
     # Config
-    home.file.".config/eww/eww.scss".source = ./eww.scss;
-    home.file.".config/eww/eww.yuck".source = ./eww.yuck;
+    home.file.".config/eww/eww.scss" = {
+      source = ./eww.scss;
+      target = .config/eww/eww.scss;
+    };
+
+    home.file.".config/eww/eww.yuck" = {
+      source = ./eww.yuck;
+      target = .config/eww/eww.scss;
+    };
 
     #scripts
     home.file.".config/eww/scripts/battery.sh" = {
