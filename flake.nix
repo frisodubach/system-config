@@ -36,14 +36,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
             }
-
-            # hyprland.homeManagerModules.default
-            # {
-            #   wayland.windowManager.hyprland = {
-            #     enable = true;
-            #     package = null;
-            #   };
-            # }
           ];
         };
       };

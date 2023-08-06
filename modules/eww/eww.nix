@@ -1,12 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ inputs, config, lib, pkgs, ... }:
 
 {
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "23.05";
+    home.homeDirectory = "/home/phonon";
 
-    home.packages = with pkgs; [ eww-wayland lua ];
+    home.packages = with pkgs; [ eww-wayland lua pamixer brightnessctl ];
 
-    programs.eww.enable = true;
+    # programs.eww.enable = true;
 
     # Config
     home.file.".config/eww/eww.scss".source = ./eww.scss;
