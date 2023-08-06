@@ -3,7 +3,9 @@
 {
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "23.05";
+    home.username = "phonon";
     home.homeDirectory = "/home/phonon";
+    programs.home-manager.enable = true;
 
     home.packages = with pkgs; [ eww-wayland lua pamixer brightnessctl ];
 
