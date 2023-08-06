@@ -15,11 +15,13 @@
     home.file.".config/eww/eww.scss" = {
       source = ./eww.scss;
       target = .config/eww/eww.scss;
+      enable = true;
     };
 
     home.file.".config/eww/eww.yuck" = {
       source = ./eww.yuck;
-      target = .config/eww/eww.scss;
+      target = eww/eww.scss;
+      enable = true;
     };
 
     #scripts
