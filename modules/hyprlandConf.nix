@@ -47,10 +47,11 @@
           disable_while_typing = true
           clickfinger_behavior = false
           tap-to-click = true
+          scroll_factor = 0.8
 
       }
 
-      sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+      sensitivity = 0.5 # -1.0 - 1.0, 0 means no modification.
   }
 
   general {
