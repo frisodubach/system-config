@@ -20,7 +20,7 @@
     };
 
     #scripts
-    home.file.".config/ewww/scripts" = {
+    home.file.".config/eww/scripts" = {
       source = ./scripts;
       executable = true;
       recursive = true;
