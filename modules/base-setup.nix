@@ -8,6 +8,7 @@
     ./alacritty.nix
     ./dunst.nix
     ./swaylock.nix
+    ./eww/eww.nix
   ];
 
   environment.sessionVariables = rec {
