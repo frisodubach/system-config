@@ -384,13 +384,13 @@
     home.file.".config/waybar/scripts/dunst.sh" = {
       text = ''
         COUNT=$(dunstctl count waiting)
-        ENABLED="󰂚 "
-        DISABLED="󰂛 "
-        if [ $COUNT != 0 ]; then DISABLED="󱅫 "; fi
+        ENABLED=" 󰂚 "
+        DISABLED=" 󰂛 "
+        if [ $COUNT != 0 ]; then DISABLED=" 󱅫 "; fi
         if dunstctl is-paused | grep -q "false"; then
-          echo "<span foreground='#A1EFD3'>$ENABLED</span>"
+          echo "$ENABLED"
         else
-          echo "<span foreground='#F48FB1'>$DISABLED</span>"
+          echo "$DISABLED"
         fi
       '';
       executable = true;
