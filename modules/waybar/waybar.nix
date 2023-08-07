@@ -25,7 +25,7 @@
             "bluetooth"
             # "network#speed"
             # "cpu"
-            "temperature"
+            # "temperature"
             "backlight"
             "battery"
             "clock"
@@ -84,17 +84,24 @@
             "scroll-step" = 1;
           };
 
-          "network#interface" = {
-            format-ethernet = "<span foreground='#91DDFF'>󰣶 </span> {ifname}";
-            format-wifi = "<span foreground='#91DDFF'>󰖩 </span>{ifname}";
-            tooltip = true;
-            tooltip-format = "{ipaddr}";
+          "network" = {
+            "format-wifi" = "{essid} ({signalStrength}%) ";
+            "format-ethernet" = "";
+            "format-disconnected" = "";
+            "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
           };
 
-          "network#speed" = {
-            format =
-              "<span foreground='#78A8FF'>⇡</span>{bandwidthUpBits} <span foreground='#78A8FF'>⇣</span>{bandwidthDownBits}";
-          };
+          # "network#interface" = {
+          #   format-ethernet = "<span foreground='#91DDFF'>󰣶 </span> {ifname}";
+          #   format-wifi = "<span foreground='#91DDFF'>󰖩 </span>{ifname}";
+          #   tooltip = true;
+          #   tooltip-format = "{ipaddr}";
+          # };
+
+          # "network#speed" = {
+          #   format =
+          #     "<span foreground='#78A8FF'>⇡</span>{bandwidthUpBits} <span foreground='#78A8FF'>⇣</span>{bandwidthDownBits}";
+          # };
 
           cpu = {
             format =
