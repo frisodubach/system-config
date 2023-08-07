@@ -229,23 +229,20 @@
         @define-color bg2	#504945;
 
 
-        @define-color bg  @black;
-        @define-color warning 	@bryellow;
-        @define-color critical	@red;
-        @define-color mode	@black;
-        @define-color unfocused	@bg2;
-        @define-color focused	@braqua;
-        @define-color inactive	@purple;
-        @define-color sound	@brpurple;
-        @define-color network	@purple;
-        @define-color memory	@braqua;
-        @define-color cpu	@green;
-        @define-color temp	@brgreen;
-        @define-color layout	@bryellow;
-        @define-color battery	@aqua;
-        @define-color date	@black;
-        @define-color time	@white;
-        @define-color music @aqua;
+        @define-color bg            @black;
+        @define-color warning       @bryellow;
+        @define-color critical      @red;
+        @define-color mode          @black;
+        @define-color unfocused     @bg2;
+        @define-color focused       @braqua;
+        @define-color inactive      @purple;
+        @define-color sound         @brpurple;
+        @define-color network       @purple;
+        @define-color layout        @bryellow;
+        @define-color battery       @aqua;
+        @define-color date          @black;
+        @define-color time          @white;
+        @define-color music         @aqua;
         @define-color notification  @aqua;
 
         /* Reset all styles */
