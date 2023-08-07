@@ -204,7 +204,7 @@
 
           tray = {
             icon-size = 16;
-            spacing = 8;
+            spacing = 10;
           };
         };
       };
@@ -255,8 +255,6 @@
         	border: none;
         	border-radius: 14px;
         	min-height: 0;
-        	margin: 0px 8px;
-        	padding: 0px 14px;
         	box-shadow: none;
         	text-shadow: none;
         	icon-shadow: none;
@@ -269,9 +267,19 @@
          font-size: 14px;
          }
 
-        #window {
-          padding: 0px 14px 0px 14px;
-          margin: 8px 0px 0px 0px;
+        .modules-left * {
+          background-color: @black;
+          margin: 2px 10px 0 0;
+        }
+
+        .modules-center * {
+          background-color: @black;
+          margin: 2px 0 0 0;
+        }
+
+        .modules-right * {
+          background-color: @black;
+          margin: 2px 10px 0 0;
         }
 
         tooltip {
@@ -282,12 +290,9 @@
         #custom-nix {
           color: @blue;
           background-color: @black;
-          padding: 0px 14px;
         }
 
         #workspaces button {
-          padding: 0px 14px;
-          margin: 0 0 0 0;
           background-color: @black;
           color: @text;
         }
@@ -299,65 +304,49 @@
 
         #taskbar button {
           background-color: @black;
-          padding: 0px 14px;
         }
 
         #taskbar button.active {
           background-color: @black;
-          padding: 0px 14px;
-        }
-
-        .modules-right * {
-          background-color: @black;
-          padding: 0px 14px;
-          margin: 0 8px 0 8px;
         }
 
         #mpris {
           background-color: @music;
-          padding: 0px 14px;
           color: @text;
         }
 
         #pulseaudio {
           background-color: @audio;
           color: @text;
-          padding: 0px 14px;
         }
 
         #network {
           background-color: @network;
           color: @text;
-          padding: 8px 14px;
         }
 
         #backlight {
           background-color: @backlight;
           color: @text;
-          padding: 0px 14px;
         }
 
         #custom-notification {
-          padding: 0px 14px 0px 14px;
           background-color: @notification;
           color: @text;
         }
 
         #batttery {
-          padding: 0px 14px;
           background-color: @battery;
           color: @text;
         }
 
         #clock {
-          padding: 0px 14px;
           background-color: @clock;
           color: @text;
           }
 
         #tray {
           /* background-color: @bg2; */
-          padding: 0 14px 0 14px;
         }
 
         #tray * {
