@@ -253,7 +253,7 @@
         /* Reset all styles */
         * {
         	border: none;
-        	border-radius: 10px;
+        	border-radius: 14px;
         	min-height: 0;
         	margin: 0;
         	padding: 0;
@@ -277,11 +277,11 @@
         #custom-nix {
           color: @blue;
           background-color: @black;
-          padding: 2px 8px;
+          padding: 0px 16px;
         }
 
         #workspaces button {
-          padding: 2px 8px;
+          padding: 0px 16px;
           margin: 0 0 0 0;
           background-color: @black;
         }
@@ -292,36 +292,35 @@
 
         #taskbar button {
           background-color: @black;
-          padding: 2px 8px;
+          padding: 0px 16px;
         }
 
         #taskbar button.active {
           background-color: @black;
-          padding: 2px 8px;
+          padding: 0px 16px;
         }
 
         .modules-right * {
           background-color: @black;
-          padding: 0px 8px;
+          padding: 0px 16px;
           margin: 0 0 0 4px;
         }
 
         #mpris {
           background-color: @black;
-          padding: 0 8px;
+          padding: 0 16px;
           color: @music;
         }
 
         #custom-notification {
-          padding: 0 8px 0 8px;
+          padding: 0 16px 0 16px;
           background-color: @black;
           color: @notification;
-          margin: 0px 20px;
         }
 
         #tray {
           background-color: @brred;
-          padding: 0 8px 0 8px;
+          padding: 0 16px 0 16px;
         }
 
         #tray * {
