@@ -278,11 +278,11 @@
         #custom-nix {
           color: @blue;
           background-color: @black;
-          padding: 8px 2px;
+          padding: 2px 8px;
         }
 
         #workspaces button {
-          padding: 8px 2px;
+          padding: 2px 8px;
           margin: 0 0 0 0;
           background-color: @black;
         }
@@ -293,23 +293,23 @@
 
         #taskbar button {
           background-color: @black;
-          padding: 8px 2px;
+          padding: 2px 8px;
         }
 
         #taskbar button.active {
           background-color: @black;
-          padding: 8px 2px;
+          padding: 2px 8px;
         }
 
         .modules-right * {
           background-color: @black;
-          padding: 8px 0px;
+          padding: 0px 8px;
           margin: 0 0 0 4px;
         }
 
         #mpris {
           background-color: @black;
-          padding: 8px 0;
+          padding: 0 8px;
           color: @music;
         }
 
