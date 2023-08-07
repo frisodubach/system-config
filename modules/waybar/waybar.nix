@@ -96,8 +96,12 @@
 
           "pulseaudio" = {
             # format = "<span foreground='#F48FB1'>󰓃</span> {volume}%";
-            "format" = "{volume}% {icon}";
-            "format-bluetooth" = "{volume}% {icon}";
+            "format" = ''
+              {icon}
+               {volume}%'';
+            "format-bluetooth" = ''
+              {icon}
+               volume}%'';
             "format-muted" = "";
             "format-icons" = {
               "headphone" = "";
@@ -146,7 +150,10 @@
           };
 
           backlight = {
-            format = "<span foreground='#F2B482'>{icon}</span> {percent}%";
+            format = ''
+
+                            <span foreground='#F2B482'>{icon}</span>
+              {percent}%'';
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
             #rotate = 90;
           };
@@ -188,7 +195,9 @@
           };
 
           clock = {
-            format = "<span foreground='#A1EFD3'>  </span>{:%H:%M}";
+            format = ''
+              <span foreground='#A1EFD3'>
+               </span>{:%H:%M}'';
             format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
             #rotate = 90;
           };
