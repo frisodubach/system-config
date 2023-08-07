@@ -268,7 +268,8 @@
 
         .modules-left * {
           background-color: @bg;
-          margin: 0px 4px 0px 4px;
+          margin: 0px 4px 0px -20px;
+          padding: 0px 24px 0 8px;
         }
 
         .modules-center * {
@@ -317,7 +318,7 @@
         #custom-nix {
           color: @blue;
           background-color: @bg;
-          padding: 0px 2px 0px 4px;
+          /*padding: 0px 2px 0px 4px;*/
         }
 
         #taskbar button {
