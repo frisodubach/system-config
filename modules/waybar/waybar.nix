@@ -25,7 +25,7 @@
             "mpris"
             "pulseaudio"
             "network"
-            "bluetooth"
+            # "bluetooth"
             # "network#speed"
             # "cpu"
             # "temperature"
@@ -277,50 +277,82 @@
         #custom-nix {
           color: @blue;
           background-color: @black;
-          padding: 0px 16px;
+          padding: 0px 20px;
         }
 
         #workspaces button {
-          padding: 0px 16px;
+          padding: 0px 20px;
           margin: 0 0 0 0;
           background-color: @black;
+          color: @text;
         }
 
         #workspaces button.active {
           background-color: @bg2;
+          color: @text;
         }
 
         #taskbar button {
           background-color: @black;
-          padding: 0px 16px;
+          padding: 0px 20px;
         }
 
         #taskbar button.active {
           background-color: @black;
-          padding: 0px 16px;
+          padding: 0px 20px;
         }
 
         .modules-right * {
           background-color: @black;
-          padding: 0px 16px;
+          padding: 0px 20px;
           margin: 0 0 0 4px;
         }
 
         #mpris {
-          background-color: @black;
+          background-color: @music;
           padding: 0 16px;
-          color: @music;
+          color: @text;
+        }
+
+        #pulseaudio {
+          background-color: @audio;
+          color: @text;
+          padding: 0px 16px;
+        }
+
+        #network {
+          background-color: @network;
+          color: @text;
+          padding: 0 16px;
+        }
+
+        #backlight {
+          background-color: @backlight;
+          color: @text;
+          padding: 0px 16px;
         }
 
         #custom-notification {
           padding: 0 16px 0 16px;
-          background-color: @black;
-          color: @notification;
+          background-color: @notification;
+          color: @text;
         }
 
+        #batttery {
+          padding: 0px 16px;
+          background-color: @battery;
+          color: @text;
+        }
+
+        #clock {
+          padding: 0px 16px;
+          background-color: @clock;
+          color: @text;
+          }
+
         #tray {
-          background-color: @brred;
-          padding: 0 16px 0 16px;
+          \* background-color: @bg2; *\
+          padding: 0 20px 0 20px;
         }
 
         #tray * {
