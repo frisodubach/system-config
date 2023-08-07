@@ -262,7 +262,7 @@
          background-color : transparent;
          font-family: 'FiraCode Mono';
          font-size: 14px;
-         margin: 0 0px 0 0;
+         margin: 10px 0px 0 0;
          }
 
         .modules-left * {
@@ -308,7 +308,8 @@
         #taskbar,
         #custom-nix
         #idle_inhibitor {
-            padding: 0 10px;
+            padding: 0 0px;
+            margin: 0px 0px;
         }
 
         #custom-nix {
