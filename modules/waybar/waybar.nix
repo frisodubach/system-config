@@ -315,13 +315,14 @@
         #taskbar,
         #custom-nix
         #idle_inhibitor {
-          padding: 0 0px;
-          margin: 0px 0px;
+          /*padding: 0 0px;
+          margin: 0px 0px;*/
         }
 
         #custom-nix {
           color: @blue;
           background-color: @bg;
+          padding: 0px 2px 0px 0px;
         }
 
         #taskbar button {
