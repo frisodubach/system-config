@@ -96,10 +96,8 @@
 
           "pulseaudio" = {
             # format = "<span foreground='#F48FB1'>󰓃</span> {volume}%";
-            "format" = ''
-              {icon}
-              {volume}%'';
-            "format-bluetooth" = "{icon}{volume}%";
+            "format" = "{icon} {volume}%";
+            "format-bluetooth" = "{icon} {volume}%";
             "format-muted" = "";
             "format-icons" = {
               "headphone" = "";
@@ -116,7 +114,8 @@
           };
 
           "network" = {
-            "format-wifi" = "{essid} ({signalStrength}%) ";
+            # "format-wifi" = "{essid} ({signalStrength}%) ";
+            "format-wifi" = "{essid} ";
             "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
@@ -148,7 +147,7 @@
           };
 
           backlight = {
-            format = "<span foreground='#F2B482'>{icon}</span>{percent}%";
+            format = "<span foreground='#F2B482'>{icon} </span>{percent}%";
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
             #rotate = 90;
           };
@@ -165,11 +164,11 @@
               "warning" = 30;
               "critical" = 15;
             };
-            "format" = "{icon}{capacity}%";
-            "format-charging" = "{capacity}%";
+            "format" = "{icon} {capacity}%";
+            "format-charging" = " {capacity}%";
             "format-good" =
-              "{icon}{capacity}%"; # An empty format will hide the module
-            "format-full" = "{icon}{capacity}%";
+              "{icon} {capacity}%"; # An empty format will hide the module
+            "format-full" = "{icon} {capacity}%";
             "format-icons" = [ "" "" "" "" "" ];
             #"rotate" = 90;
           };
