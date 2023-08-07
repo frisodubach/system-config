@@ -279,7 +279,7 @@
 
         .modules-right * {
           background-color: @bg;
-          margin: 4px 0px 4px 0px;
+          margin: 0px 4px 0px 4px;
           padding: 0px 8px 0px 8px;
         }
 
@@ -343,7 +343,7 @@
         #network {
           background-color: @bg;
           color: @network;
-          padding: 0px 10px 0px 10px;
+          padding: 0px 16px 0px 16px;
         }
 
         #backlight {
