@@ -17,11 +17,12 @@
           margin = "0";
           layer = "top";
           postion = "left";
-          width = 14;
-          height = 1080;
-          modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
+          # width = 14;
+          # height = 1080;
+          modules-left = [ "custom/nix" "wlr/workspaces" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
+            # "mpris"
             "pulseaudio"
             "network"
             "bluetooth"
@@ -35,10 +36,10 @@
             "tray"
           ];
 
-          # "hyprland/window" = {
-          #   max-length = 150;
-          #   rotate = 270;
-          # };
+          "hyprland/window" = {
+            #   max-length = 150;
+            rotate = 90;
+          };
 
           persistent_workspaces = {
             "1" = [ ];
@@ -73,6 +74,7 @@
               # "focused" = "";
               # "default" = "";
             };
+            rotate = 90;
           };
 
           mpris = {
@@ -87,7 +89,10 @@
 
           "custom/nix" = { format = "󱄅 "; };
 
-          "wlr/taskbar" = { on-click = "activate"; };
+          "wlr/taskbar" = {
+            on-click = "activate";
+            rotoate = 90;
+          };
 
           "pulseaudio" = {
             # format = "<span foreground='#F48FB1'>󰓃</span> {volume}%";
@@ -105,6 +110,7 @@
             };
             "scroll-step" = 1;
             "on-click" = "pavucontrol";
+            "rotate" = 90;
           };
 
           "network" = {
@@ -113,6 +119,7 @@
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
             "on-click" = "kitty -e 'nmtui'";
+            "rotate" = 90;
           };
 
           # "network#interface" = {
@@ -161,6 +168,7 @@
               "{capacity}% {icon}"; # An empty format will hide the module
             "format-full" = "{capacity}% {icon}";
             "format-icons" = [ "" "" "" "" "" ];
+            "rotate" = 90;
           };
 
           "bluetooth" = {
@@ -175,11 +183,13 @@
               {device_enumerate}'';
             "tooltip-format-enumerate-connected" =
               "{device_alias}	{device_address}";
+            "rotate" = 90;
           };
 
           clock = {
             format = "<span foreground='#A1EFD3'>  </span>{:%H:%M}";
             format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
+            rotate = 90;
           };
 
           "custom/notification" = {
