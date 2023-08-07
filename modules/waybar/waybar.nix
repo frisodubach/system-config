@@ -189,7 +189,7 @@
           };
 
           clock = {
-            format = "<span foreground='#A1EFD3'></span>{:%H:%M}";
+            format = "<span foreground='#A1EFD3'> </span>{:%H:%M}";
             format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
             #rotate = 90;
           };
@@ -253,7 +253,7 @@
         /* Reset all styles */
         * {
         	border: none;
-        	border-radius: 0;
+        	border-radius: 10px;
         	min-height: 0;
         	margin: 0;
         	padding: 0;
@@ -316,6 +316,7 @@
           padding: 0 8px 0 8px;
           background-color: @black;
           color: @notification;
+          margin: 0px 20px;
         }
 
         #tray {
