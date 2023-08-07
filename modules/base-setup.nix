@@ -9,7 +9,7 @@
     ./dunst.nix
     ./swaylock.nix
     # ./eww/eww.nix
-    ./waybar/waybax.nix
+    ./waybar/waybar.nix
   ];
 
   environment.sessionVariables = rec {
