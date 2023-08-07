@@ -268,8 +268,9 @@
 
         .modules-left * {
           background-color: @bg;
-          margin: 0px -20px 0px 4px;
-          padding: 0px 8px 0 24px;
+          margin: 0px 4px 0px 4px;
+          /*margin: 0px -20px 0px 4px;
+          padding: 0px 8px 0 24px;*/
         }
 
         .modules-center * {
