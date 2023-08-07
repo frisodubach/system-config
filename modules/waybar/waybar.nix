@@ -38,7 +38,7 @@
 
           "hyprland/window" = {
             #   max-length = 150;
-            rotate = 90;
+            "rotate" = 90;
           };
 
           persistent_workspaces = {
@@ -148,6 +148,7 @@
           backlight = {
             format = "<span foreground='#F2B482'>{icon}</span> {percent}%";
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
+            rotate = 90;
           };
 
           # battery = {
@@ -197,6 +198,7 @@
             tooltip = false;
             on-click = "dunstctl set-paused toggle";
             restart-interval = 1;
+            rotate = 90;
           };
 
           tray = {
@@ -261,7 +263,7 @@
 
         window#waybar {
          background-color : transparent;
-         border-bottom: solid 2px @white;
+         # border-bottom: solid 2px @white;
          font-family: 'FiraCode Mono';
          font-size: 14px;
          }
