@@ -230,6 +230,7 @@
         @define-color bg2	#504945;
 
 
+        @define-color bg  @black;
         @define-color warning 	@bryellow;
         @define-color critical	@red;
         @define-color mode	@black;
@@ -264,40 +265,41 @@
         }
 
         window#waybar {
-         background-color : transparent;
-         font-family: 'FiraCode Mono';
-         font-size: 14px;
-         margin: 0px 0px 0px 0px;
-         }
+          background-color : transparent;
+          font-family: 'FiraCode Mono';
+          font-size: 14px;
+          margin: 0px 0px 0px 0px;
+        }
 
         .modules-left * {
-          background-color: @black;
+          background-color: @bg;
           margin: 0px 2px 0px 2px;
         }
 
         .modules-center * {
-          background-color: @black;
+          background-color: @bg;
           margin: 0px 4px 0px 4px;
         }
 
         .modules-right * {
-          background-color: @black;
+          background-color: @bg;
           margin: 4px 0px 4px 0px;
+          padding: 0px 4px 0px 4px;
         }
 
         #workspaces button {
-          background-color: @black;
-          color: @text;
+          background-color: @bg;
+          color: @white;
           padding: 0px 0px;
         }
 
         #workspaces button.active {
-          background-color: @bg2;
+          background-color: @bg;
           color: @text;
         }
 
         tooltip {
-          background-color: @bg2;
+          background-color: @bg;
           color: @white;
         }
 
@@ -313,58 +315,57 @@
         #taskbar,
         #custom-nix
         #idle_inhibitor {
-            padding: 0 0px;
-            margin: 0px 0px;
+          padding: 0 0px;
+          margin: 0px 0px;
         }
 
         #custom-nix {
           color: @blue;
-          background-color: @black;
+          background-color: @bg;
         }
 
-
         #taskbar button {
-          background-color: @black;
+          background-color: @bg;
         }
 
         #taskbar button.active {
-          background-color: @black;
+          background-color: @bg2;
         }
 
         #mpris {
-          background-color: @music;
-          color: @text;
+          background-color: @bg;
+          color: @music;
         }
 
         #pulseaudio {
-          background-color: @audio;
-          color: @text;
+          background-color: @bg;
+          color: @audio;
         }
 
         #network {
-          background-color: @network;
-          color: @text;
+          background-color: @bg;
+          color: @network;
         }
 
         #backlight {
-          background-color: @backlight;
-          color: @text;
+          background-color: @bg;
+          color: @backlight;
         }
 
         #custom-notification {
-          background-color: @notification;
-          color: @text;
+          background-color: @bg;
+          color: @notification;
         }
 
         #batttery {
-          background-color: @battery;
-          color: @text;
+          background-color: @bg;
+          color: @battery;
         }
 
         #clock {
-          background-color: @clock;
-          color: @text;
-          }
+          background-color: @bg;
+          color: @clock;
+        }
 
         #tray {
           /* background-color: @bg2; */
