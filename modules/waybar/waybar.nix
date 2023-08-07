@@ -283,7 +283,7 @@
         .modules-right * {
           background-color: @bg;
           margin: 0px 4px 0px -16px;
-          padding: 0px 8px 0px 32px;
+          padding: 0px 32px 0px 8px;
         }
 
         #workspaces button {
