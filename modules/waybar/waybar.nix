@@ -282,8 +282,8 @@
 
         .modules-right * {
           background-color: @bg;
-          margin: 0px 4px 0px -16px;
-          padding: 0px 32px 0px 8px;
+          margin: 0px 4px 0px -20px;
+          padding: 0px 24px 0px 8px;
         }
 
         #workspaces button {
@@ -352,7 +352,7 @@
         #backlight {
           background-color: @bg;
           color: @backlight;
-          padding: 0px 8px 0px 8px;
+          /*padding: 0px 8px 0px 8px;*/
         }
 
         #custom-notification {
