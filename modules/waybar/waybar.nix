@@ -16,7 +16,7 @@
         mainBar = {
           margin = "0";
           layer = "top";
-          postion = "left";
+          position = "left";
           # width = 14;
           # height = 1080;
           modules-left = [ "custom/nix" "wlr/workspaces" ];
@@ -118,7 +118,7 @@
             "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
-            "on-click" = "kitty -e 'nmtui'";
+            "on-click" = "alacritty -e 'nmtui'";
             "rotate" = 90;
           };
 
