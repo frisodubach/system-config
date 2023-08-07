@@ -16,7 +16,7 @@
         mainBar = {
           margin = "0";
           layer = "top";
-          postion = "right";
+          postion = "left";
           modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
@@ -33,7 +33,7 @@
             "tray"
           ];
 
-          "wlr/window" = {
+          "hyprland/window" = {
             max-length = 150;
             rotate = 270;
           };
@@ -260,14 +260,14 @@
         }
 
         #custom-nix {
-          color: @orange;
+          color: @blue;
           background-color: @black;
           padding: 2px 8px;
         }
 
         #workspaces button {
           padding: 2px 8px;
-          margin: 0 8px 0 0;
+          margin: 0 0 0 0;
           background-color: @black;
         }
 
