@@ -86,7 +86,7 @@
             max-length = 50;
           };
 
-          "custom/nix" = { format = "󱄅 "; };
+          "custom/nix" = { format = " 󱄅 "; };
 
           "wlr/taskbar" = {
             on-click = "activate";
@@ -95,8 +95,8 @@
 
           "pulseaudio" = {
             # format = "<span foreground='#F48FB1'>󰓃</span> {volume}%";
-            "format" = "{icon} {volume}%";
-            "format-bluetooth" = "{icon} {volume}%";
+            "format" = "{icon}  {volume}%";
+            "format-bluetooth" = "{icon}  {volume}%";
             "format-muted" = "";
             "format-icons" = {
               "headphone" = "";
@@ -114,7 +114,7 @@
 
           "network" = {
             # "format-wifi" = "{essid} ({signalStrength}%) ";
-            "format-wifi" = "{essid} ";
+            "format-wifi" = "{essid}  ";
             "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
@@ -164,11 +164,11 @@
               "warning" = 30;
               "critical" = 15;
             };
-            "format" = "{icon} {capacity}%";
-            "format-charging" = " {capacity}%";
+            "format" = "{icon}  {capacity}%";
+            "format-charging" = "  {capacity}%";
             "format-good" =
-              "{icon} {capacity}%"; # An empty format will hide the module
-            "format-full" = "{icon} {capacity}%";
+              "{icon}  {capacity}%"; # An empty format will hide the module
+            "format-full" = "{icon}  {capacity}%";
             "format-icons" = [ "" "" "" "" "" ];
             #"rotate" = 90;
           };
@@ -365,10 +365,10 @@
           /* background-color: @bg2; */
         }
 
-        #tray * {
+        /* #tray * {
           padding: 0;
           margin: 0;
-        }
+        } */
 
       '';
     };
