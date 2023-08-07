@@ -272,17 +272,17 @@
 
         .modules-left * {
           background-color: @black;
-          margin: 0px 0px 0 0;
+          margin: 0px 2px 0px 2px;
         }
 
         .modules-center * {
           background-color: @black;
-          margin: 0px 10px 0px 0px;
+          margin: 0px 4px 0px 4px;
         }
 
         .modules-right * {
           background-color: @black;
-          margin: 0px 10px 0 10px;
+          margin: 4px 0px 4px 0px;
         }
 
         #workspaces button {
