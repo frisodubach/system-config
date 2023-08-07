@@ -21,7 +21,7 @@
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
             "pulseaudio"
-            "network#interface"
+            "network"
             "bluetooth"
             # "network#speed"
             # "cpu"
@@ -33,10 +33,21 @@
             "tray"
           ];
 
+          "sway/window" = {
+            max-length = 150;
+            rotate = 270;
+          };
+
           persistent_workspaces = {
             "1" = [ ];
             "2" = [ ];
             "3" = [ ];
+            "4" = [ ];
+            "5" = [ ];
+            "6" = [ ];
+            "7" = [ ];
+            "8" = [ ];
+            "9" = [ ];
           };
 
           "wlr/workspaces" = {
@@ -44,10 +55,19 @@
             on-click = "activate";
             sort-by-number = true;
             format-icons = {
-              "1" = ''<span foreground="#A1EFD3"></span>'';
-              "2" = ''<span foreground="#FFE6B3">󰈹</span>'';
-              "3" = ''<span foreground="#91DDFF">󰒱</span>'';
-              "4" = ''<span foreground="#D4BFFF">󰧑</span>'';
+              # "1" = ''<span foreground="#A1EFD3"></span>'';
+              # "2" = ''<span foreground="#FFE6B3">󰈹</span>'';
+              # "3" = ''<span foreground="#91DDFF">󰒱</span>'';
+              # "4" = ''<span foreground="#D4BFFF">󰧑</span>'';
+              "1" = "一";
+              "2" = "二";
+              "3" = "三";
+              "4" = "四";
+              "5" = "五";
+              "6" = "六";
+              "7" = "七";
+              "8" = "八";
+              "9" = "九";
               "focused" = "";
               "default" = "";
             };
@@ -82,6 +102,7 @@
               "default" = [ "" "" ];
             };
             "scroll-step" = 1;
+            "on-click" = "pavucontrol";
           };
 
           "network" = {
@@ -89,6 +110,7 @@
             "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
+            "on-click" = "kitty -e 'nmtui'";
           };
 
           # "network#interface" = {
@@ -173,38 +195,89 @@
       };
 
       style = ''
+        /* Styles */
+
+        /* Colors (gruvbox) */
+        @define-color black	#282828;
+        @define-color red	#cc241d;
+        @define-color green	#98971a;
+        @define-color yellow	#d79921;
+        @define-color blue	#458588;
+        @define-color purple	#b16286;
+        @define-color aqua	#689d6a;
+        @define-color gray	#a89984;
+        @define-color brgray	#928374;
+        @define-color brred	#fb4934;
+        @define-color brgreen	#b8bb26;
+        @define-color bryellow	#fabd2f;
+        @define-color brblue	#83a598;
+        @define-color brpurple	#d3869b;
+        @define-color braqua	#8ec07c;
+        @define-color white	#ebdbb2;
+        @define-color bg2	#504945;
+
+
+        @define-color warning 	@bryellow;
+        @define-color critical	@red;
+        @define-color mode	@black;
+        @define-color unfocused	@bg2;
+        @define-color focused	@braqua;
+        @define-color inactive	@purple;
+        @define-color sound	@brpurple;
+        @define-color network	@purple;
+        @define-color memory	@braqua;
+        @define-color cpu	@green;
+        @define-color temp	@brgreen;
+        @define-color layout	@bryellow;
+        @define-color battery	@aqua;
+        @define-color date	@black;
+        @define-color time	@white;
+
+        /* Reset all styles */
         * {
-          min-height: 0;
-          color: #CBE3E7;
+        	border: none;
+        	border-radius: 0;
+        	min-height: 0;
+        	margin: 0;
+        	padding: 0;
+        	box-shadow: none;
+        	text-shadow: none;
+        	icon-shadow: none;
         }
 
         window#waybar {
-          border-bottom: solid 2px #2D2B40;
-          font-family: 'FiraCode Mono';
-          font-size: 14px;
-        }
+         background-color : transparent;
+         border-bottom: solid 2px @white;
+         font-family: 'FiraCode Mono';
+         font-size: 14px;
+         }
 
         tooltip {
-          background-color: #2D2B40;
-          color: #CBE3E7;
+          background-color: @bg2;
+          color: @white;
         }
 
         #custom-nix {
-          color: #91DDFF;
+          color: @orange;
           padding: 2px 8px;
         }
 
         #workspaces button {
           padding: 2px 8px;
           margin: 0 8px 0 0;
+          background-color: @black;
         }
 
         #workspaces button.active {
-          background-color: #2D2B40;
+          background-color: @bg2;
+        }
+
+        #taskbar button {
+          background-color: @black;
         }
 
         #taskbar button.active {
-          background-color: #2D2B40;
+          background-color: @black;
         }
 
         .modules-right * {
@@ -225,7 +298,7 @@
         }
 
         #tray {
-          background-color: #2D2B40;
+          background-color: @brred;
           padding: 0 8px 0 8px;
         }
 
