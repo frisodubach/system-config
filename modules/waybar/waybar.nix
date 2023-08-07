@@ -293,7 +293,7 @@
         }
 
         #workspaces button.active {
-          background-color: @bg;
+          background-color: @bg2;
           color: @text;
         }
 
@@ -335,6 +335,7 @@
         #mpris {
           background-color: @bg;
           color: @music;
+          padding: 0px 10px 0px 10px;
         }
 
         #pulseaudio {
@@ -345,6 +346,7 @@
         #network {
           background-color: @bg;
           color: @network;
+          padding: 0px 10px 0px 10px;
         }
 
         #backlight {
@@ -360,7 +362,7 @@
         #batttery {
           background-color: @bg;
           color: @battery;
-          padding: 0px 10px 0px 10px;
+          padding: 0px 16px 0px 16px;
         }
 
         #clock {
