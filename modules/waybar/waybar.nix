@@ -211,6 +211,7 @@
 
         /* Colors (gruvbox) */
         @define-color black	#282828;
+        @define-color orange  #d65d0e;
         @define-color red	#cc241d;
         @define-color green	#98971a;
         @define-color yellow	#d79921;
@@ -218,6 +219,7 @@
         @define-color purple	#b16286;
         @define-color aqua	#689d6a;
         @define-color gray	#a89984;
+        @define-color brorange  #fe8019;
         @define-color brgray	#928374;
         @define-color brred	#fb4934;
         @define-color brgreen	#b8bb26;
@@ -290,8 +292,8 @@
         }
 
         #workspaces button.active {
-          background-color: @bg2;
-          color: @bg2;
+          background-color: @bg;
+          color: @orange;
         }
 
         tooltip {
@@ -318,7 +320,7 @@
         #custom-nix {
           color: @blue;
           background-color: @bg;
-          padding: 0px 4px 0px 4px;
+          padding: 0px 2px 0px 4px;
         }
 
         #taskbar button {
