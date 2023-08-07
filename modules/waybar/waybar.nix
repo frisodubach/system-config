@@ -346,12 +346,13 @@
         #network {
           background-color: @bg;
           color: @network;
-          padding: 0px 16px 0px 16px;
+          /*padding: 0px 16px 0px 16px;*/
         }
 
         #backlight {
           background-color: @bg;
           color: @backlight;
+          padding: 0px 8px 0px 8px;
         }
 
         #custom-notification {
