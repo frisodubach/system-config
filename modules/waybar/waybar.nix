@@ -14,11 +14,9 @@
       # package = pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"] ;} );
       settings = {
         mainBar = {
-          margin = "0";
+          #margin = "0";
           layer = "top";
           position = "top";
-          # width = 14;
-          # height = 1080;
           modules-left = [ "custom/nix" "wlr/workspaces" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
@@ -85,6 +83,7 @@
               paused = "<span foreground='#FFE6B3'>󰏤</span> ";
               stopped = "<span foreground='#F48FB1'>󰓛</span> ";
             };
+            max-length = 50;
           };
 
           "custom/nix" = { format = "󱄅 "; };
@@ -121,6 +120,7 @@
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
             "on-click" = "alacritty -e 'nmtui'";
             # "rotate" = 90;
+            "max-length" = 50;
           };
 
           # "network#interface" = {
