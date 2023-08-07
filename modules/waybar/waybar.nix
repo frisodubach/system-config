@@ -291,7 +291,7 @@
 
         #workspaces button.active {
           background-color: @bg2;
-          color: @text;
+          color: @bg2;
         }
 
         tooltip {
@@ -318,7 +318,7 @@
         #custom-nix {
           color: @blue;
           background-color: @bg;
-          padding: 0px 2px 0px 6px;
+          padding: 0px 4px 0px 4px;
         }
 
         #taskbar button {
