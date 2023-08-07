@@ -17,8 +17,8 @@
           margin = "0";
           layer = "top";
           postion = "left";
-          width = "14";
-          # height = 1080;
+          width = 14;
+          height = 1080;
           modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
