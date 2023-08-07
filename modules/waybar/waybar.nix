@@ -263,7 +263,7 @@
 
         window#waybar {
          background-color : transparent;
-         # border-bottom: solid 2px @white;
+         /* border-bottom: solid 2px @white; */
          font-family: 'FiraCode Mono';
          font-size: 14px;
          }
