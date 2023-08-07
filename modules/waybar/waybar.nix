@@ -238,14 +238,15 @@
         @define-color unfocused     @bg2;
         @define-color focused       @braqua;
         @define-color inactive      @purple;
-        @define-color sound         @brpurple;
-        @define-color network       @purple;
+        @define-color audio         @blue;
+        @define-color network       @green;
         @define-color layout        @bryellow;
-        @define-color battery       @aqua;
-        @define-color date          @black;
-        @define-color time          @white;
+        @define-color battery       @yellow;
+        @define-color date          @yellow;
+        @define-color time          @orange;
         @define-color music         @aqua;
-        @define-color notification  @aqua;
+        @define-color notification  @red;
+        @define-color backlight     @aqua;
 
         /* Reset all styles */
         * {
@@ -358,10 +359,10 @@
           color: @notification;
         }
 
-        #batttery {
+        #battery {
           background-color: @bg;
           color: @battery;
-          padding: 0px 16px 0px 16px;
+          /*padding: 0px 16px 0px 16px;*/
         }
 
         #clock {
