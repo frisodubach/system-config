@@ -262,22 +262,22 @@
          background-color : transparent;
          font-family: 'FiraCode Mono';
          font-size: 14px;
-         margin: 10px 10px 10px 10px;
+         margin: 10px 0px 0px 0px;
          }
 
         .modules-left * {
           background-color: @black;
-          margin: 0px 0px 0 0;
+          margin: 10px 0px 0 0;
         }
 
         .modules-center * {
           background-color: @black;
-          margin: 0px 0px 0 0;
+          margin: 10px 0px 0 0;
         }
 
         .modules-right * {
           background-color: @black;
-          margin: 0px 0px 0 0;
+          margin: 10px 0px 0 0;
         }
 
         #workspaces button {
