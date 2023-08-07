@@ -98,7 +98,7 @@
             # format = "<span foreground='#F48FB1'>󰓃</span> {volume}%";
             "format" = ''
               {icon}
-               {volume}%'';
+              {volume}%'';
             "format-bluetooth" = ''
               {icon}
                volume}%'';
@@ -151,8 +151,7 @@
 
           backlight = {
             format = ''
-
-                            <span foreground='#F2B482'>{icon}</span>
+              <span foreground='#F2B482'>{icon}</span>
               {percent}%'';
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
             #rotate = 90;
@@ -170,11 +169,18 @@
               "warning" = 30;
               "critical" = 15;
             };
-            "format" = "{capacity}% {icon}";
-            "format-charging" = "{capacity}% ";
-            "format-good" =
-              "{capacity}% {icon}"; # An empty format will hide the module
-            "format-full" = "{capacity}% {icon}";
+            "format" = ''
+              {icon}
+              {capacity}%'';
+            "format-charging" = ''
+              
+              {capacity}% '';
+            "format-good" = ''
+              {icon}
+              {capacity}%''; # An empty format will hide the module
+            "format-full" = ''
+              {icon}
+              {capacity}%'';
             "format-icons" = [ "" "" "" "" "" ];
             #"rotate" = 90;
           };
@@ -197,7 +203,7 @@
           clock = {
             format = ''
               <span foreground='#A1EFD3'>
-               </span>{:%H:%M}'';
+              </span>{:%H:%M}'';
             format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
             #rotate = 90;
           };
