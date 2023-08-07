@@ -17,10 +17,9 @@
           #margin = "0";
           layer = "top";
           position = "top";
-          modules-left = [ "custom/nix" "wlr/workspaces" ];
+          modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
-            "mpris"
             "pulseaudio"
             "network"
             # "bluetooth"
@@ -361,6 +360,7 @@
         #batttery {
           background-color: @bg;
           color: @battery;
+          padding: 0px 10px 0px 10px;
         }
 
         #clock {
