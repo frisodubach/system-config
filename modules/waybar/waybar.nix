@@ -34,21 +34,19 @@
             "tray"
           ];
 
-          "hyprland/window" = {
-            #   max-length = 150;
-            # "rotate" = 90;
-          };
+          "hyprland/window" = { };
 
           persistent_workspaces = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
-            "5" = [ ];
-            "6" = [ ];
-            "7" = [ ];
-            "8" = [ ];
-            "9" = [ ];
+            # "1" = [ ];
+            # "2" = [ ];
+            # "3" = [ ];
+            # "4" = [ ];
+            # "5" = [ ];
+            # "6" = [ ];
+            # "7" = [ ];
+            # "8" = [ ];
+            # "9" = [ ];
+            "*" = 9;
           };
 
           "wlr/workspaces" = {
@@ -252,39 +250,40 @@
 
         /* Reset all styles */
         * {
-        	border: none;
-        	border-radius: 14px;
-        	min-height: 0;
-        	box-shadow: none;
-        	text-shadow: none;
-        	icon-shadow: none;
+          border: none;
+          border-radius: 14px;
+          min-height: 0;
+          box-shadow: none;
+          text-shadow: none;
+          icon-shadow: none;
         }
 
         window#waybar {
          background-color : transparent;
          font-family: 'FiraCode Mono';
          font-size: 14px;
+         margin: 0 0px 0 0;
          }
 
         .modules-left * {
           background-color: @black;
-          margin: 2px 10px 0 0;
+          margin: 0px 0px 0 0;
         }
 
         .modules-center * {
           background-color: @black;
-          margin: 2px 0 0 0;
+          margin: 0px 0px 0 0;
         }
 
         .modules-right * {
           background-color: @black;
-          margin: 2px 10px 0 0;
+          margin: 0px 0px 0 0;
         }
 
         #workspaces button {
           background-color: @black;
           color: @text;
-          padding: 1px 5px;
+          padding: 0px 0px;
         }
 
         #workspaces button.active {
