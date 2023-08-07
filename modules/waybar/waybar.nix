@@ -110,7 +110,7 @@
             };
             "scroll-step" = 1;
             "on-click" = "pavucontrol";
-            "rotate" = 90;
+            #"rotate" = 90;
           };
 
           "network" = {
@@ -148,7 +148,7 @@
           backlight = {
             format = "<span foreground='#F2B482'>{icon}</span> {percent}%";
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
-            rotate = 90;
+            #rotate = 90;
           };
 
           # battery = {
@@ -169,7 +169,7 @@
               "{capacity}% {icon}"; # An empty format will hide the module
             "format-full" = "{capacity}% {icon}";
             "format-icons" = [ "" "" "" "" "" ];
-            "rotate" = 90;
+            #"rotate" = 90;
           };
 
           "bluetooth" = {
@@ -184,13 +184,13 @@
               {device_enumerate}'';
             "tooltip-format-enumerate-connected" =
               "{device_alias}	{device_address}";
-            "rotate" = 90;
+            #"rotate" = 90;
           };
 
           clock = {
             format = "<span foreground='#A1EFD3'>  </span>{:%H:%M}";
             format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
-            rotate = 90;
+            #rotate = 90;
           };
 
           "custom/notification" = {
@@ -198,7 +198,7 @@
             tooltip = false;
             on-click = "dunstctl set-paused toggle";
             restart-interval = 1;
-            rotate = 90;
+            #rotate = 90;
           };
 
           tray = {
@@ -276,11 +276,11 @@
         #custom-nix {
           color: @blue;
           background-color: @black;
-          padding: 2px 8px;
+          padding: 8px 2px;
         }
 
         #workspaces button {
-          padding: 2px 8px;
+          padding: 8px 2px;
           margin: 0 0 0 0;
           background-color: @black;
         }
@@ -291,23 +291,23 @@
 
         #taskbar button {
           background-color: @black;
-          padding: 2px 8px;
+          padding: 8px 2px;
         }
 
         #taskbar button.active {
           background-color: @black;
-          padding: 2px 8px;
+          padding: 8px 2px;
         }
 
         .modules-right * {
           background-color: @black;
-          padding: 0 8px;
+          padding: 8px 0px;
           margin: 0 0 0 4px;
         }
 
         #mpris {
           background-color: @black;
-          padding: 0 8px;
+          padding: 8px 0;
           color: @music;
         }
 
