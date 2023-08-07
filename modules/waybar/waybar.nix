@@ -76,9 +76,9 @@
             format =
               "{status_icon}<span weight='bold'>{artist}</span> | {title}";
             status-icons = {
-              playing = "<span foreground='#A1EFD3'>󰎈</span> ";
-              paused = "<span foreground='#FFE6B3'>󰏤</span> ";
-              stopped = "<span foreground='#F48FB1'>󰓛</span> ";
+              playing = " 󰎈 ";
+              paused = " 󰏤 ";
+              stopped = " 󰓛 ";
             };
             max-length = 50;
           };
@@ -111,7 +111,7 @@
 
           "network" = {
             # "format-wifi" = "{essid} ({signalStrength}%) ";
-            "format-wifi" = "{essid}  ";
+            "format-wifi" = "{essid}   ";
             "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
@@ -132,19 +132,15 @@
           #     "<span foreground='#78A8FF'>⇡</span>{bandwidthUpBits} <span foreground='#78A8FF'>⇣</span>{bandwidthDownBits}";
           # };
 
-          cpu = {
-            format =
-              "<span foreground='#D4BFFF'>  </span>{usage}% <span foreground='#D4BFFF'>󱐌 </span>{avg_frequency}";
-          };
+          cpu = { format = "  {usage}% 󱐌 {avg_frequency}"; };
 
           temperature = {
-            format =
-              "<span foreground='#FFE6B3'>{icon} </span>{temperatureC} °C";
+            format = "{icon} {temperatureC} °C";
             format-icons = [ "" "" "" "󰈸" ];
           };
 
           backlight = {
-            format = "<span foreground='#F2B482'>{icon} </span>{percent}%";
+            format = "{icon} {percent}%";
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
             #rotate = 90;
           };
@@ -161,8 +157,8 @@
               "warning" = 30;
               "critical" = 15;
             };
-            "format" = "{icon}  {capacity}%";
-            "format-charging" = "  {capacity}%";
+            "format" = " {icon}  {capacity}%";
+            "format-charging" = "   {capacity}%";
             "format-good" =
               "{icon}  {capacity}%"; # An empty format will hide the module
             "format-full" = "{icon}  {capacity}%";
@@ -186,8 +182,8 @@
           };
 
           clock = {
-            format = "<span foreground='#A1EFD3'> </span>{:%H:%M}";
-            format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
+            format = "  {:%H:%M}";
+            format-alt = " 󰃭 {:%Y-%m-%d}";
             #rotate = 90;
           };
 
