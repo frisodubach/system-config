@@ -258,26 +258,31 @@
           icon-shadow: none;
         }
 
+        window {
+          margin: 10px 0px 0px 0px;
+          padding: 0px 0px 0px 0px;
+        }
+
         window#waybar {
          background-color : transparent;
          font-family: 'FiraCode Mono';
          font-size: 14px;
-         margin: 10px 0px 0px 0px;
+         margin: 0px 0px 0px 0px;
          }
 
         .modules-left * {
           background-color: @black;
-          margin: 10px 0px 0 0;
+          margin: 0px 0px 0 0;
         }
 
         .modules-center * {
           background-color: @black;
-          margin: 10px 0px 0 0;
+          margin: 0px 10px 0px 0px;
         }
 
         .modules-right * {
           background-color: @black;
-          margin: 10px 0px 0 0;
+          margin: 0px 10px 0 10px;
         }
 
         #workspaces button {
