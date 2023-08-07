@@ -33,7 +33,7 @@
             "tray"
           ];
 
-          "sway/window" = {
+          "wlr/window" = {
             max-length = 150;
             rotate = 270;
           };
@@ -232,6 +232,8 @@
         @define-color battery	@aqua;
         @define-color date	@black;
         @define-color time	@white;
+        @define-color music @aqua;
+        @define-color notification  @aqua;
 
         /* Reset all styles */
         * {
@@ -259,6 +261,7 @@
 
         #custom-nix {
           color: @orange;
+          background-color: @black;
           padding: 2px 8px;
         }
 
@@ -286,19 +289,19 @@
         }
 
         #mpris {
-          background-color: #2D2B40;
+          background-color: @black;
           padding: 0 8px;
-          color: #8A889D;
+          color: @music;
         }
 
         #custom-notification {
           padding: 0 8px 0 8px;
-          background-color: #2D2B40;
-          color: #100E23;
+          background-color: @black;
+          color: @notification;
         }
 
         #tray {
-          background-color: @brred;
+          background-color: @tray;
           padding: 0 8px 0 8px;
         }
 
