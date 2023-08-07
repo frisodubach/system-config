@@ -260,7 +260,7 @@
         }
 
         window {
-          margin: 10px 0px 0px 0px;
+          margin: 0px 0px 0px 0px;
           padding: 0px 0px 0px 0px;
         }
 
@@ -273,12 +273,12 @@
 
         .modules-left * {
           background-color: @bg;
-          margin: 0px 2px 0px 2px;
+          margin: 0px 4px 0px 4px;
         }
 
         .modules-center * {
           background-color: @bg;
-          margin: 0px 4px 0px 4px;
+          margin: 0px 2px 0px 2px;
         }
 
         .modules-right * {
@@ -322,7 +322,7 @@
         #custom-nix {
           color: @blue;
           background-color: @bg;
-          padding: 0px 2px 0px 0px;
+          padding: 0px 2px 0px 6px;
         }
 
         #taskbar button {
