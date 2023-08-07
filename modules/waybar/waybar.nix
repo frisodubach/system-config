@@ -16,13 +16,13 @@
         mainBar = {
           margin = "0";
           layer = "top";
-          position = "left";
+          position = "top";
           # width = 14;
           # height = 1080;
           modules-left = [ "custom/nix" "wlr/workspaces" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
-            # "mpris"
+            "mpris"
             "pulseaudio"
             "network"
             "bluetooth"
@@ -38,7 +38,7 @@
 
           "hyprland/window" = {
             #   max-length = 150;
-            "rotate" = 90;
+            # "rotate" = 90;
           };
 
           persistent_workspaces = {
@@ -74,7 +74,7 @@
               # "focused" = "";
               # "default" = "";
             };
-            rotate = 90;
+            # rotate = 90;
           };
 
           mpris = {
@@ -91,7 +91,7 @@
 
           "wlr/taskbar" = {
             on-click = "activate";
-            rotoate = 90;
+            # rotoate = 90;
           };
 
           "pulseaudio" = {
@@ -99,9 +99,7 @@
             "format" = ''
               {icon}
               {volume}%'';
-            "format-bluetooth" = ''
-              {icon}
-               volume}%'';
+            "format-bluetooth" = "{icon}{volume}%";
             "format-muted" = "";
             "format-icons" = {
               "headphone" = "";
@@ -123,7 +121,7 @@
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
             "on-click" = "alacritty -e 'nmtui'";
-            "rotate" = 90;
+            # "rotate" = 90;
           };
 
           # "network#interface" = {
@@ -150,9 +148,7 @@
           };
 
           backlight = {
-            format = ''
-              <span foreground='#F2B482'>{icon}</span>
-              {percent}%'';
+            format = "<span foreground='#F2B482'>{icon}</span>{percent}%";
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
             #rotate = 90;
           };
@@ -169,18 +165,11 @@
               "warning" = 30;
               "critical" = 15;
             };
-            "format" = ''
-              {icon}
-              {capacity}%'';
-            "format-charging" = ''
-              
-              {capacity}% '';
-            "format-good" = ''
-              {icon}
-              {capacity}%''; # An empty format will hide the module
-            "format-full" = ''
-              {icon}
-              {capacity}%'';
+            "format" = "{icon}{capacity}%";
+            "format-charging" = "{capacity}%";
+            "format-good" =
+              "{icon}{capacity}%"; # An empty format will hide the module
+            "format-full" = "{icon}{capacity}%";
             "format-icons" = [ "" "" "" "" "" ];
             #"rotate" = 90;
           };
@@ -201,9 +190,7 @@
           };
 
           clock = {
-            format = ''
-              <span foreground='#A1EFD3'>
-              </span>{:%H:%M}'';
+            format = "<span foreground='#A1EFD3'></span>{:%H:%M}";
             format-alt = "<span foreground='#A1EFD3'󰃭  </span>{:%Y-%m-%d}";
             #rotate = 90;
           };
