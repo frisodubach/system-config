@@ -17,6 +17,8 @@
           margin = "0";
           layer = "top";
           postion = "left";
+          width = 14;
+          # height = 1080;
           modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
@@ -33,10 +35,10 @@
             "tray"
           ];
 
-          "hyprland/window" = {
-            max-length = 150;
-            rotate = 270;
-          };
+          # "hyprland/window" = {
+          #   max-length = 150;
+          #   rotate = 270;
+          # };
 
           persistent_workspaces = {
             "1" = [ ];
@@ -68,8 +70,8 @@
               "7" = "七";
               "8" = "八";
               "9" = "九";
-              "focused" = "";
-              "default" = "";
+              # "focused" = "";
+              # "default" = "";
             };
           };
 
@@ -277,13 +279,16 @@
 
         #taskbar button {
           background-color: @black;
+          padding: 2px 8px;
         }
 
         #taskbar button.active {
           background-color: @black;
+          padding: 2px 8px;
         }
 
         .modules-right * {
+          background-color: @black;
           padding: 0 8px;
           margin: 0 0 0 4px;
         }
@@ -301,7 +306,7 @@
         }
 
         #tray {
-          background-color: @tray;
+          background-color: @brred;
           padding: 0 8px 0 8px;
         }
 
