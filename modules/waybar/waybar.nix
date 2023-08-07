@@ -337,6 +337,7 @@
         #pulseaudio {
           background-color: @bg;
           color: @audio;
+          padding: 0px 24px 0px 16px;
         }
 
         #network {
@@ -354,12 +355,13 @@
         #custom-notification {
           background-color: @bg;
           color: @notification;
+          padding: 0px 8px 0px 8px;
         }
 
         #battery {
           background-color: @bg;
           color: @battery;
-          /*padding: 0px 16px 0px 16px;*/
+          /*padding: 0px 16px 0px 8px;*/
         }
 
         #clock {
