@@ -235,14 +235,14 @@
         @define-color focused       @braqua;
         @define-color inactive      @purple;
         @define-color audio         @blue;
-        @define-color network       @green;
+        @define-color network       @aqua;
         @define-color layout        @bryellow;
-        @define-color battery       @yellow;
-        @define-color date          @yellow;
-        @define-color time          @orange;
+        @define-color battery       @bryellow;
+        @define-color date          @orange;
+        @define-color clock         @orange;
         @define-color music         @aqua;
         @define-color notification  @red;
-        @define-color backlight     @aqua;
+        @define-color backlight     @green;
 
         /* Reset all styles */
         * {
