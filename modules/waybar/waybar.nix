@@ -262,7 +262,6 @@
 
         window#waybar {
          background-color : transparent;
-         /* border-bottom: solid 2px @white; */
          font-family: 'FiraCode Mono';
          font-size: 14px;
          }
@@ -282,9 +281,35 @@
           margin: 2px 10px 0 0;
         }
 
+        #workspaces button {
+          background-color: @black;
+          color: @text;
+          padding: 1px 5px;
+        }
+
+        #workspaces button.active {
+          background-color: @bg2;
+          color: @text;
+        }
+
         tooltip {
           background-color: @bg2;
           color: @white;
+        }
+
+        #clock,
+        #battery,
+        #backlight,
+        #network,
+        #pulseaudio,
+        #mpris,
+        #custom-media,
+        #tray,
+        #mode,
+        #taskbar,
+        #custom-nix
+        #idle_inhibitor {
+            padding: 0 10px;
         }
 
         #custom-nix {
@@ -292,15 +317,6 @@
           background-color: @black;
         }
 
-        #workspaces button {
-          background-color: @black;
-          color: @text;
-        }
-
-        #workspaces button.active {
-          background-color: @bg2;
-          color: @text;
-        }
 
         #taskbar button {
           background-color: @black;
