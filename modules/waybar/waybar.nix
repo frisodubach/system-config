@@ -351,7 +351,7 @@
           }
 
         #tray {
-          \* background-color: @bg2; *\
+          /* background-color: @bg2; */
           padding: 0 20px 0 20px;
         }
 
