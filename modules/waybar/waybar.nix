@@ -262,7 +262,7 @@
          background-color : transparent;
          font-family: 'FiraCode Mono';
          font-size: 14px;
-         margin: 10px 0px 0 0;
+         margin: 10px 10px 10px 10px;
          }
 
         .modules-left * {
