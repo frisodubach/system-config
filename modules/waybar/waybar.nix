@@ -255,7 +255,7 @@
         	border: none;
         	border-radius: 14px;
         	min-height: 0;
-        	margin: 0;
+        	margin: 0px 20px;
         	padding: 0;
         	box-shadow: none;
         	text-shadow: none;
@@ -277,7 +277,7 @@
         #custom-nix {
           color: @blue;
           background-color: @black;
-          padding: 0px 20px;
+          padding: 2px 8px;
         }
 
         #workspaces button {
@@ -294,58 +294,58 @@
 
         #taskbar button {
           background-color: @black;
-          padding: 0px 20px;
+          padding: 2px 8px;
         }
 
         #taskbar button.active {
           background-color: @black;
-          padding: 0px 20px;
+          padding: 2px 8px;
         }
 
         .modules-right * {
           background-color: @black;
-          padding: 0px 20px;
-          margin: 0 0 0 4px;
+          padding: 2px 8px;
+          margin: 0 20px 0 20px;
         }
 
         #mpris {
           background-color: @music;
-          padding: 0 16px;
+          padding: 2px 8px;
           color: @text;
         }
 
         #pulseaudio {
           background-color: @audio;
           color: @text;
-          padding: 0px 16px;
+          padding: 2px 8px;
         }
 
         #network {
           background-color: @network;
           color: @text;
-          padding: 0 16px;
+          padding: 2px 8px;
         }
 
         #backlight {
           background-color: @backlight;
           color: @text;
-          padding: 0px 16px;
+          padding: 2px 8px;
         }
 
         #custom-notification {
-          padding: 0 16px 0 16px;
+          padding: 2px 8px 2px 8px;
           background-color: @notification;
           color: @text;
         }
 
         #batttery {
-          padding: 0px 16px;
+          padding: 2px 8px;
           background-color: @battery;
           color: @text;
         }
 
         #clock {
-          padding: 0px 16px;
+          padding: 2px 8px;
           background-color: @clock;
           color: @text;
           }
