@@ -182,8 +182,9 @@
           };
 
           clock = {
-            format = "  {:%H:%M}  󰃭 {:%Y-%m-%d}";
-            #format-alt = " 󰃭 {:%Y-%m-%d}";
+            # format = "  {:%H:%M}  󰃭 {:%Y-%m-%d}";
+            format = "  {:%H:%M} ";
+            format-alt = " 󰃭 {:%Y-%m-%d}";
             #rotate = 90;
           };
 
@@ -340,7 +341,7 @@
           background-color: @bg;
           color: @audio;
           padding: 0px 24px 0px 16px;
-          min-width: 32px;
+          min-width: 50px;
         }
 
         #network {
@@ -353,7 +354,7 @@
           background-color: @bg;
           color: @backlight;
           /*padding: 0px 8px 0px 8px;*/
-          min-width: 32px;
+          min-width: 50px;
         }
 
         #custom-notification {
