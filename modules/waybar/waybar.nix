@@ -20,13 +20,13 @@
           modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
-            "pulseaudio"
             "network"
+            "backlight"
+            "pulseaudio"
             # "bluetooth"
             # "network#speed"
             # "cpu"
             # "temperature"
-            "backlight"
             "battery"
             "clock"
             "custom/notification"
@@ -235,15 +235,16 @@
         @define-color unfocused     @bg2;
         @define-color focused       @braqua;
         @define-color inactive      @purple;
-        @define-color audio         @blue;
-        @define-color network       @aqua;
         @define-color layout        @bryellow;
-        @define-color battery       @bryellow;
-        @define-color date          @orange;
-        @define-color clock         @orange;
         @define-color music         @aqua;
+
+        @define-color network       @blue;
+        @define-color backlight     @aqua;
+        @define-color audio         @green;
+        @define-color battery       @bryellow;
+        @define-color clock         @orange;
+        @define-color date          @orange;
         @define-color notification  @red;
-        @define-color backlight     @green;
 
         /* Reset all styles */
         * {
