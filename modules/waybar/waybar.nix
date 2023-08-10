@@ -342,7 +342,7 @@
           background-color: @bg;
           color: @audio;
           padding: 0px 24px 0px 16px;
-          min-width: 48px;
+          min-width: 64px;
         }
 
         #network {
@@ -355,7 +355,7 @@
           background-color: @bg;
           color: @backlight;
           /*padding: 0px 8px 0px 8px;*/
-          min-width: 48px;
+          min-width: 64px;
         }
 
         #custom-notification {
@@ -369,7 +369,7 @@
           background-color: @bg;
           color: @battery;
           /*padding: 0px 16px 0px 8px;*/
-          min-width: 48px;
+          min-width: 64px;
         }
 
         #clock {
