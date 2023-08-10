@@ -182,8 +182,8 @@
           };
 
           clock = {
-            format = "  {:%H:%M}";
-            format-alt = " 󰃭 {:%Y-%m-%d}";
+            format = "  {:%H:%M}  󰃭 {:%Y-%m-%d}";
+            #format-alt = " 󰃭 {:%Y-%m-%d}";
             #rotate = 90;
           };
 
@@ -196,7 +196,7 @@
           };
 
           tray = {
-            icon-size = 16;
+            icon-size = 14;
             spacing = 10;
           };
         };
@@ -340,6 +340,7 @@
           background-color: @bg;
           color: @audio;
           padding: 0px 24px 0px 16px;
+          min-width: 32px;
         }
 
         #network {
@@ -352,18 +353,21 @@
           background-color: @bg;
           color: @backlight;
           /*padding: 0px 8px 0px 8px;*/
+          min-width: 32px;
         }
 
         #custom-notification {
           background-color: @bg;
           color: @notification;
           padding: 0px 8px 0px 8px;
+          min-width: 16px;
         }
 
         #battery {
           background-color: @bg;
           color: @battery;
           /*padding: 0px 16px 0px 8px;*/
+          min-width: 32px;
         }
 
         #clock {
