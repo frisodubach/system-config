@@ -7,7 +7,7 @@
     ./hyprland/hyprland.nix
     ./alacritty.nix
     ./dunst.nix
-    ./swaylock.nix
+    ./hyprland/swaylock.nix
     # ./eww/eww.nix
     ./waybar/waybar.nix
   ];
