@@ -4,7 +4,7 @@
   imports = [
     ./main-user.nix
     ./fish.nix
-    ./hyprland.nix
+    ./hyprland/hyprland.nix
     ./alacritty.nix
     ./dunst.nix
     ./swaylock.nix

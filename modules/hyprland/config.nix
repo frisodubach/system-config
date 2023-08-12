@@ -142,25 +142,27 @@
   # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
   bind = $mainMod, Q, exec, alacritty
   bind = $mainMod, C, killactive,
-  bind = $mainMod, M, exit,
+  # bind = $mainMod, M, exit,
   bind = $mainMod, E, exec, nautilus
-  bind = $mainMod, V, togglefloating,
+  bind = $mainMod, F, togglefloating,
   bind = $mainMod, space, exec, wofi --show drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
   # bind = $mainMod, space, exec, wofi --fork -S drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
   bind = $mainMod, P, pseudo, # dwindle
-  bind = $mainMod, J, togglesplit, # dwindle
+  bind = $mainMod, S, togglesplit, # dwindle
+  bind = $mainMod, N, exec, emacsclient -nc
+  bind = $mainMod, B, exec, librewolf
 
   # Move focus with mainMod + arrow keys
-  bind = $mainMod, left, movefocus, l
-  bind = $mainMod, right, movefocus, r
-  bind = $mainMod, up, movefocus, u
-  bind = $mainMod, down, movefocus, d
+  bind = $mainMod, H, movefocus, l
+  bind = $mainMod, L, movefocus, r
+  bind = $mainMod, K, movefocus, u
+  bind = $mainMod, J, movefocus, d
 
   # Move windows with mainMod + shift + arrow keys
-  bind = $mainMod SHIFT, left, movefocus, l
-  bind = $mainMod SHIFT, right, movefocus, r
-  bind = $mainMod SHIFT, up, movefocus, u
-  bind = $mainMod SHIFT, down, movefocus, d
+  bind = $mainMod SHIFT, H, movefocus, l
+  bind = $mainMod SHIFT, L, movefocus, r
+  bind = $mainMod SHIFT, K, movefocus, u
+  bind = $mainMod SHIFT, J, movefocus, d
 
   # Resize active window with mainMod + CTRL + hjkl
   binde = $mainMod CTRL, H, resizeactive, -20 0
@@ -223,10 +225,10 @@
   # bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
 
   # Keybind to lock screen
-  bind = $mainMod, L, exec, $screenLockCmd
+  # bind = $mainMod, L, exec, $screenLockCmd
 
   # Keybind to lock screen and suspend
-  bind = $mainMod SHIFT, L, exec, $lockAndSuspendCmd
+  bind = $mainMod, M, exec, $lockAndSuspendCmd
 
   # Keybind to turn off
   bind=, XF86PowerOff, exec, systemctl suspend
