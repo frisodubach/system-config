@@ -8,8 +8,8 @@
     ./alacritty.nix
     ./dunst.nix
     ./hyprland/swaylock.nix
-    # ./eww/eww.nix
-    ./waybar/waybar.nix
+    ./eww/eww.nix
+    # ./waybar/waybar.nix
   ];
 
   environment.sessionVariables = rec {
