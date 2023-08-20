@@ -199,6 +199,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Bar Windows ;;
 (defwindow bar
+    :exclusive true
+    :monitor 0
+    :windowtype "dock"
+    :stacking "bg"
+        :focusable false
 	:geometry (geometry :x "0"
 						:y "0"
 						:height "100%"

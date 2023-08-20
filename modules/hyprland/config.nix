@@ -14,7 +14,7 @@
   # monitor=,preferred,auto,auto
   # monitor=,highres,auto,1
   monitor=eDP-1,1920x1080@60,0x0,1
-  # monitor=eDP-1,addreserved,0,0,48,0
+  monitor=eDP-1,addreserved,0,0,48,0
   monitor=,highres,auto,1
 
 
