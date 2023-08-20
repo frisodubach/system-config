@@ -134,7 +134,8 @@
   windowrule=float,title:^(Open Folder)(.*)$
   windowrule=float,title:^(Save As)(.*)$
   windowrule=float,title:^(Library)(.*)$
-
+  windowrule=float,title:^(Select a File)(.*)$
+  windowrule=float,title:^(Choose wallpaper)(.*)$
 
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
   $mainMod = SUPER

@@ -202,12 +202,13 @@
     :exclusive true
     :monitor 0
     :windowtype "dock"
-    :stacking "bg"
+    :stacking "fg"
         :focusable false
 	:geometry (geometry :x "0"
 						:y "0"
 						:height "100%"
-						:width "47px")
+						:width "47px"
+                        :anchor "left center")
 	:monitor 0
 	:reserve (struts :distance "35px"
 					 :side "left")
