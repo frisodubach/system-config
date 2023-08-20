@@ -81,9 +81,11 @@
 			  :tooltip "Volume: ${current-volume}%"
 			  :max 101
 			  :min 0
-			  :onchange "amixer -D pulse sset Master {}%" ))
+			  ;; :onchange "amixer -D pulse sset Master {}%" )) ;;
+			  :onchange "pamixer --set-volume {}" ))
 	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
-(defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+;;(defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'");;
+(defpoll current-volume :interval "1s" "pamixer --get-volume")
 (defvar volum false)
 
 ;; Control Panel Widgets ;;
@@ -138,21 +140,21 @@
 	(box		:orientation "v"
 				:space-evenly "false"
 
-	(button   	:class "button-bspres"
-				:tooltip "BSPWM Restart"
-				:onclick "bspc wm -r" "" )
+	;;(button   	:class "button-bspres"
+	;;			:tooltip "BSPWM Restart"
+	;;			:onclick "bspc wm -r" "" )
 
   	(button		:class "button-reb"
 	  			:tooltip "Reboot"
 				:onclick "reboot"	"")
 
-	(button		:class "button-quit"
-				:tooltip "Logout"
-				:onclick "killall bspwm" "")
+	;;(button		:class "button-quit"
+	;;			:tooltip "Logout"
+	;;			:onclick "killall bspwm" "")
 
 	(button		:class "button-lock"
 				:tooltip "Lock Screen"
-				:onclick "betterlockscreen -l"	"")))
+				:onclick ""swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M & sleep 1; systemctl suspend &"	"")))
 
 	(button		:class "button-off"
 				:tooltip "Shutdown"
