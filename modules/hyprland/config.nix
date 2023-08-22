@@ -13,9 +13,11 @@
   # See https://wiki.hyprland.org/Configuring/Monitors/
   # monitor=,preferred,auto,auto
   # monitor=,highres,auto,1
-  monitor=eDP-1,1920x1080@60,0x0,1
+  #monitor=eDP-1,1920x1080@60,0x0,1
   # monitor=eDP-1,addreserved,0,0,48,0
-  monitor=DP-1,preferred,auto,1,mirror,eDP-1
+  # monitor=DP-1,preferred,auto,1,mirror,eDP-1
+  monitor=eDP-1,1920x1080@60,1920x0,1
+  monitor=DP-1,1920x1080@60,0x0,1
   monitor=,highres,auto,1
 
 
@@ -161,10 +163,10 @@
   bind = $mainMod, J, movefocus, d
 
   # Move windows with mainMod + shift + arrow keys
-  bind = $mainMod SHIFT, H, movefocus, l
-  bind = $mainMod SHIFT, L, movefocus, r
-  bind = $mainMod SHIFT, K, movefocus, u
-  bind = $mainMod SHIFT, J, movefocus, d
+  bind = $mainMod SHIFT, H, movewindow, l
+  bind = $mainMod SHIFT, L, movewindow, r
+  bind = $mainMod SHIFT, K, movewindow, u
+  bind = $mainMod SHIFT, J, movewindow, d
 
   # Resize active window with mainMod + CTRL + hjkl
   binde = $mainMod CTRL, H, resizeactive, -20 0
