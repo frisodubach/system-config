@@ -15,6 +15,7 @@
   # monitor=,highres,auto,1
   monitor=eDP-1,1920x1080@60,0x0,1
   # monitor=eDP-1,addreserved,0,0,48,0
+  monitor=DP-1,preferred,auto,1,mirror,eDP-1
   monitor=,highres,auto,1
 
 
@@ -64,7 +65,7 @@
       gaps_in = 5
       gaps_out = 16
       border_size = 2
-      col.active_border = 0xffd65d0e
+      col.active_border = 0xffa89984
       col.inactive_border = rgba(04404aaa)
       resize_on_border = true
       hover_icon_on_border = true
