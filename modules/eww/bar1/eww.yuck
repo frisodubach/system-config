@@ -50,7 +50,7 @@
 					:spacing 2
   			(revealer :transition "slideup"
 			  		  :reveal bright
-					  :duration "550ms"
+					  :duration "250ms"
   			(scale :class "bribar"
 			  	   :value current-brightness
 				   :tooltip "Brightness: ${current-brightness}%"
