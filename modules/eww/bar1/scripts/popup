@@ -2,15 +2,15 @@
 
 calendar() {
     LOCK_FILE="$HOME/.cache/eww-calendar.lock"
-    EWW_BIN="$HOME/.local/bin/eww"
+    #EWW_BIN="$HOME/.local/bin/eww"
 
     run() {
-        ${EWW_BIN} -c $HOME/.config/eww/bar open calendar
+        eww -c $HOME/.config/eww open calendar
     }
 
     # Run eww daemon if not running
     if [[ ! $(pidof eww) ]]; then
-        ${EWW_BIN} daemon
+        eww daemon
         sleep 1
     fi
 
@@ -19,7 +19,7 @@ calendar() {
         touch "$LOCK_FILE"
         run
     else
-        ${EWW_BIN} -c $HOME/.config/eww/bar close calendar
+        eww -c $HOME/.config/eww close calendar
         rm "$LOCK_FILE"
     fi
 }
@@ -27,7 +27,7 @@ calendar() {
 if [ "$1" = "launcher" ]; then
     $HOME/.local/bin/launcher
 elif [ "$1" = "wifi" ]; then
-    kitty -e nmtui
+    alacritty -e nmtui
 elif [ "$1" = "audio" ]; then
     pavucontrol
 elif [ "$1" = "calendar" ]; then
