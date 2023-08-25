@@ -19,8 +19,16 @@
 
 ;; Workspaces Widgets ;;
 (defwidget workspaces []
-	(literal :content workspace))
-(deflisten workspace "scripts/workspace")
+  (eventbox :onscroll "scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
+    (box :space-evenly true
+      (label :text "${workspaces}${current_workspace}" :visible false)
+      (for workspace in workspaces
+        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+          (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+            (label :text "${workspace.id}")))))))
+(deflisten workspaces :initial "[]" "scripts/get-workspaces")
+(deflisten current_workspace :initial "1" "scripts/get-active-workspace")
+
 
 ;; Battery Widgets ;;
 (defwidget bat []
@@ -202,7 +210,7 @@
 						:y "0"
 						:height "100%"
 						:width "47px"
-                        :anchor "left center")
+                        :anchor "right center")
 	:monitor 0
 	:reserve (struts :distance "35px"
 					 :side "left")
