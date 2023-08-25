@@ -116,11 +116,11 @@ border-radius: 5px;
   font-family: JetBrainsMono Nerd Font;
   font-size: 1.2em;
   padding-right: .5rem;
-  color: $blue;
+  color: $green;
 }
 .wifi-icon{
   margin-bottom: .2rem;
-  color: $magenta;
+  color: $blue;
 }
 .brightness-icon{
   margin: .2rem 0 .2rem 0;
@@ -128,7 +128,7 @@ border-radius: 5px;
 }
 .volume-icon{
   margin: .2rem 0 .2rem 0;
-  color: $green;
+  color: $magenta;
 }
 scale trough {
   all: unset;
@@ -143,7 +143,7 @@ scale trough {
   border-radius: 5px;
 }
 .volbar trough highlight {
-  background-color: $green;
+  background-color: $magenta;
   border-radius: 5px;
 }
 
@@ -165,6 +165,7 @@ scale trough {
   font-family: Comic Mono;
   font-size: 1em;
   font-weight: bold;
+  color: $white;
 
   .cal-inner-box {
       padding: 1rem 1rem .2rem;
@@ -181,20 +182,20 @@ scale trough {
 }
 
 calendar:selected {
-  color: $blue;
+  color: $cyan;
 }
 
 calendar.header {
-color: $blue;
+color: $cyan;
 font-weight: bold;
 }
 
 calendar.button {
-color: $magenta;
+color: $blue;
 }
 
 calendar.highlight {
-color: $magenta;
+color: $yellow;
 font-weight: bold;
 }
 
