@@ -5,7 +5,7 @@ calendar() {
     #EWW_BIN="$HOME/.local/bin/eww"
 
     run() {
-        eww -c $HOME/.config/eww open calendar
+        eww -c $HOME/.config/eww open calendar --screen 0
     }
 
     # Run eww daemon if not running
