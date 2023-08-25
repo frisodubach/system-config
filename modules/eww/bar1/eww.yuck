@@ -222,7 +222,7 @@
 ;; Calendar Windows ;;
 (defwindow calendar
 	:geometry (geometry :x "1580px"
-						:y "65%"
+						:y "75%"
 						:width "270px"
 						:height "60px")
 (cal))
