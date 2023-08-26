@@ -24,13 +24,15 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
-  # exec-once = waybar & hyprpaper & firefox
   exec-once=swaybg -i /home/phonon/Pictures/Wallpapers/2018-06-03_Komona-sunset-dark_by-David-Revoy.jpg
   #exec-once=wlsunset -l -23 -L -46
   exec-once=eww daemon
   exec-once=eww open bar
   # exec-once=waybar
   exec-once=dunst
+  exec-once = swayidle -w timeout 300 'gtklock' before-sleep 'gtklock' &
+  exec-once = swayidle -w timeout 450 'systemctl suspend' &
+  # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'gtklock' &
 
   # Source a file (multi-file configs)
   # source = ~/.config/hypr/myColors.conf
@@ -221,7 +223,8 @@
   bind=, XF86AudioNext, exec, playerctl next
   bind=, XF86AudioPrev, exec, playerctl previous
 
-  $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
+  # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
+  $screenLockCmd = gtklock
   $suspendCmd = systemctl suspend
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 

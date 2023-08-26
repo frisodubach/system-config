@@ -73,19 +73,17 @@
     wayland
 
     greetd.gtkgreet
+    sway-idle
 
     # basic tools
     # - Scipts for managing brightness / volume / mic / nightlight
-    # - EWW bar w/ workspace indicator, basic system settings, time / calendar, system info, app launcher
     # - Dynamic display settings
-    # - Locking application
     # - Screenshot tool
     # - Wallpaper engine
     # - Clipboard manager
     # - File manager
     # - Photo viewer
     # - Calculator
-    # - Font manager
 
     # Basic system tools
     gnome.nautilus # gui file manager
@@ -96,7 +94,6 @@
     xdg-utils
     wofi # application launcher
     networkmanager # gui network manager
-    lightlocker # lightDM screenlock
     swaybg # wallpaper engine
     # Audio
     pamixer

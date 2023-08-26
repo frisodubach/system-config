@@ -156,7 +156,8 @@
 
     (button		:class "button-lock"
 				:tooltip "Lock Screen"
-				:onclick "swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr \"%a %e.%m.%Y\" --timestr \"%k:%M\""	"")))
+				;;:onclick "swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr \"%a %e.%m.%Y\" --timestr \"%k:%M\""	"")))
+				:onclick "gtklock"	"")))
 
 	(button		:class "button-off"
 				:tooltip "Shutdown"
