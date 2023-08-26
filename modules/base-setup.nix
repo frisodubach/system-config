@@ -10,6 +10,7 @@
     ./hyprland/swaylock.nix
     ./eww/eww.nix
     # ./waybar/waybar.nix
+    ./gtklock/gtklock.nix
   ];
 
   environment.sessionVariables = rec {
