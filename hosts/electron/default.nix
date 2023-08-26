@@ -76,7 +76,6 @@
 
   services = {
     fstrim.enable = true;
-    thermald.enable = true;
     printing.enable = true;
 
     pipewire = {
@@ -86,18 +85,35 @@
       pulse.enable = true;
     };
 
-    tlp = {
-      enable = true;
-      settings = {
-        RADEON_DPM_STATE_ON_AC = "performance";
-        RADEON_DPM_STATE_ON_BAT = "battery";
-        PCIE_ASPM_ON_BAT = "powersupersave";
-        RUNTIME_PM_ON_BAT = 1;
+    # power-management stuff
+    thermald.enable = true;
 
-        #USB_AUTOSUSPEND=0;
+    #Auto CPU Frequency
+    auto-cpufreq.enable = true;
+    auto-cpufreq.settings = {
+      battery = {
+        governor = "powersave";
+        turbo = "never";
+      };
+      charger = {
+        governor = "performance";
+        turbo = "auto";
       };
     };
-    power-profiles-daemon.enable = false;
+
+    # TLP
+    # tlp = {
+    #   enable = true;
+    #   settings = {
+    #     RADEON_DPM_STATE_ON_AC = "performance";
+    #     RADEON_DPM_STATE_ON_BAT = "battery";
+    #     PCIE_ASPM_ON_BAT = "powersupersave";
+    #     RUNTIME_PM_ON_BAT = 1;
+
+    #     #USB_AUTOSUSPEND=0;
+    #   };
+    # };
+    # power-profiles-daemon.enable = false;
   };
 
   powerManagement.powertop.enable = false;

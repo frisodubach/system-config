@@ -85,14 +85,6 @@
     };
   };
 
-  # programs.dconf.enable = true;
-
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
   # ENABLE TAILSCALE
   services.tailscale.enable = true;
 
