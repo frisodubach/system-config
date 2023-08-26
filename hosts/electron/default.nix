@@ -102,6 +102,12 @@
 
   powerManagement.powertop.enable = false;
 
+  # Screen-lock / security
+  security = {
+    polkit.enable = true;
+    pam = { services = { gtklock = { }; }; };
+  };
+
   ############ /Networking ############
 
   nix = {
