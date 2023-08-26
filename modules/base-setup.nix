@@ -76,7 +76,7 @@
   ];
 
   programs = {
-    dconf.enbale = true;
+    dconf.enable = true;
     mtr.enable = true;
     nm-applet.enable = true;
     gnupg.agent = {
