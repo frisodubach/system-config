@@ -73,7 +73,7 @@
     wayland
 
     greetd.gtkgreet
-    sway-idle
+    swayidle
 
     # basic tools
     # - Scipts for managing brightness / volume / mic / nightlight
