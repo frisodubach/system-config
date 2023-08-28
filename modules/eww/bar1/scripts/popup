@@ -25,7 +25,7 @@ calendar() {
 }
 
 if [ "$1" = "launcher" ]; then
-    wofi --show drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
+    wofi --show drun fuzzy -i -a
 elif [ "$1" = "wifi" ]; then
     alacritty -e nmtui
 elif [ "$1" = "audio" ]; then
