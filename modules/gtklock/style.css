@@ -1,13 +1,13 @@
 /* This is GTK CSS, not normal CSS */
 
-* {
-    all: unset;
-    border: 0px;
-}
+/* * { */
+/*     all: unset; */
+/*     border: 0px; */
+/* } */
 
 window {
     /* background: rgba(0, 0, 0, 0.5); */
-    background-image: url("/home/phonon/Wallpapers/forest.jpg");
+    background-image: url("/home/phonon/Pictures/Wallpapers/forest.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

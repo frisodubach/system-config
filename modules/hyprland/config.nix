@@ -24,7 +24,7 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
-  exec-once=swaybg -i /home/phonon/Pictures/Wallpapers/2018-06-03_Komona-sunset-dark_by-David-Revoy.jpg
+  exec-once=swaybg -i /home/phonon/Pictures/Wallpapers/wallhavenGruvbox/leaves3.jpg
   #exec-once=wlsunset -l -23 -L -46
   exec-once=eww daemon
   exec-once=eww open bar

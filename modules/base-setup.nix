@@ -11,6 +11,7 @@
     ./eww/eww.nix
     # ./waybar/waybar.nix
     ./gtklock/gtklock.nix
+    ./wofi/wofi.nix
   ];
 
   environment.sessionVariables = rec {
