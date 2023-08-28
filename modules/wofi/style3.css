@@ -1,7 +1,7 @@
 window {
 margin: 0px;
-border: 2px solid #EBDBB2;
-border-radius: 25px;
+border: 2px solid #7c6f64;
+border-radius: 35px;
 background-color: #32302F;
 font-family: Fira;
 font-size: 16px;
@@ -9,29 +9,32 @@ font-size: 16px;
 
 #input {
 margin: 15px;
-border: 1px solid #282828;
+border: 1px solid #fe8019;
 border-radius: 25px;
-color: #FBF1C7;
-background-color: #665C54;
+color: #ebdbb2;
+background-color: #504945;
 }
 
 #input image {
-	color: #D79921;
+	color: #bdae93;
 }
 
 #inner-box {
 margin: 5px;
+margin-bottom: 35px;
 border: none;
 padding-left: 10px;
 padding-right: 10px;
+/* padding-bottom: 10px; */
 border-radius: 25px;
-background-color: #FE8019;
+background-color: #32302F;
 }
 
 #outer-box {
 margin: 5px;
+padding-bottom: 10px;
 border: none;
-background-color: #458588;
+background-color: #32302F;
 border-radius: 25px;
 }
 
@@ -47,13 +50,16 @@ color: #EBDBB2;
 }
 
 #entry:selected {
-	background-color: #8EC07C;
+	background-color: #504945;
 	font-weight: normal;
 	border-radius: 25px;
+	/* border: 1px solid #fe8019; */
 }
 
 #text:selected {
-	background-color: #8EC07C;
-	color: #32302F;
+	background-color: #504945;
+	color: #EBDBB2;
+	/* color: #d65d0e; */
+	border-radius: 25px;
 	font-weight: normal;
 }

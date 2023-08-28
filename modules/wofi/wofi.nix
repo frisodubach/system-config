@@ -8,6 +8,6 @@
 
     # Config
     home.file.".config/wofi/config" = { source = ./config; };
-    home.file.".config/wofi/style.css" = { source = ./style3.css; };
+    home.file.".config/wofi/style.css" = { source = ./style2.css; };
   };
 }
