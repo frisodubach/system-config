@@ -48,7 +48,7 @@
       # kb_options =
       # kb_rules =
 
-      follow_mouse = 1
+      follow_mouse = 2
       accel_profile = flat
 
       touchpad {
@@ -56,7 +56,7 @@
           disable_while_typing = true
           clickfinger_behavior = false
           tap-to-click = true
-          scroll_factor = 0.8
+          scroll_factor = 0.6
 
       }
 
@@ -128,7 +128,7 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
   # device:epic-mouse-v1 {
   #     sensitivity = -0.5
-  }
+  # }
 
   # Example windowrule v1
   # windowrule = float, ^(kitty)$
@@ -141,6 +141,12 @@
   windowrule=float,title:^(Library)(.*)$
   windowrule=float,title:^(Select a File)(.*)$
   windowrule=float,title:^(Choose wallpaper)(.*)$
+  windowrule=workspace 1,Emacs
+  windowrule=workspace 2,librewolf
+  windowrule=workspace 3,alacritty
+  windowrule=workspace 3,Nautilus
+  windowrule=workspace 4,Signal
+
 
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
   $mainMod = SUPER
@@ -203,6 +209,10 @@
   # Scroll through existing workspaces with mainMod + scroll
   bind = $mainMod, mouse_down, workspace, e+1
   bind = $mainMod, mouse_up, workspace, e-1
+
+  # Scroll through existing workspaces with mainMod + alt + h / l
+  bind = $mainMod ALT, l, workspace, e+1
+  bind = $mainMod ALT, h, workspace, e-1
 
   # Move/resize windows with mainMod + LMB/RMB and dragging
   bindm = $mainMod, mouse:272, movewindow

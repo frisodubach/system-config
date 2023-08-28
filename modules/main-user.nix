@@ -28,7 +28,6 @@
       #Important applications
       fish
       librewolf
-      vscodium
       zotero
       bitwarden
       vorta

@@ -8,25 +8,25 @@
       enable = true;
       settings = {
         global = {
-          frame_color = "#8AADF4";
+          frame_color = "#A89984";
           separator_color = "frame";
           font = "Fira Code";
         };
 
         urgency_low = {
-          background = "#24273A";
-          foreground = "#CAD3F5";
+          background = "#32302F";
+          foreground = "#EBDBB2";
         };
 
         urgency_normal = {
-          background = "#24273A";
-          foreground = "#CAD3F5";
+          background = "#32302F";
+          foreground = "#EBDBB2";
         };
 
         urgency_critical = {
-          background = "#24273A";
-          foreground = "#CAD3F5";
-          frame_color = "#F5A97F";
+          background = "#32302F";
+          foreground = "#EBDBB2";
+          frame_color = "#FB4934";
         };
       };
     };
