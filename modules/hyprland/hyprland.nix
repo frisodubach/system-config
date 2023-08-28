@@ -27,9 +27,9 @@
     CLUTTER_BACKEND = "wayland";
     BEMENU_BACKEND = "wayland";
     XDG_SESSION_TYPE = "wayland";
-    XDG_SESSION_DESKTOP = "wlroots";
-    XDG_CURRENT_DESKTOP = "wlroots";
-    XDG_CURRENT_SESSION = "wlroots";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_CURRENT_SESSION = "Hyprland";
   };
 
   xdg.portal = {
