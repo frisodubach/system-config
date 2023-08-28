@@ -157,8 +157,7 @@
   # bind = $mainMod, M, exit,
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, F, togglefloating,
-  bind = $mainMod, space, exec, wofi --show drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
-  # bind = $mainMod, space, exec, wofi --fork -S drun -b -I -O -Q -p '>' -m -M fuzzy -i -a
+  bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
   bind = $mainMod, P, pseudo, # dwindle
   bind = $mainMod, S, togglesplit, # dwindle
   bind = $mainMod, N, exec, emacsclient -nc
