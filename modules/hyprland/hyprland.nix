@@ -30,6 +30,7 @@
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_CURRENT_SESSION = "Hyprland";
+    GDK_BACKEND = "wayland";
   };
 
   xdg.portal = {
