@@ -140,21 +140,21 @@
     };
 
     # Home-manager GTK theme. [WIP]
-    gtk = {
-      enable = true;
-      cursorTheme = {
-        package = pkgs.capitaine-cursors-themed;
-        name = "Capitaine Cursors (Gruvbox)";
-      };
-      theme = {
-        package = pkgs.gruvbox-gtk-theme;
-        name = "Gruvbox-Dark-B";
-      };
-      iconTheme = {
-        package = pkgs.kora-icon-theme;
-        name = "kora";
-      };
-    };
+    # gtk = {
+    #   enable = true;
+    #   cursorTheme = {
+    #     package = pkgs.capitaine-cursors-themed;
+    #     name = "Capitaine Cursors (Gruvbox)";
+    #   };
+    #   theme = {
+    #     package = pkgs.gruvbox-gtk-theme;
+    #     name = "Gruvbox-Dark-B";
+    #   };
+    #   iconTheme = {
+    #     package = pkgs.kora-icon-theme;
+    #     name = "kora";
+    #   };
+    # };
 
     home.packages = with pkgs;
       [
