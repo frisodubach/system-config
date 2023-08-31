@@ -98,6 +98,7 @@
     wofi # application launcher
     networkmanager # gui network manager
     swaybg # wallpaper engine
+    swayosd
     # Audio
     pamixer
     playerctl

@@ -33,6 +33,7 @@
   exec-once = swayidle -w timeout 300 'gtklock' before-sleep 'gtklock' &
   exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'gtklock' &
+  exec-once = swayosd-server
 
   # Source a file (multi-file configs)
   # source = ~/.config/hypr/myColors.conf
