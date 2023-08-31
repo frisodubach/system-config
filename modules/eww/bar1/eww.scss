@@ -118,7 +118,7 @@ border-radius: 5px;
   font-family: FiraCode Nerd Font Mono;
   font-size: 1.2em;
   padding-right: .5rem;
-  margin: .2rem 0 .2rem 0;
+  // margin: .2rem 0 .2rem 0;
   color: $green;
 }
 .wifi-icon{
@@ -210,7 +210,8 @@ color: $background;
 
 // Powermenu
 .powermenu {
-  font-family: feather;
+  // font-family: feather;
+  font-family: FiraCode Nerd Font Mono;
   font-size: 1.4em;
   font-weight: bold;
 }
