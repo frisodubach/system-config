@@ -43,7 +43,7 @@
     (box      :orientation "v"
               :class "bat" battery-capacity))
     (label	:class "bat"
-;;			:halign "end"
+			:halign "center"
 			:text battery))))
 ;;			:tooltip "Battery: ${battery-capacity}%")))
 (defpoll battery			:interval "1s"	"scripts/battery icon")
