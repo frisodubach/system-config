@@ -31,14 +31,16 @@ $white: $foreground;
 // Launcher
 .launcher_icon{
     color: $cyan;
-    font-family: "Font Awesome 6 Pro";
+    // font-family: "Font Awesome 6 Pro";
+    font-family: FiraCode Nerd Font Mono;
     font-size: 1.7em;
     padding: 1rem 0 1rem 0;
 }
 
 // Workspaces
 .works {
-font-family: "Font Awesome 6 Pro";
+// font-family: "Font Awesome 6 Pro";
+font-family: FiraCode Nerd Font Mono;
 padding: .2rem .7rem .2rem .7rem;
 background-color: $black;
 border-radius: 5px;
@@ -113,9 +115,10 @@ background-color: $black;
 border-radius: 5px;
 }
 .bat{
-  font-family: JetBrainsMono Nerd Font;
+  font-family: FiraCode Nerd Font Mono;
   font-size: 1.2em;
   padding-right: .5rem;
+  margin: .2rem 0 .2rem 0;
   color: $green;
 }
 .wifi-icon{
@@ -149,7 +152,8 @@ scale trough {
 
 // Clock
 .time {
-  font-family: Comic Mono;
+  // font-family: Comic Mono;
+  font-family: FiraCode Nerd Font Mono;
   font-weight: bold;
   font-size: 1.2em;
   background-color: $black;
@@ -162,7 +166,8 @@ scale trough {
 // Calendar
 .cal-box {
   background-color: $black;
-  font-family: Comic Mono;
+  // font-family: Comic Mono;
+  font-family: FiraCode Nerd Font Mono;
   font-size: 1em;
   font-weight: bold;
   color: $white;

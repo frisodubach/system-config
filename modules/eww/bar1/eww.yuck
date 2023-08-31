@@ -36,6 +36,7 @@
               :onhoverlost "${eww} update bat=false"
 	(box	  :orientation "v"
 			  :space-evenly "false"
+              :spacing "2"
     (revealer :transition "slideup"
               :reveal bat
               :duration "550ms"
