@@ -36,31 +36,17 @@
               :onhoverlost "${eww} update bat=false"
 	(box	  :orientation "v"
 			  :space-evenly "false"
-;;              :spacing "2"
     (revealer :transition "slideup"
               :reveal bat
               :duration "550ms"
     (box      :orientation "v"
               :class "bat" battery-capacity))
-    (label	:class "bat"
-			:halign "center"
-			:text battery))))
-;;			:tooltip "Battery: ${battery-capacity}%")))
+    (label	  :class "bat"
+			  :halign "center"
+			  :text battery))))
 (defpoll battery			:interval "1s"	"scripts/battery icon")
 (defpoll battery-capacity	:interval "1s"	"scripts/battery percent")
 (defvar bat false)
-
-;; (defwidget time []
-;; 	(box	:orientation "v"
-;; 			:class "time"
-;; 			:valign "end"
-;; 	(button	:onclick "scripts/popup calendar"
-;; 			:class "time-hour" hour)
-;; 	(button	:onclick "scripts/popup calendar"
-;; 			:class "time-min"  min)))
-;; (defpoll hour	:interval "1s"	"date '+%H'")
-;; (defpoll min	:interval "1s"	"date '+%M'")
-
 
 ;; Wifi Widgets ;;
 (defwidget wifi []
@@ -80,7 +66,7 @@
 					:spacing 2
   			(revealer :transition "slideup"
 			  		  :reveal bright
-					  :duration "250ms"
+					  :duration "550ms"
   			(scale :class "bribar"
 			  	   :value current-brightness
 				   :tooltip "Brightness: ${current-brightness}%"
