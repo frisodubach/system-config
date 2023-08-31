@@ -32,14 +32,31 @@
 
 ;; Battery Widgets ;;
 (defwidget bat []
-	(box	:orientation "v"
-			:space-evenly "false"
-	(label	:class "bat"
-			:halign "end"
-			:text battery
-			:tooltip "Battery: ${battery-cappacity}%")))
+	(box	  :orientation "v"
+			  :space-evenly "false"
+    (revealer :transition "slideup"
+              :reveal bat
+              :duration "550ms"
+    (box      :orientation "v"
+              :class "batper" "${battery-capacity}%"))))
+;;    (label	:class "bat"
+;;			:halign "end"
+;;			:text battery
+;;			:tooltip "Battery: ${battery-cappacity}%")))
 (defpoll battery			:interval "1s"	"scripts/battery icon")
 (defpoll battery-cappacity	:interval "1s"	"scripts/battery percent")
+
+;; (defwidget time []
+;; 	(box	:orientation "v"
+;; 			:class "time"
+;; 			:valign "end"
+;; 	(button	:onclick "scripts/popup calendar"
+;; 			:class "time-hour" hour)
+;; 	(button	:onclick "scripts/popup calendar"
+;; 			:class "time-min"  min)))
+;; (defpoll hour	:interval "1s"	"date '+%H'")
+;; (defpoll min	:interval "1s"	"date '+%M'")
+
 
 ;; Wifi Widgets ;;
 (defwidget wifi []
