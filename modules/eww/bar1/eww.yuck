@@ -40,7 +40,10 @@
               :reveal bat
               :duration "550ms"
     (box      :orientation "v"
-              :class "batper" "${battery-capacity}%")))))
+              :class "batper" "${battery-capacity}%"))
+    box       :class "battery-icon" battery
+              :orientation "v"
+              :space-evenly "false")))
 ;;    (label	:class "bat"
 ;;			:halign "end"
 ;;			:text battery
