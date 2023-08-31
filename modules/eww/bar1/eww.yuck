@@ -44,9 +44,9 @@
 ;;    (label	:class "bat"
 ;;			:halign "end"
 ;;			:text battery
-;;			:tooltip "Battery: ${battery-cappacity}%")))
+;;			:tooltip "Battery: ${battery-capacity}%")))
 (defpoll battery			:interval "1s"	"scripts/battery icon")
-(defpoll battery-cappacity	:interval "1s"	"scripts/battery percent")
+(defpoll battery-capacity	:interval "1s"	"scripts/battery percent")
 (defvar bat false)
 
 ;; (defwidget time []
