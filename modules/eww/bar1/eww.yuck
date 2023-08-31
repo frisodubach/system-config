@@ -35,18 +35,15 @@
     (eventbox :onhover "${eww} update bat=true"
               :onhoverlost "${eww} update bat=false"
 	(box	  :orientation "v"
-			  :space-evenly "true"
+			  :space-evenly "false"
               :spacing "2"
     (revealer :transition "slideup"
               :reveal bat
               :duration "550ms"
     (box      :orientation "v"
               :class "bat" battery-capacity))
-;;    (box      :class "bat" "${battery}"
-;;              :orientation "v"
-;;              :space-evenly "false"))))
     (label	:class "bat"
-			:halign "end"
+;;			:halign "end"
 			:text battery))))
 ;;			:tooltip "Battery: ${battery-capacity}%")))
 (defpoll battery			:interval "1s"	"scripts/battery icon")
