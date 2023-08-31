@@ -35,7 +35,7 @@
     (eventbox :onhover "${eww} update bat=true"
               :onhoverlost "${eww} update bat=false"
 	(box	  :orientation "v"
-			  :space-evenly "false"
+			  :space-evenly "true"
               :spacing "2"
     (revealer :transition "slideup"
               :reveal bat
