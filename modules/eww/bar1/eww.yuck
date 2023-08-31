@@ -43,7 +43,7 @@
               :class "batper" "${battery-capacity}%"))
     (box       :class "battery-icon" "${battery}"
               :orientation "v"
-              :space-evenly "false")))
+              :space-evenly "false"))))
 ;;    (label	:class "bat"
 ;;			:halign "end"
 ;;			:text battery
