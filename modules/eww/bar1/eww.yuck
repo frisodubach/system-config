@@ -32,19 +32,22 @@
 
 ;; Battery Widgets ;;
 (defwidget bat []
+    (eventbox :onhover "${eww} update bat=true"
+              :onhoverlost "${eww} update bat=false"
 	(box	  :orientation "v"
 			  :space-evenly "false"
     (revealer :transition "slideup"
               :reveal bat
               :duration "550ms"
     (box      :orientation "v"
-              :class "batper" "${battery-capacity}%"))))
+              :class "batper" "${battery-capacity}%")))))
 ;;    (label	:class "bat"
 ;;			:halign "end"
 ;;			:text battery
 ;;			:tooltip "Battery: ${battery-cappacity}%")))
 (defpoll battery			:interval "1s"	"scripts/battery icon")
 (defpoll battery-cappacity	:interval "1s"	"scripts/battery percent")
+(defvar bat false)
 
 ;; (defwidget time []
 ;; 	(box	:orientation "v"
