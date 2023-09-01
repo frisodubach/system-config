@@ -37,7 +37,6 @@
       starship
       kid3
       wofi
-      #emacs
     ];
 
     xdg.mimeApps = {
@@ -46,8 +45,8 @@
       associations.added = {
         "text/plain" = "emacsclient.desktop";
         "application/pdf" = "zotero.desktop";
-        "image/jpeg" = "vimim.desktop";
-        "image/png" = "vimim.desktop";
+        "image/jpeg" = "vimiv.desktop";
+        "image/png" = "vimiv.desktop";
 
         "x-scheme-handler/chrome" = "librewolf.desktop";
         "x-scheme-handler/http" = "librewolf.desktop";
@@ -57,8 +56,8 @@
       defaultApplications = {
         "text/plain" = "emacsclient.desktop";
         "application/pdf" = "zotero.desktop";
-        "image/jpeg" = "vimim.desktop";
-        "image/png" = "vimim.desktop";
+        "image/jpeg" = "vimiv.desktop";
+        "image/png" = "vimiv.desktop";
 
         # For personal stuff
         "x-scheme-handler/chrome" = "librewolf.desktop";
