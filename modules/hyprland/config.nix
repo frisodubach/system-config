@@ -29,7 +29,8 @@
   exec-once=eww daemon
   exec-once=eww open bar
   # exec-once=waybar
-  exec-once=dunst
+  # exec-once=dunst
+  exec-once=mako
   exec-once = swayidle -w timeout 300 'gtklock' before-sleep 'gtklock' &
   exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'gtklock' &

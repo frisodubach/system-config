@@ -6,12 +6,13 @@
     ./fish.nix
     ./hyprland/hyprland.nix
     ./alacritty.nix
-    ./dunst.nix
+    # ./dunst.nix
     ./hyprland/swaylock.nix
     ./eww/eww.nix
     # ./waybar/waybar.nix
     ./gtklock/gtklock.nix
     ./wofi/wofi.nix
+    ./makko/mako.nix
   ];
 
   environment.sessionVariables = rec {
