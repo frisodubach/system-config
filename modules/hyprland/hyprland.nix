@@ -3,7 +3,7 @@
 {
 
   # === Hyprland ===
-  imports = [ inputs.hyprland.nixosModules.default ./swaylock.nix ];
+  imports = [ inputs.hyprland.nixosModules.default ];
 
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
@@ -35,12 +35,7 @@
     # DISPLAY = ":0";
   };
 
-  xdg.portal = {
-    enable = true;
-    # wlr.enable = true;
-    # extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-    # gtkUsePortal = true;
-  };
+  xdg.portal = { enable = true; };
 
   hardware.opengl = {
     enable = true;
