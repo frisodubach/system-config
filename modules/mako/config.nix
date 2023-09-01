@@ -15,11 +15,11 @@
   # STYLE OPTIONS
   font=FiraCode Nerd Font Mono
   width=300
-  height=100
+  height=150
   margin=10
   padding=15
   border-size=2
-  border-radius=0
+  border-radius=10
   icons=1
   max-icon-size=32
   icon-location=left
