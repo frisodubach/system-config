@@ -12,7 +12,7 @@
     # ./waybar/waybar.nix
     ./gtklock/gtklock.nix
     ./wofi/wofi.nix
-    ./makko/mako.nix
+    ./mako/mako.nix
   ];
 
   environment.sessionVariables = rec {
