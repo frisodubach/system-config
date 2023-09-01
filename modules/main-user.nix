@@ -39,11 +39,33 @@
       wofi
       #emacs
     ];
-    #xdg.mimeApps.defaultApplications = {
-    #  "image/png" = "feh.desktop";
-    #  "image/jpeg" = "feh.desktop";
-    #  "text/plain" = "gvim";
-    #};
+
+    xdg.mimeApps = {
+      enable = true;
+
+      associations.added = {
+        "text/plain" = "emacsclient.desktop";
+        "application/pdf" = "zotero.desktop";
+        # "image/jpeg" = "vimim.desktop";
+        # "image/png" = "vimim.desktop";
+
+        "x-scheme-handler/chrome" = "librewolf.desktop";
+        "x-scheme-handler/http" = "librewolf.desktop";
+        "x-scheme-handler/https" = "librewolf.desktop";
+      };
+
+      defaultApplications = {
+        "text/plain" = "emacsclient.desktop";
+        "application/pdf" = "zotero.desktop";
+        # "image/jpeg" = "vimim.desktop";
+        # "image/png" = "vimim.desktop";
+
+        # For personal stuff
+        "x-scheme-handler/chrome" = "librewolf.desktop";
+        "x-scheme-handler/http" = "librewolf.desktop";
+        "x-scheme-handler/https" = "librewolf.desktop";
+      };
+    };
     home.sessionPath = [ "~/.emacs.d/bin/" ];
   };
 }

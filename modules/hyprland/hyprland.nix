@@ -30,7 +30,7 @@
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_CURRENT_SESSION = "Hyprland";
-    # GDK_BACKEND = "wayland";
+    GDK_BACKEND = "wayland,x11";
     # WAYLAND_DISPLAY = "wayland-0";
     # DISPLAY = ":0";
   };
@@ -80,12 +80,12 @@
 
     # basic tools
     # - Scipts for managing brightness / volume / mic / nightlight
-    # - Dynamic display settings
+    # - Dynamic display settings - SwayOSD
     # - Screenshot tool
-    # - Wallpaper engine
+    # - Wallpaper engine - swaybg/hyprpaper
     # - Clipboard manager
-    # - File manager
-    # - Photo viewer
+    # - File manager - thunar/nautilus/terminal based?
+    # - Photo viewer -
     # - Calculator
 
     # Basic system tools
@@ -113,6 +113,7 @@
     swappy
     # Photoviewer
     gnome.eog
+    vimiv-qt
     # Calc
 
     # Font Manager
@@ -142,22 +143,34 @@
       extraConfig = import ./config.nix { };
     };
 
-    # Home-manager GTK theme. [WIP]
-    # gtk = {
-    #   enable = true;
-    #   cursorTheme = {
-    #     package = pkgs.capitaine-cursors-themed;
-    #     name = "Capitaine Cursors (Gruvbox)";
-    #   };
-    #   theme = {
-    #     package = pkgs.gruvbox-gtk-theme;
-    #     name = "Gruvbox-Dark-B";
-    #   };
-    #   iconTheme = {
-    #     package = pkgs.kora-icon-theme;
-    #     name = "kora";
-    #   };
-    # };
+    # Home-manager GTK theme / cursor theme [WIP]
+    home.pointerCursor = {
+      name = "Capitaine Cursors (Gruvbox)";
+      package = pkgs.capitaine-cursors-themed;
+      size = 24;
+      gtk.enable = true;
+    };
+
+    gtk = {
+      enable = true;
+      theme = {
+        package = pkgs.gruvbox-gtk-theme;
+        name = "Gruvbox-Dark-B";
+      };
+      iconTheme = {
+        package = pkgs.kora-icon-theme;
+        name = "kora";
+      };
+      # cursorTheme = {
+      #   package = pkgs.capitaine-cursors-themed;
+      #   name = "Capitaine Cursors (Gruvbox)";
+      # };
+    };
+
+    qt = {
+      enable = true;
+      platformTheme = "gtk";
+    };
 
     home.packages = with pkgs;
       [
