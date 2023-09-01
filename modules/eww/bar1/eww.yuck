@@ -52,7 +52,7 @@
 (defwidget wifi []
 	(box		:orientation "v"
 				:tooltip wifi-name
-	(button		:onclick "scripts/popup wifi"
+	(button		:onclick "scripts/wofi-wifi"
 				:class "wifi-icon" wifi-icon)))
 (defpoll wifi-icon :interval "1s" "scripts/wifi icon")
 (defpoll wifi-name :interval "1s" "scripts/wifi name")
@@ -168,7 +168,7 @@
 
 	(button		:class "button-off"
 				:tooltip "Shutdown"
-				:onclick "shutdown now"	"⏻"))))
+				:onclick "scripts/wofi-power"	"⏻"))))
 (defvar power false)
 
 ;; Top Widgets ;;
