@@ -6,7 +6,6 @@
     ./fish/fish.nix
     ./hyprland/hyprland.nix
     ./alacritty/alacritty.nix
-    ./hyprland/swaylock.nix
     ./eww/eww.nix
     ./gtklock/gtklock.nix
     ./wofi/wofi.nix
