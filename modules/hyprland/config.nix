@@ -143,11 +143,11 @@
   windowrule=float,title:^(Library)(.*)$
   windowrule=float,title:^(Select a File)(.*)$
   windowrule=float,title:^(Choose wallpaper)(.*)$
-  windowrule=workspace 1,Emacs
-  windowrule=workspace 2,librewolf
-  windowrule=workspace 3,alacritty
-  windowrule=workspace 3,Nautilus
-  windowrule=workspace 4,Signal
+  # windowrule=workspace 1,Emacs
+  # windowrule=workspace 2,librewolf
+  # windowrule=workspace 3,alacritty
+  # windowrule=workspace 3,Nautilus
+  # windowrule=workspace 4,Signal
 
 
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
@@ -160,10 +160,12 @@
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, F, togglefloating,
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
-  bind = $mainMod, P, pseudo, # dwindle
+  bind = $mainMod, P, bitwarden, # dwindle
+  bind = $mainMod SHIFT, P, pseudo, # dwindle
   bind = $mainMod, S, togglesplit, # dwindle
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, librewolf
+  bind = $mainMod, V, exec, vimim
 
   # Move focus with mainMod + arrow keys
   bind = $mainMod, H, movefocus, l
@@ -240,7 +242,7 @@
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 
   # On lid close, lock screen and suspend
-  # bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
+  bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
 
   # Keybind to lock screen
   # bind = $mainMod, L, exec, $screenLockCmd
