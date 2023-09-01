@@ -3,13 +3,11 @@
 {
   imports = [
     ./main-user.nix
-    ./fish.nix
+    ./fish/fish.nix
     ./hyprland/hyprland.nix
-    ./alacritty.nix
-    # ./dunst.nix
+    ./alacritty/alacritty.nix
     ./hyprland/swaylock.nix
     ./eww/eww.nix
-    # ./waybar/waybar.nix
     ./gtklock/gtklock.nix
     ./wofi/wofi.nix
     ./mako/mako.nix
