@@ -46,8 +46,8 @@
       associations.added = {
         "text/plain" = "emacsclient.desktop";
         "application/pdf" = "zotero.desktop";
-        # "image/jpeg" = "vimim.desktop";
-        # "image/png" = "vimim.desktop";
+        "image/jpeg" = "vimim.desktop";
+        "image/png" = "vimim.desktop";
 
         "x-scheme-handler/chrome" = "librewolf.desktop";
         "x-scheme-handler/http" = "librewolf.desktop";
@@ -57,8 +57,8 @@
       defaultApplications = {
         "text/plain" = "emacsclient.desktop";
         "application/pdf" = "zotero.desktop";
-        # "image/jpeg" = "vimim.desktop";
-        # "image/png" = "vimim.desktop";
+        "image/jpeg" = "vimim.desktop";
+        "image/png" = "vimim.desktop";
 
         # For personal stuff
         "x-scheme-handler/chrome" = "librewolf.desktop";
