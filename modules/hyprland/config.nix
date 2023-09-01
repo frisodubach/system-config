@@ -160,7 +160,7 @@
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, F, togglefloating,
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
-  bind = $mainMod, P, bitwarden
+  bind = $mainMod, P, exec, bitwarden
   bind = $mainMod SHIFT, P, pseudo, # dwindle
   bind = $mainMod, S, togglesplit, # dwindle
   bind = $mainMod, N, exec, emacsclient -nc
