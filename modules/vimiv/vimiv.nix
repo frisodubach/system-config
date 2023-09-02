@@ -10,6 +10,6 @@
 
     home.file.".config/vimiv/keys.conf" = { source = ./keys.conf; };
 
-    home.file.".config/vimiv/style.conf" = { source = ./style.conf; };
+    home.file.".config/vimiv/styles/style.conf" = { source = ./style.conf; };
   };
 }
