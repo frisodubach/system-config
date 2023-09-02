@@ -10,6 +10,7 @@
     ./gtklock/gtklock.nix
     ./wofi/wofi.nix
     ./mako/mako.nix
+    ./vimiv/vimiv.nix
   ];
 
   environment.sessionVariables = rec {
