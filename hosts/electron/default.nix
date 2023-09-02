@@ -85,23 +85,26 @@
       pulse.enable = true;
     };
 
-    power-profiles-daemon.enable = true;
-
     # power-management stuff
     # thermald.enable = true;
 
+    # Power-profiles daemon
+    # power-profiles-daemon.enable = true;
+
+    acpid.enable = true;
+
     # #Auto CPU Frequency
-    # auto-cpufreq.enable = true;
-    # auto-cpufreq.settings = {
-    #   battery = {
-    #     governor = "powersave";
-    #     turbo = "never";
-    #   };
-    #   charger = {
-    #     governor = "performance";
-    #     turbo = "auto";
-    #   };
-    # };
+    auto-cpufreq.enable = true;
+    auto-cpufreq.settings = {
+      battery = {
+        governor = "powersave";
+        turbo = "auto";
+      };
+      charger = {
+        governor = "schedutil";
+        turbo = "auto";
+      };
+    };
 
     # TLP
     # tlp = {
@@ -115,10 +118,12 @@
     #     #USB_AUTOSUSPEND=0;
     #   };
     # };
-    # power-profiles-daemon.enable = false;
   };
 
-  powerManagement.powertop.enable = false;
+  powerManagement = {
+    enable = true;
+    powertop.enable = false;
+  };
 
   # Screen-lock / security
   security = {

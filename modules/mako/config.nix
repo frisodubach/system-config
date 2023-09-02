@@ -29,7 +29,7 @@
   text-alignment=left
   default-timeout=5000
   ignore-timeout=0
-  max-visible=5
+  max-visible=3
   layer=overlay
   anchor=top-right
 
