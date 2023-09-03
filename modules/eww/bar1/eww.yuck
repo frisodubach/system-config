@@ -105,9 +105,13 @@
 (defvar volum false)
 
 ;;Widget to mute notifications
-;;makoctl mode -a do-not-disturb
-;;makoctl mode -r do-not-disturb
-;;makoctl mode spits out 'default', or 'default \n do-not-disturb'
+(defwidget notif []
+	(box		:orientation "v"
+				:tooltip notif-state
+	(button		:onclick "scripts/notification toggle"
+				:class "notif-icon" notif-icon)))
+(defpoll notif-icon :interval "1s" "scripts/notification icon")
+(defpoll notif-state :interval "1s" "scripts/notification state")
 
 ;; Control Panel Widgets ;;
 (defwidget control []
@@ -117,7 +121,8 @@
 (bat)
 (wifi)
 (bright)
-(volum)))
+(volum)
+(notif)))
 
 ;; Clock Widgets ;;
 (defwidget time []

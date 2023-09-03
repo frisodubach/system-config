@@ -20,6 +20,7 @@ $yellow: #FABD2F;
 $blue: #83A598;
 $magenta: #D3869B;
 $cyan: #8EC07C;
+$orange: #fe8019;
 $white: $foreground;
 
 // EWW BAR
@@ -129,6 +130,10 @@ border-radius: 5px;
 .volume-icon{
   margin: .2rem 0 .2rem 0;
   color: $magenta;
+}
+.notif-icon{
+  margin: .2rem 0 .2rem 0;
+  color: $orange;
 }
 scale trough {
   all: unset;
