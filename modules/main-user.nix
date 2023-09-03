@@ -33,7 +33,6 @@
       vorta
       sherlock
       amberol
-      signal-desktop
       starship
       kid3
       wofi

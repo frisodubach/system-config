@@ -2,7 +2,7 @@
   ## Mako configuration file
 
   # GLOBAL CONFIGURATION OPTIONS
-  max-history=100
+  max-history=10
   sort=-time
 
   # BINDING OPTIONS

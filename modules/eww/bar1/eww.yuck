@@ -104,6 +104,11 @@
 (defpoll current-volume :interval "1s" "pamixer --get-volume")
 (defvar volum false)
 
+;;Widget to mute notifications
+;;makoctl mode -a do-not-disturb
+;;makoctl mode -r do-not-disturb
+;;makoctl mode spits out 'default', or 'default \n do-not-disturb'
+
 ;; Control Panel Widgets ;;
 (defwidget control []
 	(box :orientation "v"
