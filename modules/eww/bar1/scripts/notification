@@ -1,30 +1,30 @@
 #!/usr/bin/env bash
 
 icon() {
-    if status = "ON"; then
-        echo 󰂚
-    else
+    if makoctl mode | grep -q "do-not-disturb"; then
         echo 󰂛
+    else
+        echo 󰂚
     fi
 }
 
 state() {
     if makoctl mode | grep -q "do-not-disturb"; then
-        status = "DND"
+        status="DND"
     else
-        status = "ON"
+        status="ON"
     fi
     echo "${status}"
 }
 
 toggle() {
-    if status = "ON"; then
-        makoctl mode -a do-not-disturb
-    else
+    if makoctl mode | grep -q "do-not-disturb"; then
         makoctl mode -r do-not-disturb
+    else
+        makoctl mode -a do-not-disturb
     fi
 }
 
-[ "$1" = "icon"] && icon && exit
-[ "$1" = "state"] && symbol && exit
-[ "$1" = "toggle"] && toggle && exit
+[ "$1" = "icon" ] && icon && exit
+[ "$1" = "state" ] && state && exit
+[ "$1" = "toggle" ] && toggle && exit
