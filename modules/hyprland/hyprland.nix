@@ -125,7 +125,7 @@
 
   # === HOME MANAGER ===
   home-manager.users.phonon = { pkgs, ... }: {
-    home.stateVersion = "23.05";
+    home.stateVersion = "22.11";
 
     # Don't understand this well.
     imports = [ inputs.hyprland.homeManagerModules.default ];

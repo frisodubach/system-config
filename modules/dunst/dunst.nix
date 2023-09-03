@@ -2,7 +2,7 @@
 
 {
   home-manager.users.phonon = { pkgs, ... }: {
-    home.stateVersion = "23.05";
+    home.stateVersion = "22.11";
 
     services.dunst = {
       enable = true;

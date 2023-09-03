@@ -3,7 +3,7 @@
 {
 
   home-manager.users.phonon = { pkgs, ... }: {
-    home.stateVersion = "23.05";
+    home.stateVersion = "22.11";
     # home.packages = [ pkgs.inter ];
 
     services.playerctld.enable = true;

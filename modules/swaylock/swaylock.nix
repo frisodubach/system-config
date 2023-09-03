@@ -5,7 +5,7 @@
   security.pam.services.swaylock = { };
 
   home-manager.users.phonon = {
-    home.stateVersion = "23.05";
+    home.stateVersion = "22.11";
 
     programs.swaylock = {
       enable = true;
