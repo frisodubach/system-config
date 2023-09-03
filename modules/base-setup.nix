@@ -54,7 +54,6 @@
     firefox
     alacritty
     gimp
-    signal-desktop
     emacs-gtk
     calibre
 

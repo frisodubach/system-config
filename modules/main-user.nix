@@ -31,6 +31,7 @@
       zotero
       bitwarden
       vorta
+      signal-desktop
       sherlock
       amberol
       starship
