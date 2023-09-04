@@ -241,6 +241,10 @@
   $suspendCmd = systemctl suspend
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 
+  # Screenshots
+  bind = ,Print, exec, grim -g "$(slurp)" - | wl-copy -t image/png
+  bind = SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f -
+
   # On lid close, lock screen and suspend
   bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
 
