@@ -26,7 +26,8 @@ $white: $foreground;
 // EWW BAR
 .eww_bar{
   background-color: $background;
-  padding: .3rem;
+  padding: .2rem;
+  border-radius: 20px;
 }
 
 // Launcher
@@ -107,11 +108,11 @@ color: $gray;
 
 // Control Panel
 .control {
-padding: .5rem;
+padding: .3rem;
 font-family: Material Icons;
 font-size: 1.6em;
 background-color: $black;
-border-radius: 5px;
+border-radius: 12px;
 }
 .bat{
   font-family: FiraCode Nerd Font Mono;
@@ -159,9 +160,9 @@ scale trough {
   font-size: 1.2em;
   background-color: $black;
   color: $white;
-  border-radius: 5px;
-  padding: .7rem 0 .5rem 0;
-  margin: .5rem 0 .5rem 0;
+  border-radius: 12px;
+  padding: .5rem 0 .5rem 0;
+  margin: .3rem 0 .3rem 0;
 }
 
 // Calendar

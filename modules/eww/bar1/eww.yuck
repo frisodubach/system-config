@@ -224,10 +224,10 @@
     :windowtype "dock"
     :stacking "fg"
         :focusable false
-	:geometry (geometry :x "0"
+	:geometry (geometry :x "8"
 						:y "0"
-						:height "100%"
-						:width "47px"
+						:height "95%"
+						:width "38px"
                         :anchor "right center")
 	:monitor 0
 	:reserve (struts :distance "35px"
@@ -240,7 +240,7 @@
 ;; Calendar Windows ;;
 (defwindow calendar
 	:geometry (geometry :x "1580px"
-						:y "75%"
+						:y "70%"
 						:width "270px"
 						:height "60px")
 (cal))
