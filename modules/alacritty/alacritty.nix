@@ -10,7 +10,7 @@
         import = [ ./themes/gruvbox_dark.yml ];
 
         window = {
-          opacity = 0.9;
+          opacity = 1;
           decorations = "full";
           dynamic_title = true;
         };
