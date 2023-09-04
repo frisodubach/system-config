@@ -35,3 +35,4 @@ While my current configuration is quite okay to use right now, there are still s
 - Bluetooth setup & =eww= widget
 - =firefox= / =librewolf= configuration w/ Nix
 - Zatuhra configuration
+- qutebrowser
