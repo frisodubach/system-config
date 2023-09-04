@@ -24,7 +24,7 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
-  exec-once=hyprctl setcursor "Capitaine Cursors (Gruvbox)" 24
+  exec-once=hyprctl setcursor \'Capitaine Cursors (Gruvbox)\' 24
   exec-once=swaybg -i /home/phonon/Pictures/Wallpapers/wallhavenGruvbox/duality.png
   #exec-once=wlsunset -l -23 -L -46
   exec-once=eww daemon
