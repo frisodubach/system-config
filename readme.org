@@ -30,5 +30,6 @@ While my current configuration is quite okay to use right now, there are still s
 - Configure =borg= backups
 - Get a working =starship= configuration
 - Split up the =hyprland= module into smaller parts
-- Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality
+- Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
 - Find & use more terminal applications to replace GUI applications (music-player, file-browser, etc)
+- Bluetooth setup & =eww= widget
