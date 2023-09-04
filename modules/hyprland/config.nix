@@ -35,6 +35,8 @@
   exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'gtklock' &
   exec-once = swayosd-server
+  exec-once = wl-paste --type text --watch cliphist store #Stores only text data
+  exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 
   # Source a file (multi-file configs)
   # source = ~/.config/hypr/myColors.conf
@@ -242,8 +244,8 @@
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 
   # Screenshots
-  bind = ,Print, exec, grim -g "$(slurp)" - | wl-copy -t image/png
-  bind = SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f -
+  bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png
+  bind = , Print, exec, grim -g "$(slurp)" - | swappy -f -
 
   # On lid close, lock screen and suspend
   bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
