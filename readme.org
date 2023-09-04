@@ -1,0 +1,34 @@
+#+title: readme
+#author: frisodubach
+
+NixOS system configuration based on flakes & a simple module-folder structure. The configuration is based on that of [[https://github.com/mdvmeijer/system-config/][mdvmeijer]], expect for it's more simple nature.
+This is my first year of using Nix, and my needs are not very complicated, so ease of use and simplicity are primary.
+
+[[./showcase.png]]
+* Overview
+The configuration is split up in two main directories:
+- =./hosts=
+- =./modules=
+
+Many Nix configurations I've seen are split up between =home-manager= and 'normal'-configuration. I instead like to organise things purely based on functionality.
+In =./hosts= system configuration is defined. This should be specific for each system the Nix configuration is used on (currently just one system).
+In =./modules= system capabilities are defined, mainly user-specific setup and =home-manager= configured programs / dotfiles. Contained in here is configuration of my most used programs such as:
+- Hyprland
+- Wofi
+- EWW
+- fish
+- alacritty
+
+There are also a few currently un-used programs included, these I either used before and have since switched away from, or a work in progress. I keep these in for completeness-sake.
+For my config, I emphasise using standard dotfiles when convenient, to allow for anyone to copy my configuration, and make it easy to move away from NixOS should I ever want to (although I doubt it).
+
+My =doom-emacs= configuration is not managed by Nix, and can instead be found [[https://github.com/frisodubach/nixConfig][here]], although I need to rework the repo to only include my doom-config.
+* Work in progress
+While my current configuration is quite okay to use right now, there are still some things that are on my list to solve. Right now this is:
+- Battery/Power management for laptop. (Configure =tlp= or =auto-cpufreq=)
+- Get workspace widget working on =eww= bar.
+- Configure =borg= backups
+- Get a working =starship= configuration
+- Split up the =hyprland= module into smaller parts
+- Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality
+- Find & use more terminal applications to replace GUI applications (music-player, file-browser, etc)
