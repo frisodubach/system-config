@@ -37,6 +37,7 @@
       starship
       kid3
       wofi
+      tor-browser-bundle-bin
     ];
 
     xdg.mimeApps = {
