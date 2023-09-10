@@ -108,7 +108,6 @@
     swappy
     # Photoviewer
     gnome.eog
-    # vimiv-qt
     # Calc
 
     # Font Manager

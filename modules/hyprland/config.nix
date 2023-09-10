@@ -144,6 +144,7 @@
   windowrule=float,title:^(Library)(.*)$
   windowrule=float,title:^(Select a File)(.*)$
   windowrule=float,title:^(Choose wallpaper)(.*)$
+  windowrule=float,title:^(Open Image)(.*)$ # GIMP
   # windowrule=workspace 1,Emacs
   # windowrule=workspace 2,librewolf
   # windowrule=workspace 3,alacritty
@@ -161,11 +162,12 @@
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, F, togglefloating,
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
-  bind = $mainMod, P, exec, bitwarden
+  bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod SHIFT, P, pseudo, # dwindle
   bind = $mainMod, S, togglesplit, # dwindle
   bind = $mainMod, N, exec, emacsclient -nc
-  bind = $mainMod, B, exec, librewolf
+  bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
+  bind = $mainMod SHIFT, B, exec, librewolf
   bind = $mainMod, V, exec, vimim
 
   # Move focus with mainMod + arrow keys
