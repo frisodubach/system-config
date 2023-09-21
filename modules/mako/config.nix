@@ -51,6 +51,9 @@
   text-color=#fbf1c7
   default-timeout=0
 
+  [mode=do-not-disturb]
+  invisible=1
+
   # [category=mpd]
   # border-color=#f9e2af
   # default-timeout=2000

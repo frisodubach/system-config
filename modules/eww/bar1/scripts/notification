@@ -19,9 +19,11 @@ state() {
 
 toggle() {
     if makoctl mode | grep -q "do-not-disturb"; then
-        makoctl mode -r do-not-disturb
+        makoctl mode -s default
+        # makoctl set-mode default
     else
-        makoctl mode -a do-not-disturb
+        makoctl mode -s do-not-disturb
+        makoctl set-mode do-not-disturb
     fi
 }
 
