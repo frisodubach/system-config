@@ -30,9 +30,9 @@
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
-  exec-once = swayidle -w timeout 300 'gtklock' before-sleep 'gtklock' &
+  exec-once = swayidle -w timeout 300 'swaylock' before-sleep 'swaylock' &
   exec-once = swayidle -w timeout 450 'systemctl suspend' &
-  # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'gtklock' &
+  # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   exec-once = swayosd-server
   exec-once = wl-paste --type text --watch cliphist store #Stores only text data
   exec-once = wl-paste --type image --watch cliphist store #Stores only image data
@@ -84,15 +84,18 @@
       # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
       rounding = 10
-      blur = true
-      blur_size = 3
-      blur_passes = 1
-      blur_new_optimizations = true
-
-      drop_shadow = true
+      drop_shadow = false
       shadow_range = 4
       shadow_render_power = 3
       col.shadow = rgba(01010166)
+
+      blur {
+      enabled = false
+      size = 3
+      passes = 1
+      new_optimizations = true
+      }
+
   }
 
   animations {
@@ -161,6 +164,7 @@
   # bind = $mainMod, M, exit,
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, F, togglefloating,
+  bind = $mainMod SHIFT, F, fullscreen,
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod SHIFT, P, pseudo, # dwindle
@@ -240,7 +244,9 @@
   bind=, XF86AudioPrev, exec, playerctl previous
 
   # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
-  $screenLockCmd = gtklock
+  # $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/marita-kavelashvili-ugnrXk1129g-unsplash.jpg
+  $screenLockCmd = swaylock
+  # $screenLockCmd = gtklock
   $suspendCmd = systemctl suspend
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 

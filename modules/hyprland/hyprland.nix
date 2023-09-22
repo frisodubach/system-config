@@ -35,7 +35,10 @@
     # DISPLAY = ":0";
   };
 
-  xdg.portal = { enable = true; };
+  xdg.portal = {
+    enable = true;
+    config.common.default = "*";
+  };
 
   hardware.opengl = {
     enable = true;

@@ -7,7 +7,8 @@
     ./hyprland/hyprland.nix
     ./alacritty/alacritty.nix
     ./eww/eww.nix
-    ./gtklock/gtklock.nix
+    # ./gtklock/gtklock.nix
+    ./swaylock/swaylock.nix
     ./wofi/wofi.nix
     ./mako/mako.nix
     ./vimiv/vimiv.nix
@@ -33,7 +34,7 @@
     smartmontools # Get SMART data
     tldr # man alternative
     fzf # fuzzy finder
-    exa # ls alternative
+    eza # ls alternative
     bat # cat alternative
     ncdu # du alternative
     duf # df alternative
@@ -49,6 +50,7 @@
     fd
     ripgrep
     git
+    aspell
 
     # basic GUI applications
     firefox
@@ -64,7 +66,11 @@
 
     # misc
     neofetch
+
+    # coding
     #python3
+    clojure
+    clojure-lsp
 
   ];
 
@@ -84,7 +90,7 @@
   # AUTO UPDATE DB
   services.locate = {
     enable = true;
-    locate = pkgs.mlocate;
+    package = pkgs.mlocate;
     interval = "daily";
     # warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null
     localuser = null;
@@ -95,8 +101,8 @@
 
   # FONTS
   fonts = {
-    enableDefaultFonts = true;
-    fonts = with pkgs; [
+    enableDefaultPackages = true;
+    packages = with pkgs; [
       fira-code
       fira
       fira-code-symbols

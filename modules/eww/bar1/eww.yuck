@@ -31,6 +31,8 @@
 
 
 ;; Battery Widgets ;;
+(defpoll battery			:interval "1s"	"scripts/battery icon")
+(defpoll battery-capacity	:interval "1s"	"scripts/battery percent")
 (defwidget bat []
     (eventbox :onhover "${eww} update bat=true"
               :onhoverlost "${eww} update bat=false"
@@ -44,20 +46,19 @@
     (label	  :class "bat"
 			  :halign "center"
 			  :text battery))))
-(defpoll battery			:interval "1s"	"scripts/battery icon")
-(defpoll battery-capacity	:interval "1s"	"scripts/battery percent")
 (defvar bat false)
 
 ;; Wifi Widgets ;;
+(defpoll wifi-icon :interval "1s" "scripts/wifi icon")
+(defpoll wifi-name :interval "1s" "scripts/wifi name")
 (defwidget wifi []
 	(box		:orientation "v"
 				:tooltip wifi-name
 	(button		:onclick "scripts/wofi-wifi"
 				:class "wifi-icon" wifi-icon)))
-(defpoll wifi-icon :interval "1s" "scripts/wifi icon")
-(defpoll wifi-name :interval "1s" "scripts/wifi name")
 
 ;; Brightness Widgets ;;
+(defpoll current-brightness :interval "1s" "brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 (defwidget bright []
   (eventbox :onhover "${eww} update bright=true"
   			:onhoverlost "${eww} update bright=false"
@@ -77,10 +78,10 @@
 				   :min 0))
   			(label :class "brightness-icon"
 			  	   :text ""))))
-(defpoll current-brightness :interval "1s" "brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 (defvar bright false)
 
 ;; Volume Widgets ;;
+(defpoll current-volume :interval "1s" "pamixer --get-volume")
 (defwidget volum []
 	(eventbox :onhover "${eww} update volum=true"
 			  :onhoverlost "${eww} update volum=false"
@@ -100,18 +101,16 @@
 			  ;; :onchange "amixer -D pulse sset Master {}%" )) ;;
 			  :onchange "pamixer --set-volume {}" ))
 	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
-;;(defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'");;
-(defpoll current-volume :interval "1s" "pamixer --get-volume")
 (defvar volum false)
 
 ;;Widget to mute notifications
+(defpoll notif-icon :interval "1s" "scripts/notification icon")
+(defpoll notif-state :interval "1s" "scripts/notification state")
 (defwidget notif []
 	(box		:orientation "v"
 				:tooltip notif-state
 	(button		:onclick "scripts/notification toggle"
 				:class "notif-icon" notif-icon)))
-(defpoll notif-icon :interval "1s" "scripts/notification icon")
-(defpoll notif-state :interval "1s" "scripts/notification state")
 
 ;; Control Panel Widgets ;;
 (defwidget control []
@@ -137,6 +136,12 @@
 (defpoll min	:interval "1s"	"date '+%M'")
 
 ;; Calendar Widgets ;;
+(defpoll calendar_day :interval "10h"
+    "date '+%d'")
+(defpoll calendar_month :interval "10h"
+    "scripts/calendar")
+(defpoll calendar_year :interval "10h"
+    "date '+%Y'")
 (defwidget cal []
 	(box :class "cal-box"
 		 :orientation "v"
@@ -145,12 +150,6 @@
 			  :day calendar_day
 			  :month calendar_month
 			  :year calendar_year))))
-(defpoll calendar_day :interval "10h"
-    "date '+%d'")
-(defpoll calendar_month :interval "10h"
-    "scripts/calendar")
-(defpoll calendar_year :interval "10h"
-    "date '+%Y'")
 
 ;; Powermenu Widgets ;;
 (defwidget power []

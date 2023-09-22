@@ -2,13 +2,13 @@
   description = "Automatic system configuration using flakes for electron";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.05";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland/v0.27.2";
+    hyprland.url = "github:hyprwm/Hyprland/v0.33.1";
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, hyprland }:
@@ -16,7 +16,7 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        config = { allowUnfree = true; };
+        # config = { allowUnfree = true; }; # depracated. Need new solution
       };
 
       lib = nixpkgs.lib;

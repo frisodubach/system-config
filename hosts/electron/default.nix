@@ -31,22 +31,17 @@
   #hardware.bluetooth.enable = true;
 
   # Local DNS entries. Fix ports once all services are working
-  # nx Nextcloud, db Flamedashboard, cp Cockpit, im Immich, fs SFTPgo, cl Radicale, bu Duplicati-Backup, px NginxProxyManager, gf Grafana, bl HUGO-Blog, sy Syncthing, pt Portainer sf SFTPgo
   networking.extraHosts = ''
-    100.117.232.92:8080 nx.remote.phonon.nl
-    100.117.232.92 nx.phonon.nl
-    100.117.232.92 db.phonon.nl
-    100.117.232.92 cp.phonon.nl
-    100.117.232.92 im.phonon.nl
-    100.117.232.92 fs.phonon.nl
-    100.117.232.92 cl.phonon.nl
-    100.117.232.92 bu.phonon.nl
-    100.117.232.92 px.phonon.nl
-    100.117.232.92 gf.phonon.nl
-    100.117.232.92 bl.phonon.nl
-    100.117.232.92 sy.phonon.nl
-    100.117.232.92 pt.phonon.nl
-    100.117.232.92 sf.phonon.nl
+    100.117.232.92 im.phonon.nl # images
+    100.117.232.92 fs.phonon.nl # files
+    100.117.232.92 bu.phonon.nl # backups
+    100.117.232.92 px.phonon.nl # proxy manager
+    100.117.232.92 gf.phonon.nl # Grafana
+    100.117.232.92 bl.phonon.nl # blog
+    100.117.232.92 sy.phonon.nl # sync
+    100.117.232.92 pt.phonon.nl # portainer
+    100.117.232.92 sf.phonon.nl # SFTP
+    100.80.184.50 ts.neutron.nl # tailscale
   '';
 
   # Configure network proxy if necessary
@@ -65,6 +60,13 @@
       tapping = true;
       accelProfile = "flat";
     };
+  };
+
+  ## USB Devices auto-mounting
+  services = {
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
   };
 
   ## LOCALE SECTION
@@ -94,40 +96,40 @@
     acpid.enable = true;
 
     # #Auto CPU Frequency
-    auto-cpufreq.enable = true;
-    auto-cpufreq.settings = {
-      battery = {
-        governor = "powersave";
-        turbo = "auto";
-      };
-      charger = {
-        governor = "schedutil";
-        turbo = "auto";
-      };
-    };
-
-    # TLP
-    # tlp = {
-    #   enable = true;
-    #   settings = {
-    #     STOP_CHARGE_THRESH_BAT0 = 1;
-    #     RADEON_DPM_STATE_ON_AC = "performance";
-    #     RADEON_DPM_STATE_ON_BAT = "battery";
-    #     PCIE_ASPM_ON_BAT = "powersupersave";
-    #     RUNTIME_PM_ON_BAT = auto;
-    #     PLATFORM_PROFILE_ON_AC="performance"
-    #     PLATFORM_PROFILE_ON_BAT="low-power" #CHECK: tlp-stat -p
-    #     CPU_SCALING_GOVERNOR_ON_AC=powersave #CHECK: tlp-stat -p
-    #     CPU_SCALING_GOVERNOR_ON_BAT=powersave
-    #     # Version 1.6
-    #     CPU_DRIVER_OPMODE_ON_AC=active #guided, passive --> frequency limits
-    #     CPU_DRIVER_OPMODE_ON_BAT=active
-    #     CPU_ENERGY_PERF_POLICY_ON_AC=balance_performance
-    #     CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power
-
-    #     #USB_AUTOSUSPEND=0;
+    # auto-cpufreq.enable = true;
+    # auto-cpufreq.settings = {
+    #   battery = {
+    #     governor = "powersave";
+    #     turbo = "auto";
+    #   };
+    #   charger = {
+    #     governor = "schedutil";
+    #     turbo = "auto";
     #   };
     # };
+
+    # TLP
+    tlp = {
+      enable = true;
+      settings = {
+        STOP_CHARGE_THRESH_BAT0 = 1;
+        RADEON_DPM_STATE_ON_AC = "performance";
+        RADEON_DPM_STATE_ON_BAT = "battery";
+        PCIE_ASPM_ON_BAT = "powersupersave";
+        RUNTIME_PM_ON_BAT = "auto";
+        PLATFORM_PROFILE_ON_AC = "performance";
+        PLATFORM_PROFILE_ON_BAT = "low-power"; # CHECK: tlp-stat -p
+        CPU_SCALING_GOVERNOR_ON_AC = "powersave"; # CHECK: tlp-stat -p
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+        # Version 1.6
+        # CPU_DRIVER_OPMODE_ON_AC=active #guided, passive --> frequency limits
+        # CPU_DRIVER_OPMODE_ON_BAT=active
+        # CPU_ENERGY_PERF_POLICY_ON_AC=balance_performance
+        # CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power
+
+        # USB_AUTOSUSPEND=0;
+      };
+    };
   };
 
   powerManagement = {
@@ -138,7 +140,12 @@
   # Screen-lock / security
   security = {
     polkit.enable = true;
-    pam = { services = { gtklock = { }; }; };
+    pam = {
+      services = {
+        gtklock = { };
+        swaylock = { };
+      };
+    };
   };
 
   ############ /Networking ############
