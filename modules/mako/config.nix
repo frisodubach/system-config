@@ -49,7 +49,7 @@
   [urgency=high]
   border-color=#fb4934
   text-color=#fbf1c7
-  default-timeout=0
+  default-timeout=5000
 
   [mode=do-not-disturb]
   invisible=1
