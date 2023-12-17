@@ -51,6 +51,7 @@
     ripgrep
     git
     aspell
+    aspellDicts.en
 
     # basic GUI applications
     firefox
