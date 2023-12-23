@@ -40,16 +40,16 @@ percent() {
 }
 
 charge() {
-    if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode; then
-        sudo tlp fullcharge
+    if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode | grep -q 1; then
+        sudo tlp fullcharge > /dev/null
     else
-        sudo tlp setcharge && exit
+        sudo tlp setcharge > /dev/null && exit
     fi
     # echo "${charge-icon}"
 }
 
 charge-icon() {
-    if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode; then
+    if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode | grep -q 1; then
         echo 󱈑
     else
         echo 󰂄 && exit
@@ -67,9 +67,9 @@ power() {
 }
 
 power-icon() {
-    if sudo tlp-stat -s | grep -q "battery (manual)"; then
+    if tlp-stat -s | grep -q "battery (manual)"; then
         echo 󰌪
-    elif sudo tlp-stat -s | grep -q "AC (manual)"; then
+    elif tlp-stat -s | grep -q "AC (manual)"; then
         echo 󰚥
     else
         echo 󰉂 && exit
@@ -79,5 +79,6 @@ power-icon() {
 [ "$1" = "icon" ] && icon && exit
 [ "$1" = "percent" ] && percent && exit
 [ "$1" = "power" ] && power && exit
+[ "$1" = "power-icon" ] && power-icon && exit
 [ "$1" = "charge" ] && charge && exit
 [ "$1" = "charge-icon" ] && charge-icon && exit
