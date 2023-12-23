@@ -43,6 +43,8 @@
     (revealer :transition "slideup"
               :reveal bat
               :duration "550ms"
+	(box	  :orientation "v"
+			  :space-evenly "false"
     (box      :orientation "v"
               :class "bat" battery-capacity)
     (button   :class "bat"
@@ -50,7 +52,7 @@
               :onclick "scripts/bat-tlp charge" charge-icon)
     (button   :class "bat"
               :tooltip "Toggle power mode"
-              :onclick "scripts/bat-tlp power" power-icon))
+              :onclick "scripts/bat-tlp power" power-icon)))
     (label	  :class "bat"
 			  :halign "center"
 			  :text battery))))
