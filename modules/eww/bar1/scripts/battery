@@ -41,9 +41,9 @@ percent() {
 
 charge() {
     if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode | grep -q 1; then
-        sudo tlp fullcharge > /dev/null
+        tlp fullcharge > /dev/null
     else
-        sudo tlp setcharge > /dev/null && exit
+        tlp setcharge > /dev/null && exit
     fi
     # echo "${charge-icon}"
 }
@@ -57,12 +57,12 @@ charge-icon() {
 }
 
 power() {
-    if sudo tlp-stat -s | grep -q "battery (manual)"; then
+    if tlp-stat -s | grep -q "battery (manual)"; then
         sudo tlp ac
-    elif sudo tlp-stat -s | grep -q "AC (manual)"; then
-        sudo tlp start
+    elif tlp-stat -s | grep -q "AC (manual)"; then
+        tlp start
     else
-        sudo tlp bat && exit
+        tlp bat && exit
     fi
 }
 
