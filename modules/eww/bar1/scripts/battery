@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 bat=/sys/class/power_supply/BAT0/
 per="$(cat "$bat/capacity")"
@@ -43,7 +43,7 @@ charge() {
     if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode; then
         sudo tlp fullcharge
     else
-        sudo tlp setcharge
+        sudo tlp setcharge && exit
     fi
     # echo "${charge-icon}"
 }
@@ -52,7 +52,7 @@ charge-icon() {
     if cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode; then
         echo 󱈑
     else
-        echo 󰂄
+        echo 󰂄 && exit
     fi
 }
 
@@ -62,7 +62,7 @@ power() {
     elif sudo tlp-stat -s | grep -q "AC (manual)"; then
         sudo tlp start
     else
-        sudo tlp bat
+        sudo tlp bat && exit
     fi
 }
 
@@ -72,7 +72,7 @@ power-icon() {
     elif sudo tlp-stat -s | grep -q "AC (manual)"; then
         echo 󰚥
     else
-        echo 󰉂
+        echo 󰉂 && exit
     fi
 }
 
@@ -81,4 +81,3 @@ power-icon() {
 [ "$1" = "power" ] && power && exit
 [ "$1" = "charge" ] && charge && exit
 [ "$1" = "charge-icon" ] && charge-icon && exit
-exit
