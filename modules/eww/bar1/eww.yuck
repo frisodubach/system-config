@@ -44,13 +44,13 @@
               :reveal bat
               :duration "550ms"
     (box      :orientation "v"
-              :class "bat" battery-capacity
+              :class "bat" battery-capacity)
     (button   :class "bat"
               :tooltip "Toggle charge limit"
               :onclick "scripts/bat-tlp charge" charge-icon)
     (button   :class "bat"
               :tooltip "Toggle power mode"
-              :onclick "scripts/bat-tlp power" power-icon)))
+              :onclick "scripts/bat-tlp power" power-icon))
     (label	  :class "bat"
 			  :halign "center"
 			  :text battery))))
