@@ -1,6 +1,31 @@
 { inputs, config, lib, pkgs, ... }:
 
 {
+  security.sudo = {
+    # enable = true;
+    extraRules = [{
+      commands = [
+        {
+          command = "${pkgs.systemd}/bin/systemctl suspend";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "${pkgs.systemd}/bin/reboot";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "${pkgs.systemd}/bin/poweroff";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "${pkgs.tlp}/bin/tlp";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+      # groups = [ "wheel" ];
+    }];
+  };
+
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
 
