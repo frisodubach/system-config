@@ -49,10 +49,10 @@
               :class "bat" battery-capacity)
     (button   :class "bat"
               :tooltip "Toggle charge limit"
-              :onclick "scripts/bat-tlp charge" charge-icon)
+              :onclick "scripts/battery charge" charge-icon)
     (button   :class "bat"
               :tooltip "Toggle power mode"
-              :onclick "scripts/bat-tlp power" power-icon)))
+              :onclick "scripts/battery power" power-icon)))
     (label	  :class "bat"
 			  :halign "center"
 			  :text battery))))
