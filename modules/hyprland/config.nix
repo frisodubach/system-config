@@ -30,7 +30,7 @@
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
-  exec-once = swayidle -w timeout 300 'swaylock' before-sleep 'swaylock' &
+  exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   exec-once = swayosd-server

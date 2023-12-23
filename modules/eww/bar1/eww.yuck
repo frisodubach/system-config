@@ -33,6 +33,8 @@
 ;; Battery Widgets ;;
 (defpoll battery			:interval "1s"	"scripts/battery icon")
 (defpoll battery-capacity	:interval "1s"	"scripts/battery percent")
+(defpoll charge-icon :interval "1s" "scripts/battery charge-icon")
+(defpoll power-icon :interval "1s" "scripts/battery power-icon")
 (defwidget bat []
     (eventbox :onhover "${eww} update bat=true"
               :onhoverlost "${eww} update bat=false"
@@ -42,7 +44,13 @@
               :reveal bat
               :duration "550ms"
     (box      :orientation "v"
-              :class "bat" battery-capacity))
+              :class "bat" battery-capacity
+    (button   :class "bat"
+              :tooltip "Toggle charge limit"
+              :onclick "scripts/bat-tlp charge" charge-icon)
+    (button   :class "bat"
+              :tooltip "Toggle power mode"
+              :onclick "scripts/bat-tlp power" power-icon)))
     (label	  :class "bat"
 			  :halign "center"
 			  :text battery))))
@@ -168,12 +176,12 @@
 
   	(button		:class "button-reb"
 	  			:tooltip "Reboot"
-				:onclick "reboot"	"󰜉")
+				:onclick "sudo reboot"	"󰜉")
 
     (button		:class "button-lock"
 				:tooltip "Lock Screen"
 				;;:onclick "swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr \"%a %e.%m.%Y\" --timestr \"%k:%M\""	"")))
-				:onclick "gtklock"	"")))
+				:onclick "sudo gtklock"	"")))
 
 	(button		:class "button-off"
 				:tooltip "Shutdown"
