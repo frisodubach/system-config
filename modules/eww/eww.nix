@@ -4,6 +4,7 @@
   security.sudo = {
     # enable = true;
     extraRules = [{
+      users = [ "phonon" ];
       commands = [
         {
           command = "${pkgs.systemd}/bin/systemctl suspend";
