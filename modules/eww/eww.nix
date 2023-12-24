@@ -7,7 +7,8 @@
       users = [ "phonon" ];
       commands = [
         {
-          command = "${pkgs.systemd}/bin/systemctl suspend";
+          command =
+            "${pkgs.systemd}/bin/systemctl suspend"; # This doesn't work due to symlink
           options = [ "NOPASSWD" ];
         }
         {
@@ -15,15 +16,17 @@
           options = [ "NOPASSWD" ];
         }
         {
-          command = "${pkgs.systemd}/bin/reboot";
+          command =
+            "${pkgs.systemd}/bin/reboot"; # This doesn't work due to symlink
           options = [ "NOPASSWD" ];
         }
         {
-          command = "${pkgs.systemd}/bin/poweroff";
+          command =
+            "${pkgs.systemd}/bin/poweroff"; # This doesn't work due to symlink
           options = [ "NOPASSWD" ];
         }
         {
-          command = "${pkgs.tlp}/bin/tlp";
+          command = "${pkgs.tlp}/bin/tlp"; # This doesn't work due to symlink
           options = [ "NOPASSWD" ];
         }
         {
