@@ -11,6 +11,10 @@
           options = [ "NOPASSWD" ];
         }
         {
+          command = "/run/current-system/sw/bin/systemctl suspend";
+          options = [ "NOPASSWD" ];
+        }
+        {
           command = "${pkgs.systemd}/bin/reboot";
           options = [ "NOPASSWD" ];
         }
@@ -20,6 +24,10 @@
         }
         {
           command = "${pkgs.tlp}/bin/tlp";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "/run/current-system/sw/bin/tlp";
           options = [ "NOPASSWD" ];
         }
       ];
