@@ -45,17 +45,6 @@
 
     # programs.eww.enable = true;
 
-    # Config
-    # home.file.".config/eww/eww.scss" = {
-    #   source = ./eww.scss;
-    #   enable = true;
-    # };
-
-    # home.file.".config/eww/eww.yuck" = {
-    #   source = ./eww.yuck;
-    #   enable = true;
-    # };
-
     #scripts
     home.file.".config/eww" = {
       source = ./bar1;
