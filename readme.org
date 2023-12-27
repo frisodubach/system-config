@@ -30,9 +30,13 @@ While my current configuration is quite okay to use right now, there are still s
 - Get a working =starship= configuration
 - Split up the =hyprland=  module into smaller parts
 - Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
+  - Improve multi-monitor workspace configuration
+  - Improve laptop monitor behaviour
 * Aspirational
 Things I would really like to implement:
 - [ ] Caffeine widget in eww-bar
+- [ ] Bluetooth control menu
+- [ ] Microphone control menu
 - [ ] Implement nix variables for color scheme
 - [ ] =firefox= / =librewolf= configuration w/ Nix
 - [ ] Bluetooth setup & =eww= widget
