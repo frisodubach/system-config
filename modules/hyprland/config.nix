@@ -33,7 +33,7 @@
   exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
-  exec-once = swayosd-server
+  # exec-once = swayosd-server
   exec-once = wl-paste --type text --watch cliphist store #Stores only text data
   exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 
@@ -256,6 +256,9 @@
 
   # On lid close, lock screen and suspend
   bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
+  # Laptop lid open / close switch
+  bindl=,switch:on:Lid,exec,hyperctl keyword monitor "eDP-1 1920x1080, 1920x0, 1"
+  bindl=,switch:off:Lid,exec,hyprctl keyword monitor "eDP-1 disable"
 
   # Keybind to lock screen
   # bind = $mainMod, L, exec, $screenLockCmd
@@ -265,5 +268,4 @@
 
   # Keybind to turn off
   bind=, XF86PowerOff, exec, systemctl suspend
-
 ''
