@@ -50,8 +50,9 @@
     fd
     ripgrep
     git
-    aspell
-    aspellDicts.en
+    # aspell
+    # aspellDicts.en
+    (aspellWithDicts (dicts: with dicts; [ en en-computers en-science ]))
 
     # basic GUI applications
     firefox
