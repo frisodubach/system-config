@@ -28,7 +28,7 @@
     networkmanager.enable = true;
     firewall = { enable = true; };
   };
-  #hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
 
   # Local DNS entries. Fix ports once all services are working
   networking.extraHosts = ''
