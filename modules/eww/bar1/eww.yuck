@@ -67,6 +67,14 @@
 	(button		:onclick "scripts/wofi-wifi"
 				:class "wifi-icon" wifi-icon)))
 
+;; Volume Widgets ;;
+(defwidget bluetooth []
+	(box      :orientation "v"
+              :tooltip "bluetooth menu"
+			  ;;:space-evenly "false"
+			  ;;:spacing "2"
+	(button   :onclick "scripts/wofi-bluetooth"   :class "bluetooth-icon" "")))
+
 ;; Brightness Widgets ;;
 (defpoll current-brightness :interval "1s" "brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 (defwidget bright []
