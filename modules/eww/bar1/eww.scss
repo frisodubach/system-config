@@ -62,12 +62,12 @@ border-radius: 12px;
 .wifi-icon{
   // margin-bottom: .2rem;
   margin: .2rem 0 .2rem 0;
-  color: $blue;
+  color: $cyan;
 }
 .bluetooth-icon{
   // margin-bottom: .2rem;
   margin: .2rem 0 .2rem 0;
-  color: $cyan;
+  color: $blue;
 }
 
 .brightness-icon{
@@ -76,11 +76,11 @@ border-radius: 12px;
 }
 .volume-icon{
   margin: .2rem 0 .2rem 0;
-  color: $magenta;
+  color: $orange;
 }
 .notif-icon{
   margin: .2rem 0 .2rem 0;
-  color: $orange;
+  color: $magenta;
 }
 scale trough {
   all: unset;
@@ -95,7 +95,7 @@ scale trough {
   border-radius: 5px;
 }
 .volbar trough highlight {
-  background-color: $magenta;
+  background-color: $orange;
   border-radius: 5px;
 }
 

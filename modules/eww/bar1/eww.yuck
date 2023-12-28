@@ -135,12 +135,12 @@
 	(box :orientation "v"
 		 :space-evenly false
 		 :class "control"
-(bat)
+(notif)
 (bluetooth)
 (wifi)
+(bat)
 (bright)
-(volum)
-(notif)))
+(volum)))
 
 ;; Clock Widgets ;;
 (defwidget time []
