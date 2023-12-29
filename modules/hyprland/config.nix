@@ -170,6 +170,7 @@
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod SHIFT, P, pseudo, # dwindle
   bind = $mainMod, S, togglesplit, # dwindle
+  bind = $mainMod SHIFT, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
   bind = $mainMod SHIFT, B, exec, librewolf
