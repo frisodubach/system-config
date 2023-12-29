@@ -25,21 +25,23 @@ For my config, I emphasise using standard dotfiles when convenient, to allow for
 My =doom-emacs= configuration is not managed by Nix, and can instead be found [[https://github.com/frisodubach/nixConfig][here]], although I need to rework the repo to only include my doom-config.
 * Work in progress
 While my current configuration is quite okay to use right now, there are still some things that are on my list to fix. Right now this is:
-- Battery/Power management for laptop. (Configure =tlp= or =auto-cpufreq=)
-- Get workspace widget working on =eww= bar.
-- Get a working =starship= configuration
-- Split up the =hyprland=  module into smaller parts
-- Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
-  - Improve multi-monitor workspace configuration
-  - Improve laptop monitor behaviour
+- [-] Battery/Power management for laptop. (Configure =tlp= or =auto-cpufreq=)
+  - [X] =tlp= configuration
+  - [ ] =auto-cpufreq= usage/configuration
+- [ ] Get workspace widget working on =eww= bar.
+- [ ] Get a working =starship= configuration
+- [ ] Split up the =hyprland=  module into smaller parts
+- [X] Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
+  - [X] Improve multi-monitor workspace configuration
+  - [X] Improve laptop monitor behaviour
 * Aspirational
 Things I would really like to implement:
 - [ ] Caffeine widget in eww-bar
-- [ ] Bluetooth control menu
+- [X] Bluetooth control menu
 - [ ] Microphone control menu
 - [ ] Implement nix variables for color scheme
 - [ ] =firefox= / =librewolf= configuration w/ Nix
-- [ ] Bluetooth setup & =eww= widget
+- [X] Bluetooth setup & =eww= widget
 - [ ] Zatuhra configuration
 - [ ] qutebrowser
 - [ ] Find & use more terminal applications to replace GUI applications (music-player, file-browser, etc)
