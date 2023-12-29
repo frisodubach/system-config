@@ -166,6 +166,7 @@
   bind = $mainMod, F, togglefloating,
   bind = $mainMod SHIFT, F, fullscreen,
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
+  bind = $mainMod SHIFT, space, exec, wofi -S run -O -Q -M fuzzy -i
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod SHIFT, P, pseudo, # dwindle
   bind = $mainMod, S, togglesplit, # dwindle
