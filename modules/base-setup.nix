@@ -73,7 +73,8 @@
     #python3
     clojure
     clojure-lsp
-
+    go
+    gopls
   ];
 
   programs = {
