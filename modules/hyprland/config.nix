@@ -158,23 +158,24 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
   $mainMod = SUPER
 
-  # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+  # Application laucnhing
   bind = $mainMod, Q, exec, alacritty
-  bind = $mainMod, C, killactive,
-  # bind = $mainMod, M, exit,
   bind = $mainMod, E, exec, nautilus
-  bind = $mainMod, F, togglefloating,
-  bind = $mainMod SHIFT, F, fullscreen,
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
   bind = $mainMod SHIFT, space, exec, wofi -S run -O -Q -M fuzzy -i
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
-  bind = $mainMod SHIFT, P, pseudo, # dwindle
-  bind = $mainMod, S, togglesplit, # dwindle
-  bind = $mainMod SHIFT, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
   bind = $mainMod SHIFT, B, exec, librewolf
   bind = $mainMod, V, exec, vimim
+
+  # Manage windows/workspaces
+  bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
+  bind = $mainMod SHIFT, P, pseudo, # dwindle
+  bind = $mainMod, W, togglesplit, # dwindle
+  bind = $mainMod, F, togglefloating,
+  bind = $mainMod SHIFT, F, fullscreen,
+  bind = $mainMod, C, killactive,
 
   # Move focus with mainMod + arrow keys
   bind = $mainMod, H, movefocus, l
