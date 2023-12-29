@@ -162,7 +162,7 @@
   bind = $mainMod, Q, exec, alacritty
   bind = $mainMod, E, exec, nautilus
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
-  bind = $mainMod SHIFT, space, exec, wofi -S run -O -Q -M fuzzy -i
+  bind = $mainMod SHIFT, space, exec, wofi -S run -O alphabetical -M fuzzy -i -t alacritty
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
