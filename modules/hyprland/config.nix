@@ -256,7 +256,7 @@
   bind = , Print, exec, grim -g "$(slurp)" - | swappy -f -
 
   # On lid close, lock screen and suspend
-  bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
+  bindl = , switch:on:Lid Switch, exec, sleep 1 & $lockAndSuspendCmd
   # Laptop lid open / close switch
   bindl=,switch:on:Lid,exec,hyperctl keyword monitor "eDP-1 1920x1080, 1920x0, 1"
   bindl=,switch:off:Lid,exec,hyprctl keyword monitor "eDP-1 disable"
