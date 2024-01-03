@@ -46,3 +46,4 @@ Things I would really like to implement:
 - [ ] qutebrowser
 - [ ] Find & use more terminal applications to replace GUI applications (music-player, file-browser, etc)
 - [ ] Configure =borg= backups
+- [X] =mullvad= script for wofi to switch locations

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # if mullvad status | grep -q "Disconnected"; then
-#     echo
+#     echo 󰒎
 # else
-#     echo
+#     echo 󰒍
 # fi
 
 vpnStatus=$(mullvad status)
 
-[[ ${vpnStatus} == "Disconnected" ]] && echo 󰒎
-[[ ${vpnStatus} == "Disconnected" ]] || echo 󰒍
+[[ ${vpnStatus} == "Disconnected" ]] && echo 󰒎 && exit
+[[ ${vpnStatus} == "Disconnected" ]] || echo 󰒍 && exit
