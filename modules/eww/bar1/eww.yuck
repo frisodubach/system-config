@@ -61,9 +61,21 @@
 ;; Wifi Widgets ;;
 (defpoll wifi-icon :interval "1s" "scripts/wifi icon")
 (defpoll wifi-name :interval "1s" "scripts/wifi name")
+(defpoll vpn-icon :interval "1s" "scripts/mullvad-icon")
 (defwidget wifi []
 	(box		:orientation "v"
 				:tooltip wifi-name
+    (revealer   :transition "slideup"
+                :reveal wifi
+                :duration "550ms"
+    (box        :orientation "v"
+                :space-evenly "false"
+    (button     :class "wifi-icon"
+                :tooltip "Toggle VPN"
+                :onclick "scripts/mullvad-toggle" vpn-icon)
+    (button     :class "wifi-icon"
+                :tooltip "VPN GUI"
+                :onclick "mullvad-vpn" "󰖂")))
 	(button		:onclick "scripts/wofi-wifi"
 				:class "wifi-icon" wifi-icon)))
 

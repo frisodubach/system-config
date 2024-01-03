@@ -22,7 +22,7 @@
 
   boot.supportedFilesystems = [ "ntfs" ];
 
-  ### NETWORKING SECTION ###
+  ############ /Networking ############
   networking = {
     hostName = "electron";
     networkmanager.enable = true;
@@ -44,11 +44,16 @@
     100.80.184.50 ts.neutron.nl # tailscale
   '';
 
+  ####### VPN configuration #######
+  services.mullvad-vpn.enable = true;
+  # networking.firewall.checkReversePath = "loose";
+  networking.wireguard.enable = true;
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  ### SOUND/IO SECTION
+  ######### SOUND/IO SECTION ############
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -148,8 +153,6 @@
       };
     };
   };
-
-  ############ /Networking ############
 
   nix = {
     package = pkgs.nixFlakes;

@@ -60,6 +60,7 @@
     gimp
     emacs-gtk
     calibre
+    mullvad-vpn
 
     # PDF utils
     ocrmypdf # Add OCR layer to PDF file
