@@ -25,7 +25,7 @@
 
   # Execute your favorite apps at launch
   exec-once=hyprctl setcursor \'Capitaine Cursors (Gruvbox)\' 24
-  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/wallhavenGruvbox/grove1.jpg
+  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/grove1.jpg
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
@@ -166,7 +166,7 @@
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
   bind = $mainMod SHIFT, B, exec, librewolf
-  bind = $mainMod, V, exec, vimim
+  bind = $mainMod, V, exec, vimiv
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
@@ -231,13 +231,19 @@
   bindm = $mainMod, mouse:273, resizewindow
 
   # Brightness control
-  bind=,XF86MonBrightnessUp,exec,brightnessctl set +5%
-  bind=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+  binde=,XF86MonBrightnessUp,exec,brightnessctl set +5%
+  binde=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+  # SwayOSD brightness broken
+  # binde=,XF86MonBrightnessUp,exec,swayosd --brightness raise 5
+  # binde=,XF86MonBrightnessDown,exec,swayosd --brightness lower 5
 
   # Audio control
-  bind = ,XF86AudioMute, exec, pamixer -t
-  bind=,XF86AudioRaiseVolume,exec,pamixer -i 5
-  bind=,XF86AudioLowerVolume,exec,pamixer -d 5
+  # binde=,XF86AudioMute,exec,pamixer -t
+  # binde=,XF86AudioRaiseVolume,exec,pamixer -i 5
+  # binde=,XF86AudioLowerVolume,exec,pamixer -d 5
+  binde=,XF86AudioMute,exec,swayosd --output-volume toggle-mute
+  binde=,XF86AudioRaiseVolume,exec,swayosd --output-volume raise 5
+  binde=,XF86AudioLowerVolume,exec,swayosd --output-volume lower 5
 
   # Control audio playback with hardware playback keys
   bind=, XF86AudioPlay, exec, playerctl play-pause
@@ -246,11 +252,11 @@
   bind=, XF86AudioPrev, exec, playerctl previous
 
   # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
-  # $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/marita-kavelashvili-ugnrXk1129g-unsplash.jpg
-  $screenLockCmd = swaylock
+  # $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
+  $screenLockCmd = swaylock && sleep 3
   # $screenLockCmd = gtklock
   $suspendCmd = systemctl suspend
-  $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
+  $lockAndSuspendCmd = $screenLockCmd & sleep 3; $suspendCmd &
 
   # Screenshots
   bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png

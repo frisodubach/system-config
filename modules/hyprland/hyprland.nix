@@ -135,7 +135,7 @@
     # Enable hyprland
     wayland.windowManager.hyprland = {
       enable = true;
-      package = null; # Use system-wide package
+      # package = null; # Use system-wide package -- Not required anymore?
       xwayland.enable = true;
       extraConfig = import ./config.nix { };
     };

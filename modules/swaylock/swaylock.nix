@@ -9,13 +9,12 @@
 
     programs.swaylock = {
       enable = true;
-      package = pkgs.swaylock;
+      package = pkgs.swaylock-effects;
       settings = {
         key-hl-color = "459599";
         line-color = "bdae93";
         inside-color = "282828";
-        image =
-          "/home/phonon/Pictures/Wallpapers/Photography/marita-kavelashvili-ugnrXk1129g-unsplash.jpg";
+        image = "/home/phonon/Pictures/Wallpapers/Photography/mist3.jpg";
         color = "32302f";
         layout-bg-color = "32302f";
         ring-color = "2b2e37";
