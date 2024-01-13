@@ -31,7 +31,7 @@
   exec-once=mako
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   # exec-once = swayidle -w timeout 450 'systemctl suspend' &
-  exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock -f' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f' &
+  exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock' &
   # exec-once = swayosd-server
   exec-once = wl-paste --type text --watch cliphist store #Stores only text data
   exec-once = wl-paste --type image --watch cliphist store #Stores only image data

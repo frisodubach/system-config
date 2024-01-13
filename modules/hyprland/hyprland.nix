@@ -115,14 +115,6 @@
 
     # Font Manager
     font-manager
-
-    # GTK/icon themes
-    # nordic
-    # whitesur-gtk-theme
-    # colloid-gtk-theme
-    gruvbox-gtk-theme
-    kora-icon-theme
-    capitaine-cursors-themed
   ];
 
   # === HOME MANAGER ===
@@ -139,41 +131,6 @@
       xwayland.enable = true;
       extraConfig = import ./config.nix { };
     };
-
-    # Home-manager GTK theme / cursor theme [WIP]
-    home.pointerCursor = {
-      name = "Capitaine Cursors (Gruvbox)";
-      package = pkgs.capitaine-cursors-themed;
-      size = 24;
-      gtk.enable = true;
-    };
-
-    gtk = {
-      enable = true;
-      theme = {
-        package = pkgs.gruvbox-gtk-theme;
-        name = "Gruvbox-Dark-B";
-      };
-      iconTheme = {
-        package = pkgs.kora-icon-theme;
-        name = "kora";
-      };
-      # cursorTheme = {
-      #   package = pkgs.capitaine-cursors-themed;
-      #   name = "Capitaine Cursors (Gruvbox)";
-      # };
-    };
-
-    qt = {
-      enable = true;
-      platformTheme = "gtk";
-    };
-
-    home.packages = with pkgs;
-      [
-        # hyprland
-        eww-wayland
-      ];
 
   };
 

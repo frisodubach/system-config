@@ -12,6 +12,7 @@
     ./wofi/wofi.nix
     ./mako/mako.nix
     ./vimiv/vimiv.nix
+    ./gruvbox/gruvbox.nix
   ];
 
   environment.sessionVariables = rec {
