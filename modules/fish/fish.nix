@@ -20,6 +20,7 @@
         la = "eza -la";
         doom-sync = "~/.emacs.d/bin/doom sync";
         doom-upgrade = "~/.emacs.d/bin/doom upgrade";
+        ssh-vpn = "mullvad-exclude ssh";
       };
     };
   };

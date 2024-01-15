@@ -13,6 +13,7 @@
     ./mako/mako.nix
     ./vimiv/vimiv.nix
     ./gruvbox/gruvbox.nix
+    ./mullvad/mullvad.nix
   ];
 
   environment.sessionVariables = rec {
@@ -51,8 +52,6 @@
     fd
     ripgrep
     git
-    # aspell
-    # aspellDicts.en
     (aspellWithDicts (dicts: with dicts; [ en en-computers en-science ]))
 
     # basic GUI applications
@@ -72,7 +71,6 @@
     neofetch
 
     # coding
-    #python3
     clojure
     clojure-lsp
     go
@@ -91,6 +89,7 @@
 
   # ENABLE TAILSCALE
   services.tailscale.enable = true;
+  networking.firewall.trustedInterfaces = [ "tailscale0" ];
 
   # AUTO UPDATE DB
   services.locate = {
