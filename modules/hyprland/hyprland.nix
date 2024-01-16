@@ -31,7 +31,7 @@
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_CURRENT_SESSION = "Hyprland";
     GDK_BACKEND = "wayland,x11";
-    # WAYLAND_DISPLAY = "wayland-0";
+    WAYLAND_DISPLAY = "wayland-1";
     # DISPLAY = ":0";
   };
 

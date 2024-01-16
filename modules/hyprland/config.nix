@@ -31,10 +31,13 @@
   exec-once=mako
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   # exec-once = swayidle -w timeout 450 'systemctl suspend' &
-  exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock' &
+  # exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock' &
   # exec-once = swayosd-server
   exec-once = wl-paste --type text --watch cliphist store #Stores only text data
   exec-once = wl-paste --type image --watch cliphist store #Stores only image data
+
+  # Fix for env variables
+  exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
   # Source a file (multi-file configs)
   # source = ~/.config/hypr/myColors.conf
