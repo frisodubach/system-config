@@ -38,6 +38,9 @@
       kid3
       wofi
       tor-browser-bundle-bin
+
+      # Temp
+      gnome.nautilus
     ];
 
     xdg.mimeApps = {

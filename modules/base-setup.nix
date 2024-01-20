@@ -30,7 +30,7 @@
     wget
     fd # better find
     ripgrep # better grep
-    htop
+    vtop
     unzip
     powertop
     smartmontools # Get SMART data
@@ -40,6 +40,7 @@
     bat # cat alternative
     ncdu # du alternative
     duf # df alternative
+    joshuto # Rust based ranger-clone
 
     # emacs package dependencies
     libtool
@@ -99,9 +100,6 @@
     # warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null
     localuser = null;
   };
-
-  # AUTO UPDATE NIX
-  #system.autoUpgrade.enable = true; # Can't use this with flake config
 
   # FONTS
   fonts = {

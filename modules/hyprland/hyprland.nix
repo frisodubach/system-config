@@ -87,8 +87,6 @@
     # - Calculator
 
     # Basic system tools
-    gnome.nautilus # gui file manager
-    xfce.thunar # gui file manager
     libnotify # notification daemon
     brightnessctl
     wlr-randr
