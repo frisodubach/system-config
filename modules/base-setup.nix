@@ -30,7 +30,8 @@
     wget
     fd # better find
     ripgrep # better grep
-    vtop
+    htop
+    gotop
     unzip
     powertop
     smartmontools # Get SMART data
