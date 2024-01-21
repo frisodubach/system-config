@@ -162,15 +162,19 @@
 
   # Application laucnhing
   bind = $mainMod, Q, exec, alacritty
-  bind = $mainMod, E, exec, nautilus
-  # bind = $mainMod, E, exec, joshuto #Need to run w/ a terminal
+  # bind = $mainMod, E, exec, nautilus
+  bind = $mainMod, E, exec, alacritty -e joshuto #Need to run w/ a terminal
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
   bind = $mainMod SHIFT, space, exec, wofi -S run -O alphabetical -M fuzzy -i -t alacritty
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
-  bind = $mainMod SHIFT, B, exec, librewolf
-  bind = $mainMod, V, exec, vimiv
+  # bind = $mainMod SHIFT, B, exec, librewolf
+  bind = $mainMod, I, exec, vimiv
+  bind = $mainMod, V, exec, /home/phonon/.config/eww/scripts/wofi-mullvad
+  bind = $mainMod SHIFT, N, exec, /home/phonon/.config/eww/scripts/wofi-wifi
+  bind = $mainMod SHIFT, B, exec, /home/phonon/.config/eww/scripts/wofi-bluetooth
+  bind = $mainMod, M, exec, mullvad-browser
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
@@ -272,11 +276,8 @@
   # bindl=,switch:on:Lid,exec,hyperctl keyword monitor "eDP-1 1920x1080, 1920x0, 1"
   # bindl=,switch:off:Lid,exec,hyprctl keyword monitor "eDP-1 disable"
 
-  # Keybind to lock screen
-  # bind = $mainMod, L, exec, $screenLockCmd
-
   # Keybind to lock screen and suspend
-  bind = $mainMod, M, exec, $lockAndSuspendCmd
+  bind = $mainMod, Z, exec, $lockAndSuspendCmd
 
   # Keybind to turn off
   bind=, XF86PowerOff, exec, systemctl suspend
