@@ -22,7 +22,7 @@
           show_icons = true;
           line_number_style = "relative";
           collapse_preview = true;
-          column_ratio = "[1, 4, 4]";
+          column_ratio = [ 1 4 4 ];
           scroll_offset = 6;
           show_borders = true;
           line_mode = "size";
@@ -134,6 +134,7 @@
           yml."inherit" = "text_default";
 
           pdf."inherit" = "reader_default";
+          epub."inherit" = "ebook_default";
         };
       };
     };

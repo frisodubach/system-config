@@ -22,7 +22,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     MOZ_GTK_TITLEBAR_DECORATION = "client";
 
-    #newm environment variables
+    #Hyprland environment variables
     TDESKTOP_DISABLE_GTK_INTEGRATION = "1";
     CLUTTER_BACKEND = "wayland";
     BEMENU_BACKEND = "wayland";
@@ -47,6 +47,7 @@
 
   # === Greeter ===
   services.xserver = {
+    excludePackages = [ pkgs.xterm ];
     enable = true;
     desktopManager.xterm.enable = false;
     displayManager = {
@@ -68,7 +69,6 @@
   environment.systemPackages = with pkgs; [
 
     # Basic apps
-    # newm-atha
     libglvnd
     seatd
     wayland
@@ -76,22 +76,11 @@
     greetd.gtkgreet
     swayidle
 
-    # basic tools
-    # - Scipts for managing brightness / volume / mic / nightlight
-    # - Dynamic display settings - SwayOSD
-    # - Screenshot tool
-    # - Wallpaper engine - swaybg/hyprpaper
-    # - Clipboard manager
-    # - File manager - thunar/nautilus/terminal based?
-    # - Photo viewer -
-    # - Calculator
-
     # Basic system tools
     libnotify # notification daemon
     brightnessctl
     wlr-randr
     xdg-utils
-    wofi # application launcher
     networkmanager # gui network manager
     swaybg # wallpaper engine
     swayosd
@@ -107,9 +96,6 @@
     grim
     slurp
     swappy
-    # Photoviewer
-    gnome.eog
-    # Calc
 
     # Font Manager
     font-manager

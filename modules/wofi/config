@@ -1,4 +1,5 @@
 style=/home/phonon/.config/wofi/style.css
+term=alacritty
 width=500
 height=200
 location=center
