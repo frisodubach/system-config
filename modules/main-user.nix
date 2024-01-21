@@ -36,39 +36,12 @@
       amberol
       starship
       kid3
-      wofi
       tor-browser-bundle-bin
 
       # Temp
       gnome.nautilus
     ];
 
-    xdg.mimeApps = {
-      enable = true;
-
-      associations.added = {
-        "text/plain" = "emacsclient.desktop";
-        "application/pdf" = "zotero.desktop";
-        "image/jpeg" = "vimiv.desktop";
-        "image/png" = "vimiv.desktop";
-
-        "x-scheme-handler/chrome" = "librewolf.desktop";
-        "x-scheme-handler/http" = "librewolf.desktop";
-        "x-scheme-handler/https" = "librewolf.desktop";
-      };
-
-      defaultApplications = {
-        "text/plain" = "emacsclient.desktop";
-        "application/pdf" = "zotero.desktop";
-        "image/jpeg" = "vimiv.desktop";
-        "image/png" = "vimiv.desktop";
-
-        # For personal stuff
-        "x-scheme-handler/chrome" = "librewolf.desktop";
-        "x-scheme-handler/http" = "librewolf.desktop";
-        "x-scheme-handler/https" = "librewolf.desktop";
-      };
-    };
     home.sessionPath = [ "~/.emacs.d/bin/" ];
   };
 }

@@ -16,6 +16,7 @@
     ./mullvad/mullvad.nix
     ./joshuto/joshuto.nix
     ./zathura/zathura.nix
+    ./xdgDefault/xdgDefault.nix
   ];
 
   environment.sessionVariables = rec {
@@ -23,6 +24,12 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_STATE_HOME = "$HOME/.local/state";
+  };
+
+  environment.variables = {
+    TERM = "alacritty";
+    TERMINAL = "alacritty";
+    EDITOR = "emacsclient";
   };
 
   environment.systemPackages = with pkgs; [
@@ -81,7 +88,7 @@
   ];
 
   programs = {
-    dconf.enable = true;
+    # dconf.enable = true;
     mtr.enable = true;
     nm-applet.enable = true;
     gnupg.agent = {
