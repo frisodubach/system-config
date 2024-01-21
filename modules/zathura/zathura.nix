@@ -9,7 +9,7 @@
     # Config
     home.file.".config/zathura/zathurarc" = { source = ./zathurarc; };
 
-    home.file.".config/zathura/gruvbox-dark" = { source = ./gruvbox-dark; };
+    # home.file.".config/zathura/gruvbox-dark" = { source = ./gruvbox-dark; };
 
   };
 }

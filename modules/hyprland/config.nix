@@ -25,7 +25,7 @@
 
   # Execute your favorite apps at launch
   exec-once=hyprctl setcursor \'Capitaine Cursors (Gruvbox)\' 24
-  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/grove1.jpg
+  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/dawn.jpg
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako

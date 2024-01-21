@@ -15,6 +15,7 @@
     ./gruvbox/gruvbox.nix
     ./mullvad/mullvad.nix
     ./joshuto/joshuto.nix
+    ./zathura/zathura.nix
   ];
 
   environment.sessionVariables = rec {
