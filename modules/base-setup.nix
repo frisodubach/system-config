@@ -14,6 +14,7 @@
     ./vimiv/vimiv.nix
     ./gruvbox/gruvbox.nix
     ./mullvad/mullvad.nix
+    ./joshuto/joshuto.nix
   ];
 
   environment.sessionVariables = rec {
@@ -41,7 +42,6 @@
     bat # cat alternative
     ncdu # du alternative
     duf # df alternative
-    joshuto # Rust based ranger-clone
 
     # emacs package dependencies
     libtool

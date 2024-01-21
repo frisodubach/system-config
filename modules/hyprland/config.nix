@@ -163,6 +163,7 @@
   # Application laucnhing
   bind = $mainMod, Q, exec, alacritty
   bind = $mainMod, E, exec, nautilus
+  # bind = $mainMod, E, exec, joshuto #Need to run w/ a terminal
   bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
   bind = $mainMod SHIFT, space, exec, wofi -S run -O alphabetical -M fuzzy -i -t alacritty
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
