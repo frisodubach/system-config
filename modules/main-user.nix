@@ -34,6 +34,7 @@
       signal-desktop
       sherlock
       amberol
+      museeks
       starship
       kid3
       tor-browser-bundle-bin
