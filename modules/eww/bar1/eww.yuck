@@ -81,8 +81,8 @@
     (button     :class "wifi-icon"
                 :tooltip "VPN GUI"
                 :halign "center"
-                :onclick "scripts/wofi-mullvad" vpn-icon)))
-	(button		:onclick "scripts/wofi-wifi"
+                :onclick "scripts/rofi-mullvad" vpn-icon)))
+	(button		:onclick "scripts/rofi-wifi"
                 :halign "center"
 				:class "wifi-icon" wifi-icon))))
 (defvar wifi false)
@@ -93,7 +93,7 @@
 			  :space-evenly "false"
 			  :spacing "2"
               :halign "center"
-	(button   :onclick "scripts/wofi-bluetooth"
+	(button   :onclick "scripts/rofi-bluetooth"
               :halign "center"
               :class "bluetooth-icon" "")))
 
@@ -217,7 +217,7 @@
 				:onclick "sudo gtklock"	"")))
 	(button		:class "button-off"
 				:tooltip "Shutdown"
-				:onclick "scripts/wofi-power"	"⏻"))))
+				:onclick "scripts/rofi-power"	"⏻"))))
 (defvar power false)
 
 ;; Top Widgets ;;

@@ -164,17 +164,18 @@
   bind = $mainMod, Q, exec, alacritty
   # bind = $mainMod, E, exec, nautilus
   bind = $mainMod, E, exec, alacritty -e joshuto #Need to run w/ a terminal
-  bind = $mainMod, space, exec, wofi --show drun -O -Q -M fuzzy -i
-  bind = $mainMod SHIFT, space, exec, wofi -S run -O alphabetical -M fuzzy -i -t alacritty
+  bind = $mainMod, space, exec, rofi -show drun
+  bind = $mainMod SHIFT, space, exec, rofi -show run
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
   # bind = $mainMod SHIFT, B, exec, librewolf
   bind = $mainMod, I, exec, vimiv
-  bind = $mainMod, V, exec, /home/phonon/.config/eww/scripts/wofi-mullvad
-  bind = $mainMod SHIFT, N, exec, /home/phonon/.config/eww/scripts/wofi-wifi
-  bind = $mainMod SHIFT, B, exec, /home/phonon/.config/eww/scripts/wofi-bluetooth
+  bind = $mainMod, V, exec, /home/phonon/.config/eww/scripts/rofi-mullvad
+  bind = $mainMod SHIFT, N, exec, /home/phonon/.config/eww/scripts/rofi-wifi
+  bind = $mainMod SHIFT, B, exec, /home/phonon/.config/eww/scripts/rofi-bluetooth
   bind = $mainMod, M, exec, mullvad-browser
+  bind = $mainMod SHFIT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow signal-desktop || signal-desktop
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors

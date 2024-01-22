@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+entries="  Lock\n⏾  Suspend\n  Reboot\n⏻  Shutdown"
+
+selected=$(echo -e $entries | rofi -dmenu -i --cache-file /dev/null | awk '{print tolower($2)}')
+
+case $selected in
+  lock)
+    exec swaylock && systemctl suspend
+    ;;
+  suspend)
+    exec systemctl suspend
+    ;;
+  reboot)
+    exec systemctl reboot
+    ;;
+  shutdown)
+    exec systemctl poweroff -i
+    ;;
+esac

@@ -9,7 +9,8 @@
     ./eww/eww.nix
     # ./gtklock/gtklock.nix
     ./swaylock/swaylock.nix
-    ./wofi/wofi.nix
+    # ./wofi/wofi.nix
+    ./rofi/rofi.nix
     ./mako/mako.nix
     ./vimiv/vimiv.nix
     ./gruvbox/gruvbox.nix
