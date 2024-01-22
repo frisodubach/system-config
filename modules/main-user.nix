@@ -38,6 +38,7 @@
       lollypop
       starship
       kid3
+      mpv
       tor-browser-bundle-bin
 
       # Temp

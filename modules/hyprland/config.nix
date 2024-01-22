@@ -175,7 +175,7 @@
   bind = $mainMod SHIFT, N, exec, /home/phonon/.config/eww/scripts/rofi-wifi
   bind = $mainMod SHIFT, B, exec, /home/phonon/.config/eww/scripts/rofi-bluetooth
   bind = $mainMod, M, exec, mullvad-browser
-  bind = $mainMod SHFIT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow signal-desktop || signal-desktop
+  bind = $mainMod SHIFT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow Signal || signal-desktop
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors

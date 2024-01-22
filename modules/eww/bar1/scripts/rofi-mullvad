@@ -21,10 +21,12 @@ chosen_id=$(echo "${chosen_relay:(-3):2}" | xargs)
 
 if [ "$chosen_relay" = "" ]; then
 	exit
-elif [ "$chosen_relay" = "󰒍 Connect VPN" ]; then
+elif [ "$chosen_relay" = " 󰒍 Connect VPN" ]; then
 	mullvad connect
-elif [ "$chosen_relay" = "󰒎 Disconnect VPN" ]; then
+	notify-send "VPN Connected"
+elif [ "$chosen_relay" = " 󰒎 Disconnect VPN" ]; then
 	mullvad disconnect
+	notify-send "VPN Disconnected"
 else
 	# Message to show when connection is activated successfully
 	mullvad relay set location "$chosen_id"
