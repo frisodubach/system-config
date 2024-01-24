@@ -18,6 +18,7 @@
     ./joshuto/joshuto.nix
     ./zathura/zathura.nix
     ./xdgDefault/xdgDefault.nix
+    ./scripts/scripts.nix
   ];
 
   environment.sessionVariables = rec {
