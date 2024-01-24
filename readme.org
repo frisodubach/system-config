@@ -28,9 +28,17 @@ While my current configuration is quite okay to use right now, there are still s
 - [-] Battery/Power management for laptop. (Configure =tlp= or =auto-cpufreq=)
   - [X] =tlp= configuration
   - [ ] =auto-cpufreq= usage/configuration
-- [ ] Get workspace widget working on =eww= bar.
+- [ ] =eww= improvements/clean-up
+  - [ ] Get workspace widget working on =eww= bar.
+  - [ ] Clean-up redundant files and folder structure
 - [ ] Get a working =starship= configuration
 - [ ] Split up the =hyprland=  module into smaller parts
+- [-] Scripts clean-up
+  - [X] Move out of =eww= module
+  - [X] add to path
+  - [X] Create desktop file for convenient use w/ rofi
+  - [ ] Create airplane-mode script
+  - [ ] Create rofi script for tlp management
 - [X] Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
   - [X] Improve multi-monitor workspace configuration
   - [X] Improve laptop monitor behaviour
