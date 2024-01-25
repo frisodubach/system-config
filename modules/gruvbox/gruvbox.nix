@@ -4,9 +4,6 @@
 
   environment.systemPackages = with pkgs; [
     gnome.gnome-themes-extra
-    # nordic
-    # whitesur-gtk-theme
-    # colloid-gtk-theme
     gruvbox-gtk-theme
     kora-icon-theme
     capitaine-cursors-themed
@@ -33,10 +30,10 @@
         package = pkgs.kora-icon-theme;
         name = "kora";
       };
-      # cursorTheme = {
-      #   package = pkgs.capitaine-cursors-themed;
-      #   name = "Capitaine Cursors (Gruvbox)";
-      # };
+      cursorTheme = {
+        package = pkgs.capitaine-cursors-themed;
+        name = "Capitaine Cursors (Gruvbox)";
+      };
     };
 
     home.sessionVariables.GTK_THEME = "Gruvbox-Dark-B";

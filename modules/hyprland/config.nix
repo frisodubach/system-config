@@ -24,7 +24,7 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
-  exec-once=hyprctl setcursor \'Capitaine Cursors (Gruvbox)\' 24
+  exec-once=hyprctl setcursor \'Capitaine Cursors \(Gruvbox\)\' 24
   exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/dawn.jpg
   exec-once=eww daemon
   exec-once=eww open bar
@@ -259,6 +259,15 @@
   bind=, XF86AudioPause, exec, playerctl play-pause
   bind=, XF86AudioNext, exec, playerctl next
   bind=, XF86AudioPrev, exec, playerctl previous
+
+  # Airplane-mode control
+  # bind=,XF86RFKill,exec,
+  # bind=,XF86RFKill,exec, rfkill block all
+  # bind=,XF86RFKill,exec, rfkill unblock all
+  # bind=,XF86RFKill,exec, nmcli radio wifi on
+  # bind=,XF86RFKill,exec, nmcli radio wifi off
+  # bind=,XF86RFKill,exec, nmcli radio all on
+  # bind=,XF86RFKill,exec, nmcli radio all off
 
   # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
   # $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg

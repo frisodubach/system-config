@@ -17,7 +17,6 @@ in {
   ];
 
   security.sudo = {
-    # enable = true;
     extraRules = [{
       users = [ "phonon" ];
       commands = [
