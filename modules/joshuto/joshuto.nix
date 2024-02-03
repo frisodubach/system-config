@@ -17,6 +17,9 @@
       # pkgs = pkgs.joshuto;
       # keymap = { };
       settings = {
+        xdg_open = true;
+        xdg_open_fork = true;
+        use_trash = true;
         display = {
           show_hidden = true;
           show_icons = true;
@@ -51,6 +54,17 @@
           }];
           reader_default = [{
             command = "zathura";
+            fork = true;
+            silent = true;
+          }];
+          video_default = [{
+            command = "mpv";
+            args = [ "--" ];
+            fork = true;
+            silent = true;
+          }];
+          audio_default = [{
+            command = "lollypop";
             fork = true;
             silent = true;
           }];

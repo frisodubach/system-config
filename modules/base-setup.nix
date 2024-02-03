@@ -16,6 +16,7 @@
     ./gruvbox/gruvbox.nix
     ./mullvad/mullvad.nix
     ./joshuto/joshuto.nix
+    ./yazi/yazi.nix
     ./zathura/zathura.nix
     ./xdgDefault/xdgDefault.nix
     ./scripts/scripts.nix
