@@ -29,6 +29,7 @@
     firewall = { enable = true; };
   };
   hardware.bluetooth.enable = true;
+  # services.blueman.enable = true;
 
   # Local DNS entries. Fix ports once all services are working
   networking.extraHosts = ''

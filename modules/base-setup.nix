@@ -86,6 +86,7 @@
     clojure-lsp
     go
     gopls
+    gotools
   ];
 
   programs = {

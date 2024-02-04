@@ -35,6 +35,7 @@
       sherlock
       amberol
       museeks
+      lollypop
       starship
       kid3
       tor-browser-bundle-bin
