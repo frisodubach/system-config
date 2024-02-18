@@ -6,6 +6,7 @@
     ./fish/fish.nix
     ./hyprland/hyprland.nix
     ./alacritty/alacritty.nix
+    # ./kitty/kitty.nix
     ./eww/eww.nix
     # ./gtklock/gtklock.nix
     ./swaylock/swaylock.nix
@@ -53,6 +54,7 @@
     bat # cat alternative
     ncdu # du alternative
     duf # df alternative
+    trash-cli # Trash can CLI
 
     # emacs package dependencies
     libtool
