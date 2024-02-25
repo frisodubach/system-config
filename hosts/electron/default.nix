@@ -27,7 +27,25 @@
     hostName = "electron";
     networkmanager.enable = true;
     firewall = { enable = true; };
+    nameservers = [
+      "DNS=194.242.2.9#all.dns.mullvad.net"
+      "DNS=194.242.2.5#extended.dns.mullvad.net"
+    ];
   };
+
+  services.resolved = {
+    enable = true;
+    dnssec = "false";
+    domains = [ "~." ];
+    fallbackDns = [
+      "DNS=194.242.2.9#all.dns.mullvad.net"
+      "DNS=194.242.2.5#extended.dns.mullvad.net"
+    ];
+    extraConfig = ''
+      DNSOverTLS=yes
+    '';
+  };
+
   hardware.bluetooth.enable = true;
   # services.blueman.enable = true;
 
