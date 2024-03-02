@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }: {
   imports =
-    [ ./hardware-configuration.nix ./networking.nix ./audio.nix ./power.nix ];
+    [ ./hardware-configuration.nix ./networking.nix ./io.nix ./power.nix ];
 
   ######### Core system stuff #########
 
