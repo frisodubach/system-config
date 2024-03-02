@@ -39,6 +39,7 @@
       services = {
         gtklock = { };
         swaylock = { };
+        hyprlock = { };
       };
     };
   };

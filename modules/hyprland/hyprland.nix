@@ -105,7 +105,7 @@
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
 
-    # Don't understand this well.
+    # Sourcing the home-manager module
     imports = [ inputs.hyprland.homeManagerModules.default ];
 
     # Enable hyprland

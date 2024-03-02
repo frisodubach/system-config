@@ -29,6 +29,7 @@
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
+  # exec-once = hypridle
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   # exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock' &
@@ -184,6 +185,10 @@
   bind = $mainMod, F, togglefloating,
   bind = $mainMod SHIFT, F, fullscreen,
   bind = $mainMod, C, killactive,
+  bind = $mainMod, Y, togglespecialworkspace, special
+  bind = $mainMod SHIFT, Y, movetoworkspace, special
+  # bind = $mainMod, G, movegroupwindow,
+  # bind = $mainMod SHIFT, G, togglegroup,
 
   # Move focus with mainMod + arrow keys
   bind = $mainMod, H, movefocus, l
@@ -270,11 +275,12 @@
   # bind=,XF86RFKill,exec, nmcli radio all off
 
   # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
-  # $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
-  $screenLockCmd = swaylock && sleep 3
+  $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
+  # $screenLockCmd = swaylock
   # $screenLockCmd = gtklock
+  # $screenLockCmd = hyprlock
   $suspendCmd = systemctl suspend
-  $lockAndSuspendCmd = $screenLockCmd & sleep 3; $suspendCmd &
+  $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 
   # Screenshots
   bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png

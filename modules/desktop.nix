@@ -9,6 +9,8 @@
     ./eww/eww.nix
     # ./gtklock/gtklock.nix
     ./swaylock/swaylock.nix
+    ./hyprlock/hyprlock.nix
+    ./hypridle/hypridle.nix
     # ./wofi/wofi.nix
     ./rofi/rofi.nix
     ./mako/mako.nix
