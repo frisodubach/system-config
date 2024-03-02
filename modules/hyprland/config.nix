@@ -47,6 +47,11 @@
   env = XCURSOR_SIZE,24
 
   # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
+  misc {
+       vfr = true
+       enable_swallow = true
+  }
+
   input {
       kb_layout = us
       # kb_variant =
