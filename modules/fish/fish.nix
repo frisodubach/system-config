@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
 

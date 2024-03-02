@@ -1,27 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./main-user.nix
-    ./fish/fish.nix
-    ./hyprland/hyprland.nix
-    ./alacritty/alacritty.nix
-    # ./kitty/kitty.nix
-    ./eww/eww.nix
-    # ./gtklock/gtklock.nix
-    ./swaylock/swaylock.nix
-    # ./wofi/wofi.nix
-    ./rofi/rofi.nix
-    ./mako/mako.nix
-    ./vimiv/vimiv.nix
-    ./gruvbox/gruvbox.nix
-    ./mullvad/mullvad.nix
-    ./joshuto/joshuto.nix
-    ./yazi/yazi.nix
-    ./zathura/zathura.nix
-    ./xdgDefault/xdgDefault.nix
-    ./scripts/scripts.nix
-  ];
+  imports = [ ./desktop.nix ./fish/fish.nix ];
 
   environment.sessionVariables = rec {
     XDG_CACHE_HOME = "$HOME/.cache";
@@ -30,10 +10,13 @@
     XDG_STATE_HOME = "$HOME/.local/state";
   };
 
-  environment.variables = {
-    TERM = "alacritty";
-    TERMINAL = "alacritty";
-    EDITOR = "emacsclient";
+  users.users = {
+    phonon = {
+      isNormalUser = true;
+      description = "phonon";
+      extraGroups = [ "networkmanager" "wheel" "audo" "video" ];
+      #initialPassword = "password";
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -55,32 +38,7 @@
     ncdu # du alternative
     duf # df alternative
     trash-cli # Trash can CLI
-
-    # emacs package dependencies
-    libtool
-    clang
-    cmake
-    gnumake
-    nixfmt
-    shfmt
-    coreutils
-    fd
-    ripgrep
-    git
-    (aspellWithDicts (dicts: with dicts; [ en en-computers en-science ]))
-
-    # basic GUI applications
-    firefox
-    alacritty
-    gimp
-    emacs-gtk
-    calibre
-    mullvad-browser
-
-    # PDF utils
-    ocrmypdf # Add OCR layer to PDF file
-    qpdf # e.g. rotating, splitting, merging, encryption
-    qpdfview # qpdfviewer
+    fish
 
     # misc
     neofetch

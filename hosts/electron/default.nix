@@ -1,8 +1,6 @@
 { config, lib, pkgs, inputs, ... }: {
-  imports = [
-    ./hardware-configuration.nix
-    #./no-git.nix
-  ];
+  imports =
+    [ ./hardware-configuration.nix ./networking.nix ./audio.nix ./power.nix ];
 
   ######### Core system stuff #########
 
@@ -22,87 +20,6 @@
 
   boot.supportedFilesystems = [ "ntfs" ];
 
-  ############ /Networking ############
-  networking = {
-    hostName = "electron";
-    networkmanager.enable = true;
-    firewall = { enable = true; };
-    nameservers = [
-      "DNS=194.242.2.9#all.dns.mullvad.net"
-      "DNS=194.242.2.5#extended.dns.mullvad.net"
-    ];
-  };
-
-  services.resolved = {
-    enable = true;
-    dnssec = "false";
-    domains = [ "~." ];
-    fallbackDns = [
-      "DNS=194.242.2.9#all.dns.mullvad.net"
-      "DNS=194.242.2.5#extended.dns.mullvad.net"
-    ];
-    extraConfig = ''
-      DNSOverTLS=yes
-    '';
-  };
-
-  hardware.bluetooth.enable = true;
-  # services.blueman.enable = true;
-
-  # Local DNS entries. Fix ports once all services are working
-  networking.extraHosts = ''
-    100.117.232.92 im.phonon.nl # images
-    100.117.232.92 fs.phonon.nl # files
-    100.117.232.92 bu.phonon.nl # backups
-    100.117.232.92 px.phonon.nl # proxy manager
-    100.117.232.92 gf.phonon.nl # Grafana
-    100.117.232.92 bl.phonon.nl # blog
-    100.117.232.92 sy.phonon.nl # sync
-    100.117.232.92 pt.phonon.nl # portainer
-    100.117.232.92 sf.phonon.nl # SFTP
-    100.80.184.50 ts.neutron.nl # tailscale
-  '';
-
-  ####### VPN configuration #######
-  services.mullvad-vpn.enable = true;
-  # networking.firewall.checkReversePath = "loose";
-  networking.wireguard.enable = true;
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  ######### SOUND/IO SECTION ############
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    audio.enable = true;
-    jack.enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-  };
-  security.rtkit.enable = true;
-
-  services.xserver.libinput = {
-    enable = true;
-    touchpad = {
-      tapping = true;
-      accelProfile = "flat";
-    };
-  };
-
-  ## USB Devices auto-mounting
-  services = {
-    devmon.enable = true;
-    gvfs.enable = true;
-    udisks2.enable = true;
-  };
-
   ## LOCALE SECTION
   time.timeZone = "Europe/Amsterdam";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -113,56 +30,6 @@
   services = {
     fstrim.enable = true;
     printing.enable = true;
-
-    # power-management stuff
-    # thermald.enable = true;
-
-    # Power-profiles daemon
-    # power-profiles-daemon.enable = true;
-
-    acpid.enable = true;
-
-    # #Auto CPU Frequency
-    # auto-cpufreq.enable = true;
-    # auto-cpufreq.settings = {
-    #   battery = {
-    #     governor = "powersave";
-    #     turbo = "auto";
-    #   };
-    #   charger = {
-    #     governor = "schedutil";
-    #     turbo = "auto";
-    #   };
-    # };
-
-    # TLP
-    tlp = {
-      enable = true;
-      settings = {
-        STOP_CHARGE_THRESH_BAT0 = 1;
-        RADEON_DPM_STATE_ON_AC = "performance";
-        RADEON_DPM_STATE_ON_BAT = "battery";
-        PCIE_ASPM_ON_BAT = "powersupersave";
-        RUNTIME_PM_ON_BAT = "auto";
-        PLATFORM_PROFILE_ON_AC = "performance";
-        PLATFORM_PROFILE_ON_BAT = "low-power"; # CHECK: tlp-stat -p
-        CPU_SCALING_GOVERNOR_ON_AC = "schedutil"; # CHECK: tlp-stat -p
-        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-        # Version 1.6 & kernal 6.3
-        CPU_DRIVER_OPMODE_ON_AC =
-          "active"; # guided, passive --> frequency limits
-        CPU_DRIVER_OPMODE_ON_BAT = "active";
-        CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
-        CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
-
-        # USB_AUTOSUSPEND=0;
-      };
-    };
-  };
-
-  powerManagement = {
-    enable = true;
-    powertop.enable = false;
   };
 
   # Screen-lock / security
