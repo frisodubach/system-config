@@ -48,8 +48,8 @@ in {
         categories = [ "System" ];
       };
       rofi-mullvad = {
-        name = "Mullvad Menu";
-        genericName = "Mullvad Menu";
+        name = "Mullvad VPN Menu";
+        genericName = "Mullvad VPN Menu";
         exec = "rofi-mullvad";
         terminal = false;
         categories = [ "System" ];
