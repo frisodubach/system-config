@@ -28,7 +28,7 @@
 
     #scripts
     home.file.".config/eww" = {
-      source = ./bar1;
+      source = ./bar;
       executable = true;
       recursive = true;
     };
