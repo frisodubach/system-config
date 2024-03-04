@@ -42,6 +42,9 @@ While my current configuration is quite okay to use right now, there are still s
 - [X] Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
   - [X] Improve multi-monitor workspace configuration
   - [X] Improve laptop monitor behaviour
+- [ ] Move home-manager to flake (mdvmeijer)
+- [ ] Configure Doom Emacs with home-manager
+- [ ] Add doom folder to path or make environment variable (mdvmeijer)
 * Aspirational
 Things I would really like to implement:
 - [ ] Caffeine widget in eww-bar
