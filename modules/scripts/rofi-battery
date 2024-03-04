@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+entries="󱈑  Conversation Mode\n󰂏  Full-charge\n󰌪  Battery-mode\n󰚥  AC-mode\n󰉂 Automatic-mode"
+
+selected=$(echo -e $entries | rofi -dmenu -i --cache-file /dev/null | awk '{print tolower($2)}')
+
+case $selected in
+  conversation)
+    exec tlp setcharge > /dev/null
+    ;;
+  full-charge)
+    exec tlp fullcharge > /dev/null
+    ;;
+  battery-mode)
+    exec tlp bat
+    ;;
+  ac-mode)
+    exec tlp ac
+    ;;
+  automatic-mode)
+    exec tlp start
+    ;;
+esac

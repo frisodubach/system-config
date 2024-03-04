@@ -8,12 +8,15 @@ let
     pkgs.writeShellScriptBin "rofi-power" (builtins.readFile ./rofi-power);
   rofi-wifi =
     pkgs.writeShellScriptBin "rofi-wifi" (builtins.readFile ./rofi-wifi);
+  rofi-battery =
+    pkgs.writeShellScriptBin "rofi-battery" (builtins.readFile ./rofi-battery);
 in {
   environment.systemPackages = with pkgs; [
     rofi-bluetooth
     rofi-mullvad
     rofi-power
     rofi-wifi
+    rofi-battery
   ];
 
   security.sudo = {
@@ -30,6 +33,10 @@ in {
         }
         {
           command = "/run/current-system/sw/bin/poweroff";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "/run/current-system/sw/bin/tlp";
           options = [ "NOPASSWD" ];
         }
       ];
@@ -68,6 +75,14 @@ in {
         terminal = false;
         categories = [ "System" ];
       };
+      rofi-battery = {
+        name = "Battery Menu";
+        genericName = "Battery Menu";
+        exec = "rofi-battery";
+        terminal = false;
+        categories = [ "System" ];
+      };
+
     };
   };
 
