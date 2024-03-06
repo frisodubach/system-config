@@ -168,6 +168,7 @@
 
   # Application laucnhing
   bind = $mainMod, Q, exec, alacritty
+  bind = $mainMod, Q, exec, emacs -nc --eval "(+vterm/here t)"
   # bind = $mainMod, E, exec, nautilus
   bind = $mainMod, E, exec, alacritty -e yazi #Need to run w/ a terminal
   bind = $mainMod, space, exec, rofi -show drun
