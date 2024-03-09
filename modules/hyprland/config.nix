@@ -182,7 +182,7 @@
   bind = $mainMod SHIFT, N, exec, rofi-bluetooth
   bind = $mainMod, M, exec, mullvad-browser
   bind = $mainMod SHIFT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow Signal || signal-desktop
-  bind = $mainMod, A, exec, pidof lollypop && hyprctl dispatch focuswindow lollypop || lollypop
+  bind = $mainMod, A, exec, lollypop
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
