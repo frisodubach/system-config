@@ -168,7 +168,7 @@
 
   # Application laucnhing
   bind = $mainMod, Q, exec, alacritty
-  bind = $mainMod, T, exec, emacs -nc --eval "(+vterm/here t)"
+  bind = $mainMod, T, exec, emacsclient -nc --eval "(+vterm/here t)"
   # bind = $mainMod, E, exec, nautilus
   bind = $mainMod, E, exec, alacritty -e yazi #Need to run w/ a terminal
   bind = $mainMod, space, exec, rofi -show drun
@@ -178,11 +178,11 @@
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
   # bind = $mainMod SHIFT, B, exec, librewolf
   bind = $mainMod, I, exec, vimiv
-  bind = $mainMod, V, exec, /home/phonon/.config/eww/scripts/rofi-mullvad
-  bind = $mainMod SHIFT, N, exec, /home/phonon/.config/eww/scripts/rofi-wifi
-  bind = $mainMod SHIFT, B, exec, /home/phonon/.config/eww/scripts/rofi-bluetooth
+  bind = $mainMod, V, exec, rofi-mullvad
+  bind = $mainMod SHIFT, N, exec, rofi-bluetooth
   bind = $mainMod, M, exec, mullvad-browser
   bind = $mainMod SHIFT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow Signal || signal-desktop
+  bind = $mainMod, A, exec, pidof lollypop && hyprctl dispatch focuswindow lollypop || lollypop
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
