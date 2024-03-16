@@ -176,10 +176,9 @@
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
   bind = $mainMod, N, exec, emacsclient -nc
   bind = $mainMod, B, exec, pidof librewolf && hyprctl dispatch focuswindow librewolf || librewolf
-  # bind = $mainMod SHIFT, B, exec, librewolf
+  bind = $mainMod SHIFT, B, exec, rofi-bluetooth
   bind = $mainMod, I, exec, vimiv
   bind = $mainMod, V, exec, rofi-mullvad
-  bind = $mainMod SHIFT, N, exec, rofi-bluetooth
   bind = $mainMod, M, exec, mullvad-browser
   bind = $mainMod SHIFT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow Signal || signal-desktop
   bind = $mainMod, A, exec, lollypop
@@ -281,7 +280,7 @@
   # bind=,XF86RFKill,exec, nmcli radio all off
 
   # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
-  $screenLockCmd = swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
+  $screenLockCmd = pidof swaylock || swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
   # $screenLockCmd = swaylock
   # $screenLockCmd = gtklock
   # $screenLockCmd = hyprlock
