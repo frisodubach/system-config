@@ -15,9 +15,10 @@
     ./rofi/rofi.nix
     ./mako/mako.nix
     ./vimiv/vimiv.nix
+    # ./paisa/paisa.nix
     ./gruvbox/gruvbox.nix
     ./mullvad/mullvad.nix
-    ./joshuto/joshuto.nix
+    # ./joshuto/joshuto.nix
     ./yazi/yazi.nix
     ./zathura/zathura.nix
     ./xdgDefault/xdgDefault.nix
