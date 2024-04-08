@@ -14,7 +14,7 @@
     phonon = {
       isNormalUser = true;
       description = "phonon";
-      extraGroups = [ "networkmanager" "wheel" "audo" "video" ];
+      extraGroups = [ "networkmanager" "wheel" "audo" "video" "storage" ];
       #initialPassword = "password";
     };
   };

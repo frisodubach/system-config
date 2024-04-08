@@ -20,6 +20,12 @@
 
   boot.supportedFilesystems = [ "ntfs" ];
 
+  fileSystems."/media/storagedrive" = {
+    device = "/dev/disk/by-uuid/12DCE3EB6E9B9B69";
+    fsType = "ntfs-3g";
+    options = [ "rw" "uid=1000" ];
+  };
+
   ## LOCALE SECTION
   time.timeZone = "Europe/Amsterdam";
   i18n.defaultLocale = "en_US.UTF-8";
