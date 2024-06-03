@@ -56,6 +56,7 @@
       museeks
       starship
       kid3
+      vial
 
       # PDF utils
       ocrmypdf # Add OCR layer to PDF file
