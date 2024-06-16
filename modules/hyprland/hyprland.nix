@@ -46,12 +46,12 @@
   };
 
   # === Greeter ===
+  services.displayManager.defaultSession = "hyprland";
   services.xserver = {
     excludePackages = [ pkgs.xterm ];
     enable = true;
     desktopManager.xterm.enable = false;
     displayManager = {
-      defaultSession = "hyprland";
       lightdm = {
         enable = false;
         greeters.gtk = {

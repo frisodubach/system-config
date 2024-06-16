@@ -9,7 +9,7 @@
     clang
     cmake
     gnumake
-    nixfmt
+    nixfmt-classic
     shfmt
     coreutils
     fd
