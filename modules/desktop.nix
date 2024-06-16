@@ -65,7 +65,7 @@
 
       # Temp
       gnome.nautilus
-      gparted
+      gnome.gnome-disk-utility
     ];
 
   };
