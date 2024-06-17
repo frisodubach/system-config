@@ -7,7 +7,7 @@
     programs.alacritty = {
       enable = true;
       settings = {
-        import = [ ./themes/gruvbox_dark.yml ];
+        import = [ ./themes/gruvbox_dark.toml ];
 
         window = {
           opacity = 1;
