@@ -25,7 +25,7 @@
 
   # Execute your favorite apps at launch
   exec-once=hyprctl setcursor \'Capitaine Cursors \(Gruvbox\)\' 24
-  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/dawn.jpg
+  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/Photography/taiwan5.jpg
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
@@ -33,7 +33,7 @@
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   # exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock' &
-  # exec-once = swayosd-server
+  exec-once = swayosd-server
   exec-once = wl-paste --type text --watch cliphist store #Stores only text data
   exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 
@@ -127,10 +127,10 @@
       preserve_split = true # you probably want this
   }
 
-  master {
+  #master {
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      new_is_master = true
-  }
+      # new_is_master = true
+  #}
 
   gestures {
       # See https://wiki.hyprland.org/Configuring/Variables/ for more
@@ -148,6 +148,8 @@
   # windowrule = float, ^(kitty)$
   # Example windowrule v2
   # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+  # Prevent Steam menus from disappearing after mouse movement
+  # windowrulev2 = stayfocused,title:^()$,class:^(steam)$
   # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
   windowrule=float,title:^(Open File)(.*)$
   windowrule=float,title:^(Open Folder)(.*)$
@@ -250,19 +252,19 @@
   bindm = $mainMod, mouse:273, resizewindow
 
   # Brightness control
-  binde=,XF86MonBrightnessUp,exec,brightnessctl set +5%
-  binde=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
+  # binde=,XF86MonBrightnessUp,exec,brightnessctl set +5%
+  # binde=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
   # SwayOSD brightness broken
-  # binde=,XF86MonBrightnessUp,exec,swayosd --brightness raise 5
-  # binde=,XF86MonBrightnessDown,exec,swayosd --brightness lower 5
+  binde=,XF86MonBrightnessUp,exec,swayosd-client --brightness raise 5
+  binde=,XF86MonBrightnessDown,exec,swayosd-client --brightness lower 5
 
   # Audio control
   # binde=,XF86AudioMute,exec,pamixer -t
   # binde=,XF86AudioRaiseVolume,exec,pamixer -i 5
   # binde=,XF86AudioLowerVolume,exec,pamixer -d 5
-  binde=,XF86AudioMute,exec,swayosd --output-volume toggle-mute
-  binde=,XF86AudioRaiseVolume,exec,swayosd --output-volume raise 5
-  binde=,XF86AudioLowerVolume,exec,swayosd --output-volume lower 5
+  binde=,XF86AudioMute,exec,swayosd-client --output-volume mute-toggle
+  binde=,XF86AudioRaiseVolume,exec,swayosd-client --output-volume raise 5
+  binde=,XF86AudioLowerVolume,exec,swayosd-client --output-volume lower 5
 
   # Control audio playback with hardware playback keys
   bind=, XF86AudioPlay, exec, playerctl play-pause
@@ -302,4 +304,9 @@
 
   # Keybind to turn off
   bind=, XF86PowerOff, exec, systemctl suspend
+
+  # Temporary fix for locking screen losing focus
+  # allow_session_lock_restore = true
+  bindl = SUPER, BackSpace, exec, pkill -SIGUSR1 swaylock && WAYLAND_DISPLAY=wayland-1 swaylock -f
+
 ''
