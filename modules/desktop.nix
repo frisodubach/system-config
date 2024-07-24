@@ -44,7 +44,6 @@
       mullvad-browser
       bitwarden
       signal-desktop
-      lollypop
       mpv
       tor-browser-bundle-bin
 
@@ -53,10 +52,13 @@
       vorta
       sherlock
       amberol
-      museeks
       starship
       kid3
+      rhythmbox
       vial
+
+      # finance
+      portfolio
 
       # PDF utils
       ocrmypdf # Add OCR layer to PDF file
