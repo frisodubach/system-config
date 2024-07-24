@@ -6,7 +6,7 @@
 
     # emacs package dependencies
     libtool
-    clang
+    clang # vterm dependencies
     cmake
     gnumake
     nixfmt-classic
@@ -31,5 +31,12 @@
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
     home.sessionPath = [ "~/.emacs.d/bin/" ];
+
+    # https://discourse.nixos.org/t/advice-needed-installing-doom-emacs/8806/5
+    home.file.".doom.d" = {
+      source = ./doom.d;
+      # recursive = true;
+      onChange = builtins.readFile ./doom-sync.sh;
+    };
   };
 }
