@@ -8,14 +8,15 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland?ref=v0.41.1";
-      submodules = true;
-    };
+    # hyprland = {
+    #   type = "git";
+    #   url = "https://github.com/hyprwm/Hyprland?ref=v0.41.2";
+    #   submodules = true;
+    # };
+    # gbar.url = "github:scorpion-26/gBar";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, hyprland }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {

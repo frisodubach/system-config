@@ -2,8 +2,8 @@
 
 {
 
-  # === Hyprland ===
-  imports = [ inputs.hyprland.nixosModules.default ];
+  # Necessary for Hyprland git-version (inputs)
+  # imports = [ inputs.hyprland.nixosModules.default ];
 
   nix.settings = {
     substituters = [ "https://hyprland.cachix.org" ];
@@ -106,7 +106,8 @@
     home.stateVersion = "22.11";
 
     # Sourcing the home-manager module
-    imports = [ inputs.hyprland.homeManagerModules.default ];
+    # Necessary for Hyprland git-version (inputs)
+    # imports = [ inputs.hyprland.homeManagerModules.default ];
 
     # Enable hyprland
     wayland.windowManager.hyprland = {
