@@ -56,7 +56,7 @@
         enable = false;
         greeters.gtk = {
           enable = false;
-          theme.name = "Gruvbox-Dark-B";
+          theme.name = "Gruvbox-Dark";
         };
       };
       gdm = {

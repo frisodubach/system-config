@@ -24,7 +24,7 @@
       enable = true;
       theme = {
         package = pkgs.gruvbox-gtk-theme;
-        name = "Gruvbox-Dark-B";
+        name = "Gruvbox-Dark";
       };
       iconTheme = {
         package = pkgs.kora-icon-theme;
@@ -36,7 +36,7 @@
       };
     };
 
-    home.sessionVariables.GTK_THEME = "Gruvbox-Dark-B";
+    home.sessionVariables.GTK_THEME = "Gruvbox-Dark";
 
     qt = {
       enable = true;
