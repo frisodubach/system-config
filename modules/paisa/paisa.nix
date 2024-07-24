@@ -1,6 +1,10 @@
-{ config, lib, pkgs, inputs, paisa, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
-  environment.systemPackages = with pkgs;
-    [ inputs.paisa.packages.${pkgs.system}.default ];
+  imports = [ inputs.paisa.nixosModules.default ];
+
+  # environment.systemPackages = with pkgs;
+  #   [ inputs.paisa.packages.${pkgs.system}.default ];
+
+  environment.systemPackages = with pkgs; [ paisa-cli paisa ];
 }
