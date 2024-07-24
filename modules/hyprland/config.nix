@@ -29,7 +29,7 @@
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
-  # exec-once = hypridle
+  exec-once = hypridle
   # exec-once = swayidle -w timeout 300 'systemctl suspend' before-sleep 'swaylock' &
   # exec-once = swayidle -w timeout 450 'systemctl suspend' &
   # exec-once=swayidle -w timeout 300 'hyprctl dispatch dpms off' timeout 360 'swaylock' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock' &
@@ -145,12 +145,6 @@
   # }
 
   # Example windowrule v1
-  # windowrule = float, ^(kitty)$
-  # Example windowrule v2
-  # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-  # Prevent Steam menus from disappearing after mouse movement
-  # windowrulev2 = stayfocused,title:^()$,class:^(steam)$
-  # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
   windowrule=float,title:^(Open File)(.*)$
   windowrule=float,title:^(Open Folder)(.*)$
   windowrule=float,title:^(Save As)(.*)$
@@ -171,7 +165,6 @@
   # Application laucnhing
   bind = $mainMod, Q, exec, alacritty
   bind = $mainMod, T, exec, emacsclient -nc --eval "(+vterm/here t)"
-  # bind = $mainMod, E, exec, nautilus
   bind = $mainMod, E, exec, alacritty -e yazi #Need to run w/ a terminal
   bind = $mainMod, space, exec, rofi -show drun
   bind = $mainMod SHIFT, space, exec, rofi -show run
@@ -194,8 +187,27 @@
   bind = $mainMod, C, killactive,
   bind = $mainMod, Y, togglespecialworkspace, special
   bind = $mainMod SHIFT, Y, movetoworkspace, special
-  # bind = $mainMod, G, movegroupwindow,
-  # bind = $mainMod SHIFT, G, togglegroup,
+
+  # Groups
+  # bind = $mainMod CTRL, G, togglegroup
+  # bind = $mainMod, G, changegroupactive, f
+  # bind = $mainMod SHIFT, G, changegroupactive, b
+  # bind = $mainMod ALT, G, moveoutofgroup
+
+  # bind = $mainMod CTRL SHIFT, H, moveintogroup, l
+  # bind = $mainMod CTRL SHIFT, L, moveintogroup, r
+  # bind = $mainMod CTRL SHIFT, K, moveintogroup, u
+  # bind = $mainMod CTRL SHIFT, J, moveintogroup, d
+
+  # TODO: Add some way to control direction where window will be placed
+  # bind = $mainMod CTRL SHIFT, H, moveoutofgroup
+  # bind = $mainMod CTRL SHIFT, L, moveoutofgroup
+  # bind = $mainMod CTRL SHIFT, K, moveoutofgroup
+  # bind = $mainMod CTRL SHIFT, J, moveoutofgroup
+
+  # Special workspace -- scratchpad
+  bind = $mainMod, X, togglespecialworkspace, scratchpad
+  bind = $mainMod SHIFT, X, movetoworkspace, special:scratchpad
 
   # Move focus with mainMod + arrow keys
   bind = $mainMod, H, movefocus, l
@@ -252,16 +264,11 @@
   bindm = $mainMod, mouse:273, resizewindow
 
   # Brightness control
-  # binde=,XF86MonBrightnessUp,exec,brightnessctl set +5%
-  # binde=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
   # SwayOSD brightness broken
   binde=,XF86MonBrightnessUp,exec,swayosd-client --brightness raise 5
   binde=,XF86MonBrightnessDown,exec,swayosd-client --brightness lower 5
 
   # Audio control
-  # binde=,XF86AudioMute,exec,pamixer -t
-  # binde=,XF86AudioRaiseVolume,exec,pamixer -i 5
-  # binde=,XF86AudioLowerVolume,exec,pamixer -d 5
   binde=,XF86AudioMute,exec,swayosd-client --output-volume mute-toggle
   binde=,XF86AudioRaiseVolume,exec,swayosd-client --output-volume raise 5
   binde=,XF86AudioLowerVolume,exec,swayosd-client --output-volume lower 5
@@ -281,11 +288,10 @@
   # bind=,XF86RFKill,exec, nmcli radio all on
   # bind=,XF86RFKill,exec, nmcli radio all off
 
-  # $screenLockCmd = swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
-  $screenLockCmd = pidof swaylock || swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
+  # $screenLockCmd = pidof swaylock || swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
   # $screenLockCmd = swaylock
   # $screenLockCmd = gtklock
-  # $screenLockCmd = hyprlock
+  $screenLockCmd = hyprlock
   $suspendCmd = systemctl suspend
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 
