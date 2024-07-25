@@ -313,6 +313,6 @@
 
   # Temporary fix for locking screen losing focus
   # allow_session_lock_restore = true
-  bindl = SUPER, BackSpace, exec, pkill -SIGUSR1 swaylock && WAYLAND_DISPLAY=wayland-1 swaylock -f
+  # bindl = SUPER, BackSpace, exec, pkill -SIGUSR1 swaylock && WAYLAND_DISPLAY=wayland-1 swaylock -f
 
 ''
