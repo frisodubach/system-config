@@ -9,6 +9,7 @@
     #   "DNS=194.242.2.9#all.dns.mullvad.net"
     #   "DNS=194.242.2.5#extended.dns.mullvad.net"
     # ];
+    nameservers = [ "9.9.9.9" "149.112.112.112" ];
   };
 
   # services.resolved = {

@@ -23,9 +23,11 @@ if [ "$chosen_relay" = "" ]; then
 	exit
 elif [ "$chosen_relay" = " 󰒍 Connect VPN" ]; then
 	mullvad connect
+	mullvad lockdown-mode set on
 	notify-send "VPN Connected"
 elif [ "$chosen_relay" = " 󰒎 Disconnect VPN" ]; then
 	mullvad disconnect
+	mullvad lockdown-mode set off
 	notify-send "VPN Disconnected"
 else
 	# Message to show when connection is activated successfully
