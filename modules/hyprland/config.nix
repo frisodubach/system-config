@@ -25,7 +25,7 @@
 
   # Execute your favorite apps at launch
   exec-once=hyprctl setcursor \'Capitaine Cursors \(Gruvbox\)\' 24
-  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/Photography/taiwan5.jpg
+  exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/stairs.jpg
   exec-once=eww daemon
   exec-once=eww open bar
   exec-once=mako
@@ -289,7 +289,7 @@
   # bind=,XF86RFKill,exec, nmcli radio all off
 
   # $screenLockCmd = pidof swaylock || swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
-  $screenLockCmd = hyprlock
+  $screenLockCmd = pidof hyprlock || hyprlock
   $suspendCmd = systemctl suspend
   $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
 
