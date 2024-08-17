@@ -85,6 +85,7 @@
   (setq org-link-descriptive t)
   (setq org-pretty-entities t)
   (setq org-hidden-keywords t))
+(setq doom-modeline-enable-word-count t)
 
 ;;Set org-mode to mixed-pitch to enable Sans-font
 (add-hook! 'org-mode-hook #'mixed-pitch-mode)
