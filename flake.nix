@@ -21,7 +21,7 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        # config = { allowUnfree = true; }; # depracated. Need new solution
+        config = { allowUnfree = true; }; # depracated. Need new solution
       };
 
       lib = nixpkgs.lib;

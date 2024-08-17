@@ -23,6 +23,7 @@
     ./zathura/zathura.nix
     ./xdgDefault/xdgDefault.nix
     ./scripts/scripts.nix
+    # ./waybar/waybar.nix
   ];
 
   environment.variables = {
@@ -68,6 +69,9 @@
       # Temp
       gnome.nautilus
       gnome.gnome-disk-utility
+
+      #work
+      # citrix_workspace
     ];
 
   };

@@ -4,17 +4,19 @@
 
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
+    # home.packages = [ pkgs.inter ];
 
     services.playerctld.enable = true;
 
     programs.waybar = {
       enable = true;
+      # package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
       settings = {
         mainBar = {
           #margin = "0";
           layer = "top";
-          position = "right";
-          modules-left = [ "custom/nix" "hyprland/workspaces" ];
+          position = "top";
+          modules-left = [ "custom/nix" "wlr/workspaces" "mpris" ];
           modules-center = [ "wlr/taskbar" ];
           modules-right = [
             "network"
@@ -67,6 +69,17 @@
               # "default" = "";
             };
             # rotate = 90;
+          };
+
+          mpris = {
+            format =
+              "{status_icon}<span weight='bold'>{artist}</span> | {title}";
+            status-icons = {
+              playing = " 󰎈 ";
+              paused = " 󰏤 ";
+              stopped = " 󰓛 ";
+            };
+            max-length = 50;
           };
 
           "custom/nix" = { format = " 󱄅 "; };
