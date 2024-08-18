@@ -27,7 +27,7 @@
   };
 
   ## LOCALE SECTION
-  time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "Asia/Taipei";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = { LC_TIME = "nl_NL.UTF-8"; };
 
