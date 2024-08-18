@@ -176,7 +176,7 @@
   bind = $mainMod, V, exec, rofi-mullvad
   bind = $mainMod, M, exec, mullvad-browser
   bind = $mainMod SHIFT, M, exec, pidof signal-desktop && hyprctl dispatch focuswindow Signal || signal-desktop
-  bind = $mainMod, A, exec, lollypop
+  bind = $mainMod, A, exec, rhythmbox
 
   # Manage windows/workspaces
   bind = $mainMod, S, swapactiveworkspaces, 0 1 # swap workspace between monitors
