@@ -5,7 +5,7 @@
     ./emacs/emacs.nix
     ./hyprland/hyprland.nix
     ./alacritty/alacritty.nix
-    # ./kitty/kitty.nix
+    ./kitty/kitty.nix
     ./eww/eww.nix
     # ./gtklock/gtklock.nix
     ./swaylock/swaylock.nix

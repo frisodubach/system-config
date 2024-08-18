@@ -163,9 +163,9 @@
   $mainMod = SUPER
 
   # Application laucnhing
-  bind = $mainMod, Q, exec, alacritty
+  bind = $mainMod, Q, exec, kitty
   bind = $mainMod, T, exec, emacsclient -nc --eval "(+vterm/here t)"
-  bind = $mainMod, E, exec, alacritty -e yazi #Need to run w/ a terminal
+  bind = $mainMod, E, exec, kitty -e yazi #Need to run w/ a terminal
   bind = $mainMod, space, exec, rofi -show drun
   bind = $mainMod SHIFT, space, exec, rofi -show run
   bind = $mainMod, P, exec, pidof bitwarden && hyprctl dispatch focuswindow bitwarden || bitwarden
