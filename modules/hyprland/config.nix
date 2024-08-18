@@ -80,7 +80,7 @@
       gaps_in = 5
       gaps_out = 16
       border_size = 2
-      col.active_border = 0xffbdae93
+      col.active_border = 0xff665C54
       col.inactive_border = 0xff282828
       resize_on_border = true
       hover_icon_on_border = true
