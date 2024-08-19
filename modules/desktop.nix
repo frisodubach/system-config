@@ -52,7 +52,6 @@
       zotero
       vorta
       sherlock
-      amberol
       starship
       kid3
       rhythmbox

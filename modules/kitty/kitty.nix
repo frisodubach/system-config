@@ -26,6 +26,7 @@
         cursor_blink_interval = 0;
         cursor_shape = "block";
         cursor_shape_unfocused = "hollow";
+        shell_integration = "no-cursor";
         hide_window_decorations = "yes";
 
         tab_bar_min_tabs = 1;
