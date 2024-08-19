@@ -15,18 +15,16 @@
           layer = "top";
           position = "right";
           modules-left = [ "custom/nix" "hyprland/workspaces" ];
-          modules-center = [ "wlr/taskbar" ];
+          # modules-center = [ "" ];
           modules-right = [
+            "custom/notification"
+            "bluetooth"
             "network"
+            "custom/vpn"
+            "battery"
             "backlight"
             "pulseaudio"
-            # "bluetooth"
-            # "network#speed"
-            # "cpu"
-            # "temperature"
-            "battery"
             "clock"
-            "custom/notification"
             "tray"
           ];
 
@@ -45,15 +43,12 @@
             "*" = 9;
           };
 
-          "wlr/workspaces" = {
+          "hyprland/workspaces" = {
             format = "{icon}";
             on-click = "activate";
             sort-by-number = true;
             format-icons = {
               # "1" = ''<span foreground="#A1EFD3"></span>'';
-              # "2" = ''<span foreground="#FFE6B3">󰈹</span>'';
-              # "3" = ''<span foreground="#91DDFF">󰒱</span>'';
-              # "4" = ''<span foreground="#D4BFFF">󰧑</span>'';
               "1" = "一";
               "2" = "二";
               "3" = "三";
@@ -71,15 +66,10 @@
 
           "custom/nix" = { format = " 󱄅 "; };
 
-          "wlr/taskbar" = {
-            on-click = "activate";
-            # rotoate = 90;
-          };
-
           "pulseaudio" = {
             # format = "<span foreground='#F48FB1'>󰓃</span> {volume}%";
-            "format" = "{icon}  {volume}%";
-            "format-bluetooth" = "{icon}  {volume}%";
+            "format" = "{icon}";
+            "format-bluetooth" = "{icon}";
             "format-muted" = "";
             "format-icons" = {
               "headphone" = "";
@@ -96,37 +86,17 @@
           };
 
           "network" = {
-            # "format-wifi" = "{essid} ({signalStrength}%) ";
-            "format-wifi" = "{essid}   ";
+            "format-wifi" = "";
             "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format" = "{ipaddr}/{cidr} via {gwaddr} ";
-            "on-click" = "alacritty -e 'nmtui'";
+            "on-click" = "kitty -e 'nmtui'";
             # "rotate" = 90;
             "max-length" = 50;
           };
 
-          # "network#interface" = {
-          #   format-ethernet = "<span foreground='#91DDFF'>󰣶 </span> {ifname}";
-          #   format-wifi = "<span foreground='#91DDFF'>󰖩 </span>{ifname}";
-          #   tooltip = true;
-          #   tooltip-format = "{ipaddr}";
-          # };
-
-          # "network#speed" = {
-          #   format =
-          #     "<span foreground='#78A8FF'>⇡</span>{bandwidthUpBits} <span foreground='#78A8FF'>⇣</span>{bandwidthDownBits}";
-          # };
-
-          cpu = { format = "  {usage}% 󱐌 {avg_frequency}"; };
-
-          temperature = {
-            format = "{icon} {temperatureC} °C";
-            format-icons = [ "" "" "" "󰈸" ];
-          };
-
           backlight = {
-            format = "{icon} {percent}%";
+            format = "{icon}";
             format-icons = [ "󰃜" "󰃛" "󰃚 " ];
             #rotate = 90;
           };
@@ -143,20 +113,19 @@
               "warning" = 30;
               "critical" = 15;
             };
-            "format" = " {icon}  {capacity}%";
-            "format-charging" = "   {capacity}%";
-            "format-good" =
-              "{icon}  {capacity}%"; # An empty format will hide the module
-            "format-full" = "{icon}  {capacity}%";
+            "format" = " {icon}";
+            "format-charging" = "";
+            "format-good" = "{icon}"; # An empty format will hide the module
+            "format-full" = "{icon}";
             "format-icons" = [ "" "" "" "" "" ];
             #"rotate" = 90;
           };
 
           "bluetooth" = {
             # "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-            "format" = " {status}";
+            "format" = "";
             "format-disabled" = ""; # an empty format will hide the module
-            "format-connected" = " {num_connections}";
+            "format-connected" = "";
             "tooltip-format" = "{controller_alias}	{controller_address}";
             "tooltip-format-connected" = ''
               {controller_alias}	{controller_address}
@@ -169,8 +138,8 @@
 
           clock = {
             # format = "  {:%H:%M}  󰃭 {:%Y-%m-%d}";
-            format = "  {:%H:%M} ";
-            format-alt = " 󰃭 {:%Y-%m-%d}";
+            format = "{:%H\\n%M}";
+            format-alt = "{:%Y-%m-%d}";
             #rotate = 90;
           };
 
