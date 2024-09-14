@@ -21,16 +21,14 @@ In =./modules= system capabilities are defined, mainly user-specific setup and =
 
 There are also a few currently un-used programs included, these I either used before and have since switched away from, or a work in progress. I keep these in for completeness-sake and I don't want to bother with excluding them from the =.gitignore=.
 For my config, I emphasise using standard dotfiles when convenient, to allow for anyone to copy my configuration, and make it easy to move away from NixOS should I ever want to (although I doubt it).
-
-My =doom-emacs= configuration is not managed by Nix, and can instead be found [[https://github.com/frisodubach/nixConfig][here]], although I need to rework the repo to only include my doom-config.
 * Work in progress
 While my current configuration is quite okay to use right now, there are still some things that are on my list to fix. Right now this is:
 - [-] Battery/Power management for laptop. (Configure =tlp= or =auto-cpufreq=)
   - [X] =tlp= configuration
   - [ ] =auto-cpufreq= usage/configuration
-- [ ] =eww= improvements/clean-up
+- [-] =eww= improvements/clean-up
   - [ ] Get workspace widget working on =eww= bar.
-  - [ ] Clean-up redundant files and folder structure
+  - [X] Clean-up redundant files and folder structure
 - [ ] Get a working =starship= configuration
 - [ ] Split up the =hyprland=  module into smaller parts
 - [-] Scripts clean-up
@@ -38,23 +36,22 @@ While my current configuration is quite okay to use right now, there are still s
   - [X] add to path
   - [X] Create desktop file for convenient use w/ rofi
   - [ ] Create airplane-mode script
-  - [ ] Create rofi script for tlp management
+  - [X] Create rofi script for tlp management
 - [X] Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
   - [X] Improve multi-monitor workspace configuration
   - [X] Improve laptop monitor behaviour
 - [ ] Move home-manager to flake (mdvmeijer)
-- [ ] Configure Doom Emacs with home-manager
+- [X] Configure Doom Emacs with home-manager
 - [ ] Add doom folder to path or make environment variable (mdvmeijer)
 * Aspirational
 Things I would really like to implement:
-- [ ] Caffeine widget in eww-bar
 - [X] Bluetooth control menu
 - [ ] Microphone control menu
 - [ ] Implement nix variables for color scheme
 - [ ] =firefox= / =librewolf= configuration w/ Nix
 - [X] Bluetooth setup & =eww= widget
-- [ ] Zatuhra configuration
+- [X] Zatuhra configuration
 - [ ] qutebrowser
-- [ ] Find & use more terminal applications to replace GUI applications (music-player, file-browser, etc)
+- [X] Find & use more terminal applications to replace GUI applications (music-player, file-browser, etc)
 - [ ] Configure =borg= backups
 - [X] =mullvad= script for wofi to switch locations
