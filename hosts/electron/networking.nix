@@ -28,6 +28,10 @@
   hardware.bluetooth.enable = true;
   # services.blueman.enable = true;
 
+  # MiraCast firewall options
+  networking.firewall.allowedTCPPorts = [ 7236 7250 ];
+  networking.firewall.allowedUDPPorts = [ 7236 5353 ];
+
   # Local DNS entries. Fix ports once all services are working
   networking.extraHosts = ''
     100.117.232.92 im.phonon.nl # images
