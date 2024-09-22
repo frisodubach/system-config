@@ -95,7 +95,7 @@
                           :class "bluetooth-icon" "")))
 
 ;; Brightness Widgets ;;
-(defpoll current-brightness :interval "1s" "brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
+(defpoll current-brightness :interval "1s" "brightnessctl -m -d amdgpu_bl1 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 (defwidget bright []
            (eventbox :onhover "${eww} update bright=true"
   	             :onhoverlost "${eww} update bright=false"
