@@ -26,8 +26,7 @@
     wget
     fd # better find
     ripgrep # better grep
-    htop
-    gotop
+    htop-vim
     unzip
     powertop
     smartmontools # Get SMART data
