@@ -31,6 +31,7 @@
   # MiraCast firewall options
   networking.firewall.allowedTCPPorts = [ 7236 7250 ];
   networking.firewall.allowedUDPPorts = [ 7236 5353 ];
+  networking.firewall.trustedInterfaces = [ "p2p-wl+" ];
 
   # Local DNS entries. Fix ports once all services are working
   networking.extraHosts = ''
