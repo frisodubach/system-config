@@ -222,3 +222,10 @@
 
 ;; Prevents flickering for vsync
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+
+;; Aditional keybinds
+;; LSP commands
+;; (!map :leader "c"
+;;       :desc "Flycheck Errors" "!" #'flycheck-list-errors
+;;       :desc "LSP doc glance" "h" #'lsp-ui-doc-glance
+;;       :desc "LSP doc show" "H" #'lsp-ui-doc-show)
