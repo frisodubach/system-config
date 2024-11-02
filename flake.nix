@@ -19,19 +19,25 @@
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
+      commonArgs = {
         inherit system;
-        config = { allowUnfree = true; }; # depracated. Need new solution
+        config.allowUnfree = true;
       };
+
+      pkgs = import nixpkgs commonArgs;
+      pkgs-unstable = import nixpkgs-unstable commonArgs;
 
       lib = nixpkgs.lib;
 
     in {
       nixosConfigurations = {
         electron = lib.nixosSystem {
-          inherit system;
+          # inherit system;
           inherit pkgs;
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+            inherit pkgs-unstable;
+          };
           modules = [
             ./hosts/electron/default.nix
             ./modules/base-setup.nix

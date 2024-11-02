@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, pkgs-unstable, ... }:
 
 {
   imports = [
@@ -31,6 +31,8 @@
     TERMINAL = "alacritty";
     EDITOR = "emacsclient";
   };
+
+  environment.systemPackages = with pkgs-unstable; [ citrix_workspace ];
 
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
