@@ -20,7 +20,6 @@
   monitor=DP-1,1920x1080@60,0x0,1
   monitor=,highres,auto,1
 
-
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
@@ -291,17 +290,18 @@
   # $screenLockCmd = pidof swaylock || swaylock -i /home/phonon/Pictures/Wallpapers/Photography/mist3.jpg
   $screenLockCmd = pidof hyprlock || hyprlock
   $suspendCmd = systemctl suspend
-  $lockAndSuspendCmd = $screenLockCmd & sleep 1; $suspendCmd &
+  $lockAndSuspendCmd = $screenLockCmd & sleep 0.25; $suspendCmd &
 
   # Screenshots
   bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy -t image/png
   bind = , Print, exec, grim -g "$(slurp)" - | swappy -f -
 
   # On lid close, lock screen and suspend
-  bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
+  # bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
+  bindl = , switch:on:Lid Switch, exec, $screenLockCmd
   # Laptop lid open / close switch
-  # bindl=,switch:on:Lid Switch,exec,hyperctl keyword monitor "eDP-1 1920x1080, 1920x0, 1"
-  # bindl=,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1 disable"
+  bindl=,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, 1920x1080, 1920x0, 1" & eww open bar &
+  bindl=,switch:on:Lid Switch,exec,hyprctl keyword monitor "eDP-1, disable"
 
   # Keybind to lock screen and suspend
   bind = $mainMod, Z, exec, $lockAndSuspendCmd
