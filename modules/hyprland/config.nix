@@ -23,7 +23,6 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
-  exec-once=hyprctl setcursor \'Capitaine Cursors \(Gruvbox\)\' 24
   exec-once=swaybg -m fill -i /home/phonon/Pictures/Wallpapers/gruv/stairs.jpg
   exec-once=eww daemon
   exec-once=eww open bar
@@ -42,8 +41,12 @@
   # Source a file (multi-file configs)
   # source = ~/.config/hypr/myColors.conf
 
-  # Some default env vars.
+  # Cursor setup
+  exec-once = hyprctl setcursor 'Capitaine Cursors (Gruvbox)' 24
   env = XCURSOR_SIZE,24
+  env = XCURSOR_THEME,Capitaine Cursors (Gruvbox)
+  env = HYPRCURSOR_SIZE,24
+  env = HYPRCURSOR_THEME,Capitaine Cursors (Gruvbox)
 
   # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
   misc {
