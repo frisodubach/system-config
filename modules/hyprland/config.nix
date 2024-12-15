@@ -305,7 +305,7 @@
   # bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
   bindl = , switch:on:Lid Switch, exec, $screenLockCmd
   # Laptop lid open / close switch
-  bindl=,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, 1920x1080, 1920x0, 1" & eww open bar &
+  bindl=,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, 1920x1080, 1920x0, 1" & pidof eww || eww open bar &
   bindl=,switch:on:Lid Switch,exec,hyprctl keyword monitor "eDP-1, disable"
 
   # Keybind to lock screen and suspend
@@ -316,6 +316,6 @@
 
   # Temporary fix for locking screen losing focus
   # allow_session_lock_restore = true
-  # bindl = SUPER, BackSpace, exec, pkill -SIGUSR1 swaylock && WAYLAND_DISPLAY=wayland-1 swaylock -f
+  bindl = SUPER, BackSpace, exec, hyprctl --instance 0 'dispatch exec hyprlock' && hyprctl --instance 0 'dispatch exec hyprlock'
 
 ''
