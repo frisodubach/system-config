@@ -3,7 +3,7 @@
 {
 
   environment.systemPackages = with pkgs; [
-    gnome.gnome-themes-extra
+    gnome-themes-extra
     gruvbox-gtk-theme
     kora-icon-theme
     capitaine-cursors-themed

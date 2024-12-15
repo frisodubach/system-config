@@ -68,11 +68,10 @@
       qpdfview # qpdfviewer
 
       # Temp
-      gnome.nautilus
-      gnome.gnome-disk-utility
+      nautilus
+      gnome-disk-utility
       gnome-network-displays
-      #work
-      # citrix_workspace
+      gnome-remote-desktop
     ];
 
   };

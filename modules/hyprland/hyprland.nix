@@ -40,10 +40,7 @@
     config.common.default = "*";
   };
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-  };
+  hardware.graphics = { enable = true; };
 
   # === Greeter ===
   services.displayManager.defaultSession = "hyprland";

@@ -7,7 +7,7 @@
     programs.kitty = {
       enable = true;
       shellIntegration.enableFishIntegration = true;
-      theme = "Gruvbox Dark Soft";
+      themeFile = "gruvbox-dark-soft";
 
       # Font configuration
       font = {

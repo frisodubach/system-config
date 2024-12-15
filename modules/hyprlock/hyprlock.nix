@@ -3,23 +3,19 @@
 # let unstable = import inputs.nixpkgs-unstable { system = mySystem; };
 let unstable = import inputs.nixpkgs-unstable { system = "x86_64-linux"; };
 in {
-  environment.systemPackages = with pkgs; [ unstable.hyprlock ];
+  environment.systemPackages = with pkgs; [ hyprlock ];
 
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
 
-    home.file.".config/hypr/hyprlock.conf".text = let
-      wallpaper-laptop =
-        /home/phonon/Pictures/Wallpapers/gruv/houseonthesideofalake.jpg;
-    in ''
+    home.file.".config/hypr/hyprlock.conf".text = ''
             general {
               hide_cursor = true
             }
 
             background {
                 monitor =
-                path = ${wallpaper-laptop}
-                color = rgba(282828ff)
+                path = /home/phonon/Pictures/Wallpapers/gruv/houseonthesideofalake.jpg
 
                 # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
                 blur_passes = 0 # 0 disables blurring
@@ -33,8 +29,7 @@ in {
 
             background {
                 monitor = eDP-1
-                path = ${wallpaper-laptop}
-                color = rgba(282828ff)
+                path = /home/phonon/Pictures/Wallpapers/gruv/houseonthesideofalake.jpg
 
                 # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
                 blur_passes = 0 # 0 disables blurring
