@@ -18,16 +18,20 @@
 	                :onclick "scripts/popup launcher"  "󱄅")))
 
 ;; Workspaces Widgets ;;
+(deflisten workspace "scripts/workspace.sh 0")
 (defwidget workspaces []
-           (eventbox :onscroll "scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
-                     (box :space-evenly true
-                          (label :text "${workspaces}${current_workspace}" :visible false)
-                          (for workspace in workspaces
-                               (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
-                                         (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
-                                              (label :text "${workspace.id}")))))))
-(deflisten workspaces :initial "[]" "scripts/get-workspaces")
-(deflisten current_workspace :initial "1" "scripts/get-active-workspace")
+           (literal :content workspace))
+
+;; (defwidget workspaces []
+;;            (eventbox :onscroll "scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
+;;                      (box :space-evenly true
+;;                           (label :text "${workspaces}${current_workspace}" :visible false)
+;;                           (for workspace in workspaces
+;;                                (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+;;                                          (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+;;                                               (label :text "${workspace.id}")))))))
+;; (deflisten workspaces :initial "[]" "scripts/get-workspaces")
+;; (deflisten current_workspace :initial "1" "scripts/get-active-workspace")
 
 
 ;; Battery Widgets ;;

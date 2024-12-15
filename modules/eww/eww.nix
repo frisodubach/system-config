@@ -22,7 +22,7 @@
   home-manager.users.phonon = { pkgs, ... }: {
     home.stateVersion = "22.11";
 
-    home.packages = with pkgs; [ eww lua pamixer brightnessctl ];
+    home.packages = with pkgs; [ eww lua pamixer brightnessctl jq socat ];
 
     # programs.eww.enable = true;
 
