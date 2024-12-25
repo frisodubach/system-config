@@ -1,0 +1,36 @@
+#!/bin/sh
+
+close() {
+    if hyprctl monitors -j | jq '.[] | select(.id == 1).disabled' | grep false; then
+        status="enabled"
+        hyprctl keyword monitor "eDP-1, disable"
+        exit
+    elif hyprctl monitors -j | jq '.[] | select(.id == 1).disabled' | grep true; then
+        status="disabled"
+        hyprctl keyword monitor "DP-1, enable"
+        hyprctl keyword monitor "eDP-1, disable"
+        exit
+    else
+        status="no output"
+        exit
+    fi
+}
+
+open() {
+    if hyprctl monitors -j | jq '.[] | select(.id == 1).disabled' | grep false; then
+        status="enabled"
+        hyprctl keyword monitor "eDP-1, enable"
+        exit
+    elif hyprctl monitors -j | jq '.[] | select(.id == 1).disabled' | grep true; then
+        status="disabled"
+        hyprctl keyword monitor "DP-1, enable"
+        hyprctl keyword monitor "eDP-1, enable"
+        exit
+    else
+        status="no output"
+        exit
+    fi
+}
+
+[ "$1" = "close" ] && close && exit
+[ "$1" = "open" ] && open && exit

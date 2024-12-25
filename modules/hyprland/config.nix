@@ -303,10 +303,10 @@
 
   # On lid close, lock screen and suspend
   # bindl = , switch:on:Lid Switch, exec, $lockAndSuspendCmd
-  bindl = , switch:on:Lid Switch, exec, $screenLockCmd
+  # bindl = , switch:on:Lid Switch, exec, $screenLockCmd
   # Laptop lid open / close switch
-  bindl=,switch:off:Lid Switch,exec,hyprctl keyword monitor "eDP-1, 1920x1080, 1920x0, 1" & pidof eww || eww open bar &
-  bindl=,switch:on:Lid Switch,exec,hyprctl keyword monitor "eDP-1, disable"
+  bindl=,switch:off:Lid Switch,exec, hypr-screendisable open
+  bindl=,switch:on:Lid Switch,exec,$screenLockCmd && hypr-screendisable close
 
   # Keybind to lock screen and suspend
   bind = $mainMod, Z, exec, $lockAndSuspendCmd

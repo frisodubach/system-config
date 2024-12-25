@@ -10,6 +10,9 @@ let
     pkgs.writeShellScriptBin "rofi-wifi" (builtins.readFile ./rofi-wifi);
   rofi-battery =
     pkgs.writeShellScriptBin "rofi-battery" (builtins.readFile ./rofi-battery);
+  hypr-screendisable = pkgs.writeShellScriptBin "hypr-screendisable"
+    (builtins.readFile ./hypr-screendisable);
+
 in {
   environment.systemPackages = with pkgs; [
     rofi-bluetooth
@@ -17,6 +20,7 @@ in {
     rofi-power
     rofi-wifi
     rofi-battery
+    hypr-screendisable
   ];
 
   security.sudo = {
