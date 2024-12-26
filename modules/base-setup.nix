@@ -40,7 +40,7 @@
     fish
 
     # misc
-    neofetch
+    microfetch
 
     # coding
     clojure
