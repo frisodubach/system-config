@@ -14,10 +14,10 @@ Many Nix configurations I've seen are split up between =home-manager= and 'norma
 In =./hosts= system configuration is defined. This should be specific for each system the Nix configuration is used on (currently just one system).
 In =./modules= system capabilities are defined, mainly user-specific setup and =home-manager= configured programs / dotfiles. Contained in here is configuration of my most used programs such as:
 - Hyprland
-- Wofi
+- rofi
 - EWW
 - fish
-- alacritty
+- kitty
 
 There are also a few currently un-used programs included, these I either used before and have since switched away from, or a work in progress. I keep these in for completeness-sake and I don't want to bother with excluding them from the =.gitignore=.
 For my config, I emphasise using standard dotfiles when convenient, to allow for anyone to copy my configuration, and make it easy to move away from NixOS should I ever want to (although I doubt it).
@@ -26,16 +26,16 @@ While my current configuration is quite okay to use right now, there are still s
 - [-] Battery/Power management for laptop. (Configure =tlp= or =auto-cpufreq=)
   - [X] =tlp= configuration
   - [ ] =auto-cpufreq= usage/configuration
-- [-] =eww= improvements/clean-up
-  - [ ] Get workspace widget working on =eww= bar.
+- [X] =eww= improvements/clean-up
+  - [X] Get workspace widget working on =eww= bar.
   - [X] Clean-up redundant files and folder structure
 - [ ] Get a working =starship= configuration
 - [ ] Split up the =hyprland=  module into smaller parts
-- [-] Scripts clean-up
+- [X] Scripts clean-up
   - [X] Move out of =eww= module
   - [X] add to path
   - [X] Create desktop file for convenient use w/ rofi
-  - [ ] Create airplane-mode script
+  - [X] Create airplane-mode script
   - [X] Create rofi script for tlp management
 - [X] Improve =hyprland= configuration ease-of-use. Maybe utilize scratchpad functionality, update / add keyboard shortcuts
   - [X] Improve multi-monitor workspace configuration
